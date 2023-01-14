@@ -1,0 +1,982 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=VT323&display=swap");
+html {
+  width: 100vw;
+  height: 100vh;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+html body *, html body *::before, html body *::after {
+  box-sizing: inherit;
+}
+
+.container {
+  --width: 100vmin;
+  --break-point: clamp(0px, var(--width) - 500px, 50vmin);
+  width: calc(var(--width) - var(--break-point) - 2%);
+  height: calc((var(--width) - var(--break-point)) * (60/50));
+  border: 0px solid black;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
+  font-size: var(--width);
+  --blank:  ;
+  --plus: +;
+  --multiply: *;
+  --times-ten: * 10;
+  --submit: initial;
+  --is-operator0:  ;
+  --is-operator8:  ;
+  --is-number0: initial;
+  --is-number8: initial;
+}
+.container #layer7 {
+  --checked1: initial;
+  --not-checked1:  ;
+  --is-operator1: initial;
+  --is-not-operator1:  ;
+  --is-number1: initial;
+  --expression1: + 0;
+}
+.container #layer7 > .number:checked ~ .layer {
+  --is-number1:  ;
+}
+.container #layer7 > .operator:not(.equals):checked ~ .layer {
+  --is-operator1:  ;
+  --is-not-operator1: initial;
+}
+.container #layer7 > .zero:checked ~ .layer {
+  --symbol1: 0;
+  --char1: "0";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .one:checked ~ .layer {
+  --symbol1: 1;
+  --char1: "1";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .two:checked ~ .layer {
+  --symbol1: 2;
+  --char1: "2";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .three:checked ~ .layer {
+  --symbol1: 3;
+  --char1: "3";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .four:checked ~ .layer {
+  --symbol1: 4;
+  --char1: "4";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .five:checked ~ .layer {
+  --symbol1: 5;
+  --char1: "5";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .six:checked ~ .layer {
+  --symbol1: 6;
+  --char1: "6";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .seven:checked ~ .layer {
+  --symbol1: 7;
+  --char1: "7";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .eight:checked ~ .layer {
+  --symbol1: 8;
+  --char1: "8";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .nine:checked ~ .layer {
+  --symbol1: 9;
+  --char1: "9";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .plus:checked ~ .layer {
+  --symbol1: +;
+  --char1: "+";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .minus:checked ~ .layer {
+  --symbol1: -;
+  --char1: "-";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer7 > .multiply:checked ~ .layer {
+  --symbol1: *;
+  --char1: "*";
+  --checked1:  ;
+  --not-checked1: initial;
+}
+.container #layer6 {
+  --checked2: initial;
+  --not-checked2:  ;
+  --is-operator2: initial;
+  --is-not-operator2:  ;
+  --is-number2: initial;
+  --expression2: + 0;
+}
+.container #layer6 > .number:checked ~ .layer {
+  --is-number2:  ;
+}
+.container #layer6 > .operator:not(.equals):checked ~ .layer {
+  --is-operator2:  ;
+  --is-not-operator2: initial;
+}
+.container #layer6 > .zero:checked ~ .layer {
+  --symbol2: 0;
+  --char2: "0";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .one:checked ~ .layer {
+  --symbol2: 1;
+  --char2: "1";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .two:checked ~ .layer {
+  --symbol2: 2;
+  --char2: "2";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .three:checked ~ .layer {
+  --symbol2: 3;
+  --char2: "3";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .four:checked ~ .layer {
+  --symbol2: 4;
+  --char2: "4";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .five:checked ~ .layer {
+  --symbol2: 5;
+  --char2: "5";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .six:checked ~ .layer {
+  --symbol2: 6;
+  --char2: "6";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .seven:checked ~ .layer {
+  --symbol2: 7;
+  --char2: "7";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .eight:checked ~ .layer {
+  --symbol2: 8;
+  --char2: "8";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .nine:checked ~ .layer {
+  --symbol2: 9;
+  --char2: "9";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .plus:checked ~ .layer {
+  --symbol2: +;
+  --char2: "+";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .minus:checked ~ .layer {
+  --symbol2: -;
+  --char2: "-";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer6 > .multiply:checked ~ .layer {
+  --symbol2: *;
+  --char2: "*";
+  --checked2:  ;
+  --not-checked2: initial;
+}
+.container #layer5 {
+  --checked3: initial;
+  --not-checked3:  ;
+  --is-operator3: initial;
+  --is-not-operator3:  ;
+  --is-number3: initial;
+  --expression3: + 0;
+}
+.container #layer5 > .number:checked ~ .layer {
+  --is-number3:  ;
+}
+.container #layer5 > .operator:not(.equals):checked ~ .layer {
+  --is-operator3:  ;
+  --is-not-operator3: initial;
+}
+.container #layer5 > .zero:checked ~ .layer {
+  --symbol3: 0;
+  --char3: "0";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .one:checked ~ .layer {
+  --symbol3: 1;
+  --char3: "1";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .two:checked ~ .layer {
+  --symbol3: 2;
+  --char3: "2";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .three:checked ~ .layer {
+  --symbol3: 3;
+  --char3: "3";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .four:checked ~ .layer {
+  --symbol3: 4;
+  --char3: "4";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .five:checked ~ .layer {
+  --symbol3: 5;
+  --char3: "5";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .six:checked ~ .layer {
+  --symbol3: 6;
+  --char3: "6";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .seven:checked ~ .layer {
+  --symbol3: 7;
+  --char3: "7";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .eight:checked ~ .layer {
+  --symbol3: 8;
+  --char3: "8";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .nine:checked ~ .layer {
+  --symbol3: 9;
+  --char3: "9";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .plus:checked ~ .layer {
+  --symbol3: +;
+  --char3: "+";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .minus:checked ~ .layer {
+  --symbol3: -;
+  --char3: "-";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer5 > .multiply:checked ~ .layer {
+  --symbol3: *;
+  --char3: "*";
+  --checked3:  ;
+  --not-checked3: initial;
+}
+.container #layer4 {
+  --checked4: initial;
+  --not-checked4:  ;
+  --is-operator4: initial;
+  --is-not-operator4:  ;
+  --is-number4: initial;
+  --expression4: + 0;
+}
+.container #layer4 > .number:checked ~ .layer {
+  --is-number4:  ;
+}
+.container #layer4 > .operator:not(.equals):checked ~ .layer {
+  --is-operator4:  ;
+  --is-not-operator4: initial;
+}
+.container #layer4 > .zero:checked ~ .layer {
+  --symbol4: 0;
+  --char4: "0";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .one:checked ~ .layer {
+  --symbol4: 1;
+  --char4: "1";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .two:checked ~ .layer {
+  --symbol4: 2;
+  --char4: "2";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .three:checked ~ .layer {
+  --symbol4: 3;
+  --char4: "3";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .four:checked ~ .layer {
+  --symbol4: 4;
+  --char4: "4";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .five:checked ~ .layer {
+  --symbol4: 5;
+  --char4: "5";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .six:checked ~ .layer {
+  --symbol4: 6;
+  --char4: "6";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .seven:checked ~ .layer {
+  --symbol4: 7;
+  --char4: "7";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .eight:checked ~ .layer {
+  --symbol4: 8;
+  --char4: "8";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .nine:checked ~ .layer {
+  --symbol4: 9;
+  --char4: "9";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .plus:checked ~ .layer {
+  --symbol4: +;
+  --char4: "+";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .minus:checked ~ .layer {
+  --symbol4: -;
+  --char4: "-";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer4 > .multiply:checked ~ .layer {
+  --symbol4: *;
+  --char4: "*";
+  --checked4:  ;
+  --not-checked4: initial;
+}
+.container #layer3 {
+  --checked5: initial;
+  --not-checked5:  ;
+  --is-operator5: initial;
+  --is-not-operator5:  ;
+  --is-number5: initial;
+  --expression5: + 0;
+}
+.container #layer3 > .number:checked ~ .layer {
+  --is-number5:  ;
+}
+.container #layer3 > .operator:not(.equals):checked ~ .layer {
+  --is-operator5:  ;
+  --is-not-operator5: initial;
+}
+.container #layer3 > .zero:checked ~ .layer {
+  --symbol5: 0;
+  --char5: "0";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .one:checked ~ .layer {
+  --symbol5: 1;
+  --char5: "1";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .two:checked ~ .layer {
+  --symbol5: 2;
+  --char5: "2";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .three:checked ~ .layer {
+  --symbol5: 3;
+  --char5: "3";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .four:checked ~ .layer {
+  --symbol5: 4;
+  --char5: "4";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .five:checked ~ .layer {
+  --symbol5: 5;
+  --char5: "5";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .six:checked ~ .layer {
+  --symbol5: 6;
+  --char5: "6";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .seven:checked ~ .layer {
+  --symbol5: 7;
+  --char5: "7";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .eight:checked ~ .layer {
+  --symbol5: 8;
+  --char5: "8";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .nine:checked ~ .layer {
+  --symbol5: 9;
+  --char5: "9";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .plus:checked ~ .layer {
+  --symbol5: +;
+  --char5: "+";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .minus:checked ~ .layer {
+  --symbol5: -;
+  --char5: "-";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer3 > .multiply:checked ~ .layer {
+  --symbol5: *;
+  --char5: "*";
+  --checked5:  ;
+  --not-checked5: initial;
+}
+.container #layer2 {
+  --checked6: initial;
+  --not-checked6:  ;
+  --is-operator6: initial;
+  --is-not-operator6:  ;
+  --is-number6: initial;
+  --expression6: + 0;
+}
+.container #layer2 > .number:checked ~ .layer {
+  --is-number6:  ;
+}
+.container #layer2 > .operator:not(.equals):checked ~ .layer {
+  --is-operator6:  ;
+  --is-not-operator6: initial;
+}
+.container #layer2 > .zero:checked ~ .layer {
+  --symbol6: 0;
+  --char6: "0";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .one:checked ~ .layer {
+  --symbol6: 1;
+  --char6: "1";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .two:checked ~ .layer {
+  --symbol6: 2;
+  --char6: "2";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .three:checked ~ .layer {
+  --symbol6: 3;
+  --char6: "3";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .four:checked ~ .layer {
+  --symbol6: 4;
+  --char6: "4";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .five:checked ~ .layer {
+  --symbol6: 5;
+  --char6: "5";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .six:checked ~ .layer {
+  --symbol6: 6;
+  --char6: "6";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .seven:checked ~ .layer {
+  --symbol6: 7;
+  --char6: "7";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .eight:checked ~ .layer {
+  --symbol6: 8;
+  --char6: "8";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .nine:checked ~ .layer {
+  --symbol6: 9;
+  --char6: "9";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .plus:checked ~ .layer {
+  --symbol6: +;
+  --char6: "+";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .minus:checked ~ .layer {
+  --symbol6: -;
+  --char6: "-";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer2 > .multiply:checked ~ .layer {
+  --symbol6: *;
+  --char6: "*";
+  --checked6:  ;
+  --not-checked6: initial;
+}
+.container #layer1 {
+  --checked7: initial;
+  --not-checked7:  ;
+  --is-operator7: initial;
+  --is-not-operator7:  ;
+  --is-number7: initial;
+  --expression7: + 0;
+}
+.container #layer1 > .number:checked ~ .layer {
+  --is-number7:  ;
+}
+.container #layer1 > .operator:not(.equals):checked ~ .layer {
+  --is-operator7:  ;
+  --is-not-operator7: initial;
+}
+.container #layer1 > .zero:checked ~ .layer {
+  --symbol7: 0;
+  --char7: "0";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .one:checked ~ .layer {
+  --symbol7: 1;
+  --char7: "1";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .two:checked ~ .layer {
+  --symbol7: 2;
+  --char7: "2";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .three:checked ~ .layer {
+  --symbol7: 3;
+  --char7: "3";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .four:checked ~ .layer {
+  --symbol7: 4;
+  --char7: "4";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .five:checked ~ .layer {
+  --symbol7: 5;
+  --char7: "5";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .six:checked ~ .layer {
+  --symbol7: 6;
+  --char7: "6";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .seven:checked ~ .layer {
+  --symbol7: 7;
+  --char7: "7";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .eight:checked ~ .layer {
+  --symbol7: 8;
+  --char7: "8";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .nine:checked ~ .layer {
+  --symbol7: 9;
+  --char7: "9";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .plus:checked ~ .layer {
+  --symbol7: +;
+  --char7: "+";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .minus:checked ~ .layer {
+  --symbol7: -;
+  --char7: "-";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container #layer1 > .multiply:checked ~ .layer {
+  --symbol7: *;
+  --char7: "*";
+  --checked7:  ;
+  --not-checked7: initial;
+}
+.container .answer {
+  --expression1: var(--is-operator0, var(--is-operator1, var(--plus))) var(--symbol1) var(--is-operator1, var(--multiply) var(--power1));
+  --power1: calc(1 var(--is-operator2, var(--not-checked2, var(--times-ten) var(--is-operator3, var(--not-checked3, var(--times-ten) var(--is-operator4, var(--not-checked4, var(--times-ten) var(--is-operator5, var(--not-checked5, var(--times-ten) var(--is-operator6, var(--not-checked6, var(--times-ten) var(--is-operator7, var(--not-checked7, var(--times-ten) var(--is-operator8, var(--not-checked8, var(--times-ten) )))))))))))))));
+  --term1: calc(var(--is-operator1, var(--not-checked1, var(--expression1) var(--is-operator2, var(--not-checked2, var(--expression2) var(--is-operator3, var(--not-checked3, var(--expression3) var(--is-operator4, var(--not-checked4, var(--expression4) var(--is-operator5, var(--not-checked5, var(--expression5) var(--is-operator6, var(--not-checked6, var(--expression6) var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))))))))))))))));
+  --T21: var(--is-operator0) var(--term1);
+  --F21: var(--is-operator0, var(--blank));
+  --term-or-blank1: var(--T21, var(--F21));
+  --T31: var(--is-operator1) var(--expression1);
+  --F31: var(--is-operator1, var(--term-or-blank1));
+  --final1: var(--T31, var(--F31));
+  --expression2: var(--is-operator1, var(--is-operator2, var(--plus))) var(--symbol2) var(--is-operator2, var(--multiply) var(--power2));
+  --power2: calc(1 var(--is-operator3, var(--not-checked3, var(--times-ten) var(--is-operator4, var(--not-checked4, var(--times-ten) var(--is-operator5, var(--not-checked5, var(--times-ten) var(--is-operator6, var(--not-checked6, var(--times-ten) var(--is-operator7, var(--not-checked7, var(--times-ten) var(--is-operator8, var(--not-checked8, var(--times-ten) )))))))))))));
+  --term2: calc(var(--is-operator2, var(--not-checked2, var(--expression2) var(--is-operator3, var(--not-checked3, var(--expression3) var(--is-operator4, var(--not-checked4, var(--expression4) var(--is-operator5, var(--not-checked5, var(--expression5) var(--is-operator6, var(--not-checked6, var(--expression6) var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))))))))))))));
+  --T22: var(--is-operator1) var(--term2);
+  --F22: var(--is-operator1, var(--blank));
+  --term-or-blank2: var(--T22, var(--F22));
+  --T32: var(--is-operator2) var(--expression2);
+  --F32: var(--is-operator2, var(--term-or-blank2));
+  --final2: var(--T32, var(--F32));
+  --expression3: var(--is-operator2, var(--is-operator3, var(--plus))) var(--symbol3) var(--is-operator3, var(--multiply) var(--power3));
+  --power3: calc(1 var(--is-operator4, var(--not-checked4, var(--times-ten) var(--is-operator5, var(--not-checked5, var(--times-ten) var(--is-operator6, var(--not-checked6, var(--times-ten) var(--is-operator7, var(--not-checked7, var(--times-ten) var(--is-operator8, var(--not-checked8, var(--times-ten) )))))))))));
+  --term3: calc(var(--is-operator3, var(--not-checked3, var(--expression3) var(--is-operator4, var(--not-checked4, var(--expression4) var(--is-operator5, var(--not-checked5, var(--expression5) var(--is-operator6, var(--not-checked6, var(--expression6) var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))))))))))));
+  --T23: var(--is-operator2) var(--term3);
+  --F23: var(--is-operator2, var(--blank));
+  --term-or-blank3: var(--T23, var(--F23));
+  --T33: var(--is-operator3) var(--expression3);
+  --F33: var(--is-operator3, var(--term-or-blank3));
+  --final3: var(--T33, var(--F33));
+  --expression4: var(--is-operator3, var(--is-operator4, var(--plus))) var(--symbol4) var(--is-operator4, var(--multiply) var(--power4));
+  --power4: calc(1 var(--is-operator5, var(--not-checked5, var(--times-ten) var(--is-operator6, var(--not-checked6, var(--times-ten) var(--is-operator7, var(--not-checked7, var(--times-ten) var(--is-operator8, var(--not-checked8, var(--times-ten) )))))))));
+  --term4: calc(var(--is-operator4, var(--not-checked4, var(--expression4) var(--is-operator5, var(--not-checked5, var(--expression5) var(--is-operator6, var(--not-checked6, var(--expression6) var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))))))))));
+  --T24: var(--is-operator3) var(--term4);
+  --F24: var(--is-operator3, var(--blank));
+  --term-or-blank4: var(--T24, var(--F24));
+  --T34: var(--is-operator4) var(--expression4);
+  --F34: var(--is-operator4, var(--term-or-blank4));
+  --final4: var(--T34, var(--F34));
+  --expression5: var(--is-operator4, var(--is-operator5, var(--plus))) var(--symbol5) var(--is-operator5, var(--multiply) var(--power5));
+  --power5: calc(1 var(--is-operator6, var(--not-checked6, var(--times-ten) var(--is-operator7, var(--not-checked7, var(--times-ten) var(--is-operator8, var(--not-checked8, var(--times-ten) )))))));
+  --term5: calc(var(--is-operator5, var(--not-checked5, var(--expression5) var(--is-operator6, var(--not-checked6, var(--expression6) var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))))))));
+  --T25: var(--is-operator4) var(--term5);
+  --F25: var(--is-operator4, var(--blank));
+  --term-or-blank5: var(--T25, var(--F25));
+  --T35: var(--is-operator5) var(--expression5);
+  --F35: var(--is-operator5, var(--term-or-blank5));
+  --final5: var(--T35, var(--F35));
+  --expression6: var(--is-operator5, var(--is-operator6, var(--plus))) var(--symbol6) var(--is-operator6, var(--multiply) var(--power6));
+  --power6: calc(1 var(--is-operator7, var(--not-checked7, var(--times-ten) var(--is-operator8, var(--not-checked8, var(--times-ten) )))));
+  --term6: calc(var(--is-operator6, var(--not-checked6, var(--expression6) var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))))));
+  --T26: var(--is-operator5) var(--term6);
+  --F26: var(--is-operator5, var(--blank));
+  --term-or-blank6: var(--T26, var(--F26));
+  --T36: var(--is-operator6) var(--expression6);
+  --F36: var(--is-operator6, var(--term-or-blank6));
+  --final6: var(--T36, var(--F36));
+  --expression7: var(--is-operator6, var(--is-operator7, var(--plus))) var(--symbol7) var(--is-operator7, var(--multiply) var(--power7));
+  --power7: calc(1 var(--is-operator8, var(--not-checked8, var(--times-ten) )));
+  --term7: calc(var(--is-operator7, var(--not-checked7, var(--expression7) var(--is-operator8))));
+  --T27: var(--is-operator6) var(--term7);
+  --F27: var(--is-operator6, var(--blank));
+  --term-or-blank7: var(--T27, var(--F27));
+  --T37: var(--is-operator7) var(--expression7);
+  --F37: var(--is-operator7, var(--term-or-blank7));
+  --final7: var(--T37, var(--F37));
+  --equation: var(--final1) var(--final2) var(--final3) var(--final4) var(--final5) var(--final6) var(--final7);
+  --valid: var(--is-not-operator1, var(--is-number0) var(--is-number2)) var(--is-not-operator2, var(--is-number1) var(--is-number3)) var(--is-not-operator3, var(--is-number2) var(--is-number4)) var(--is-not-operator4, var(--is-number3) var(--is-number5)) var(--is-not-operator5, var(--is-number4) var(--is-number6)) var(--is-not-operator6, var(--is-number5) var(--is-number7)) var(--is-not-operator7, var(--is-number6) var(--is-number8));
+}
+.container .answer > .digit:nth-child(1)::before {
+  content: var(--submit, var(--char1));
+}
+.container .answer > .digit:nth-child(2)::before {
+  content: var(--submit, var(--char2));
+}
+.container .answer > .digit:nth-child(3)::before {
+  content: var(--submit, var(--char3));
+}
+.container .answer > .digit:nth-child(4)::before {
+  content: var(--submit, var(--char4));
+}
+.container .answer > .digit:nth-child(5)::before {
+  content: var(--submit, var(--char5));
+}
+.container .answer > .digit:nth-child(6)::before {
+  content: var(--submit, var(--char6));
+}
+.container .answer > .digit:nth-child(7)::before {
+  content: var(--submit, var(--char7));
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-template-rows: repeat(5, 19.25%);
+  grid-template-areas: "answer answer answer answer" "seven eight nine plus" "four five six minus" "one two three multiply" "blank zero reset equals";
+  grid-gap: 1% 1.5%;
+  padding: 6% 3% 4%;
+}
+.layer:not(.container > .layer) {
+  pointer-events: none;
+}
+.layer:not(.container > .layer)::before {
+  opacity: 0;
+}
+.layer:not(.container > .layer) > .button {
+  opacity: 0;
+}
+.layer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.answer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: answer;
+  border: 0.025em solid black;
+  padding: 0 1.5%;
+  max-width: 100%;
+  transform: translatey(-5%);
+  font: calc((100% - var(--break-point)) * (28/100)) "VT323", monospace;
+  letter-spacing: min(0.04em, 4px);
+  line-height: 0.5;
+}
+.answer::before {
+  counter-reset: convert calc(var(--equation));
+  --placeholder: var(--submit, var(--checked1, "0"));
+  --answer: var(--valid) var(--submit) counter(convert);
+  --error: var(--valid, var(--submit) "ERROR");
+  content: var(--placeholder) var(--answer, var(--error));
+  margin-right: var(--valid, var(--submit) auto);
+  transform: inherit;
+}
+
+.digit {
+  flex: 0 1;
+  transform: inherit;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0.04em solid rgba(0, 0, 0, 0.5);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font: calc((100% - var(--break-point)) * (11.5/100)) "Open Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15%;
+  color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button.blank {
+  grid-area: blank;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.button.reset {
+  grid-area: reset;
+  background-color: white;
+  padding: 0;
+}
+.button.reset::before {
+  content: "foo";
+  width: 100px;
+  height: 100px;
+  background: blue;
+  display: block;
+  position: absolute;
+}
+.button.zero {
+  grid-area: zero;
+}
+.button.zero::before {
+  content: "0";
+}
+.button.one {
+  grid-area: one;
+}
+.button.one::before {
+  content: "1";
+}
+.button.two {
+  grid-area: two;
+}
+.button.two::before {
+  content: "2";
+}
+.button.three {
+  grid-area: three;
+}
+.button.three::before {
+  content: "3";
+}
+.button.four {
+  grid-area: four;
+}
+.button.four::before {
+  content: "4";
+}
+.button.five {
+  grid-area: five;
+}
+.button.five::before {
+  content: "5";
+}
+.button.six {
+  grid-area: six;
+}
+.button.six::before {
+  content: "6";
+}
+.button.seven {
+  grid-area: seven;
+}
+.button.seven::before {
+  content: "7";
+}
+.button.eight {
+  grid-area: eight;
+}
+.button.eight::before {
+  content: "8";
+}
+.button.nine {
+  grid-area: nine;
+}
+.button.nine::before {
+  content: "9";
+}
+.button.plus {
+  grid-area: plus;
+}
+.button.plus::before {
+  content: "+";
+}
+.button.minus {
+  grid-area: minus;
+}
+.button.minus::before {
+  content: "-";
+}
+.button.multiply {
+  grid-area: multiply;
+}
+.button.multiply::before {
+  content: "*";
+}
+.button.equals {
+  grid-area: equals;
+}
+.button.equals::before {
+  content: "=";
+}
+.button.equals:checked ~ .reset {
+  box-shadow: inset 0 0 0 0.05em rgba(0, 0, 255, 0.6);
+}
+.button.equals:checked ~ .layer .last {
+  pointer-events: auto;
+}
+.button.equals:checked ~ .layer .answer {
+  --submit:  ;
+}
+.button:not(.equals):checked {
+  opacity: 0;
+}
+.button:not(.equals):checked ~ .layer {
+  pointer-events: auto;
+}
+.button:not(.equals):checked ~ .layer:not(.second-last)::before {
+  opacity: 1;
+}
+.button:not(.equals):checked ~ .layer > .button {
+  opacity: 1;
+}
+.button:not(.blank):not(.equals:checked):hover {
+  background-color: rgba(0, 0, 255, 0.25);
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
