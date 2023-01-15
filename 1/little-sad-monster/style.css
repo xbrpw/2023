@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(circle, #36cdf4, #889bf9);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#balloon {
+  cursor: crosshair;
+}
+
+.eye {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  background: #fff;
+  bottom: 277px;
+  left: 57px;
+  overflow: hidden;
+}
+
+.eye.right {
+  bottom: 280px;
+  left: 94px;
+}
+
+.eye:after {
+  /*pupil*/
+  position: absolute;
+  bottom: 10px;
+  right: 7px;
+  width: 25px;
+  height: 25px;
+  background: #000;
+  border-radius: 50%;
+  content: "";
+}
+
+#lil-monster {
+  position: relative;
+  width: 384px;
+  height: 605px;
+  margin: 0 auto;
+}
