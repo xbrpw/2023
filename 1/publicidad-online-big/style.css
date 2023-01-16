@@ -1,0 +1,140 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: cornflowerblue;
+  background-image: url(https://assets.codepen.io/t-1/saad-chaudhry-WdBu6PJ83uY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+  font-size: 20px;
+}
+.banner-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.img {
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+.img-overlay {
+position: absolute;
+display: block;
+top: -10%;
+left: -10%;
+right: 0;
+bottom: 0;
+width: 120%;
+filter: blur(10px);
+}
+.banner-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 8px 0;
+  margin: 0 auto 20px;
+  width: calc(100% - 16px);
+  max-width: 400px;
+  font-family: "Google Sans Display", Roboto, Arial;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  top: -40px;
+  border-radius: 5px;
+  height: 80px;
+  width: auto;
+}
+
+.rating {
+  display: flex;
+  margin: 5px 0 5px;
+}
+
+.rating-icon {
+ width: 20px;
+ height: 20px;
+}
+
+.rating-info {
+  margin: 0 0 10px;
+  opacity: 0.6;
+  font-size: 14px;
+  display: flex;
+}
+
+.rating-user-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.content {
+  position: relative;
+  padding: 0 8px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.icon-svg {
+  width: 14px;
+  height: 14px;
+  fill: #a5a5a6;
+  margin-right: 3px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  background-color: #1463FA;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  margin: 20px 0 5px;
+}
+
+.btn-info {
+  display: inline-block;
+  font-size: 10px;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.btn-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 8px;
+}

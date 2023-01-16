@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>SVG strike through text w/ write-on</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;display=swap'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<style>
+:root{
+	--animation-speed: 1;
+	--strike-through-delay: 700ms;
+	--write-on-delay: 1000ms;
+	--color-text: #101011;
+	--color-strikes: #3f9ceddd;
+	--color-correction: #3f9ced;
+}
+
+/* parent box to contain text, strike-lines, and write-on text */
+.text-container{
+	position: relative;
+	color: var(--color-text);
+	font-family: 'Caveat', 'Segoe Script', cursive;
+	font-weight: 700;
+	font-size: 28px;
+	white-space: nowrap;
+	word-spacing: 0.25em;
+	transform: rotate(-1deg);
+	
+}
+
+.text-container span{
+	position: relative;
+}
+
+#squiggle-filters{
+	position: absolute;
+	left: 0;
+	top: 0;
+	clip-path: inset(0);
+	pointer-events: none;
+}
+
+@keyframes squiggle{
+	0%{
+		filter: url(#squiggly-0);
+	}
+	25%{
+		filter: url(#squiggly-1);
+	}
+	50%{
+		filter: url(#squiggly-2);
+	}
+	75%{
+		filter: url(#squiggly-3);
+	}
+	100%{
+		filter: url(#squiggly-4);
+	}
+}
+
+/* inline SVG for strike glyphs and mask */
+.svg-strikes{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 97%;
+	height: 48%;
+	transform: translate(-3%, -50%) rotate(2deg);
+	overflow: visible;
+	pointer-events: none;
+}
+
+/* colorize the strikes */
+#strikes{
+	fill: var(--color-strikes);
+	stroke: none;
+}
+
+#strike-through path{
+	fill: none;
+	stroke: #3f9ced;
+	stroke-width: 5.0535;
+	stroke-linecap: round;
+	stroke-dasharray: 154;
+	stroke-dashoffset: 154;
+	animation: strokeoffset ease calc(900ms / var(--animation-speed)) var(--strike-through-delay) forwards;
+}
+
+#strike-through path:nth-child(2){
+	animation-delay: calc(var(--strike-through-delay) + (500ms / var(--animation-speed)));
+}
+
+@keyframes strokeoffset{
+	to{
+		stroke-dashoffset: 0;
+	}
+}
+
+/* inline SVG for write-on glyphs and mask */
+.svg-write-on-text{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	overflow: visible;
+	word-spacing: 0;
+	width: min(37vmin, 20.5555vw);
+	transform: translate(-15%, -135%) rotate(-8deg);
+}
+
+.write-on-text-container{
+	stroke: none;
+	fill: var(--color-correction);
+	font-family: 'Dancing Script', cursive;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 1.25;
+}
+
+/* using a set of paths as a mask */
+#write-on-mask-container{
+	fill: none;
+	stroke:#3f9ced;
+	stroke-linecap: round;
+	stroke-width: 1.2;
+	stroke-dasharray: 186 186;
+}
+
+.write-on-path{
+	--word-1-delay: 100ms;
+	--word-2-delay: 400ms;
+	stroke-dashoffset: 186;
+	animation: stroke ease forwards calc(2s / var(--animation-speed));
+}
+
+.write-on-path:nth-child(2n){
+	--word-1-delay: 300ms;
+	--word-2-delay: 600ms;
+	stroke: rgba(255, 255, 255, 0.007);
+}
+
+@keyframes stroke{
+	to{
+		stroke-dashoffset: 0;
+		stroke-width: 3;
+	}
+}
+
+/* animate the paths synchronously */
+.path-Anyone{
+	animation-delay: calc(var(--write-on-delay) + var(--word-1-delay));
+	animation-timing-function: ease-out;
+}
+
+.letter-A-edge{
+	animation-delay: calc(var(--write-on-delay) + (var(--word-1-delay) + 400ms) / var(--animation-speed));
+}
+
+.letter-B-edge{
+	animation-delay: calc(var(--write-on-delay) + (var(--word-2-delay) + 1500ms) / var(--animation-speed));
+}
+
+.letter-B-line{
+	animation-delay: calc(var(--write-on-delay) + (var(--word-2-delay) + 1900ms) / var(--animation-speed));
+}
+
+.path-etter{
+	animation-delay: calc(var(--write-on-delay) + (var(--word-2-delay) + 800ms) / var(--animation-speed));
+}
+
+.letter-t-horz{
+	animation-delay: calc(var(--write-on-delay) + (var(--word-2-delay) + 1000ms) / var(--animation-speed));
+}
+
+
+
+/* Made with Coffee, Care, and Curiosity by @ShadowShahriar */
+</style>
+<style>
+    .fadein-3s {
+    animation: 
+      fade-in 3s ease;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0}
+  }
+
+  @keyframes fade-out {
+    to { opacity: 0}
+  }
+
+  @keyframes slide-in {
+    from { transform: translateY(10px) }
+  }
+</style>
+<br><br><br><br>
+<span style="color:#3f9ced; " class="text-container write-on-mask-container fadein-3s"> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	and a coffee</span>
+	<section class="text-container">
+"Made with love 
+<span>	and code" 
+	<svg class="svg-strikes" viewBox="0 0 151.79 15.221" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<mask id="strike-through">
+				<path d="m-88.2 171.1c51.025-2.0342 102.05-4.0683 153.07-6.1024"/>
+				<path d="m-83.677 176.6c22.249-0.10315 44.497-0.20631 69.419-1.2156s52.516-2.9246 80.111-4.8399"/>
+			</mask>
+		</defs>
+		<g id="strikes" transform="translate(88.224 -163.3)" mask="url(#strike-through)">
+			<path d="m-88.186 171.14c0.21274-0.0124 0.42546-0.0247 0.63818-0.0372 0.60462-0.0232 1.2096-0.038 1.8139-0.0693 3.9702-0.20512 2.9657-0.28129 7.7356-0.21109 2.4325 0.0358 4.8629 0.16845 7.2953 0.20799 3.3351 0.0542 6.6708 0.0488 10.006 0.0732 12.231-0.45722 12.003-0.57305 24.734-0.5057 4.5953 0.0243 9.1907 0.32959 13.785 0.2124 4.5663-0.11649 9.1121-0.66639 13.673-0.91288 4.5113-0.24376 9.0289-0.34941 13.542-0.55776 4.2661-0.19696 8.53-0.43876 12.795-0.65813 14.943-0.8339 29.874-1.9515 44.742-3.6842 1.6208-0.51748 1.1203-2.1116-0.50051-1.5941-15.069 0.65726-30.141 1.235-45.213 1.8277-4.2783 0.153-8.5566 0.30544-12.835 0.45899-4.5137 0.16201-9.0252 0.4101-13.541 0.48769-4.6316 0.0796-9.267-0.1671-13.897-0.0163-4.497 0.14649-8.9742 0.67998-13.468 0.90775-9.8959 0.50162-15.02 0.45209-24.768 0.53972-3.2794 0.24345-6.5665 0.39723-9.8381 0.73034-2.3401 0.23826-4.6618 0.63422-6.9883 0.98291-2.486 0.37259-4.9744 0.73782-7.4442 1.2069-0.61939 0.11763-1.5769 0.38089-2.2816 0.57083-0.04076 0.0149-0.02628 0.055 0.01448 0.0401z"/>
+			<path d="m-83.721 176.7c7.9321 1.622 16.1 1.5867 24.157 1.7081 3.0562 0.0461 6.1126 0.0754 9.1689 0.1131 3.6933-0.15021 18.79-0.77743 22.063-0.85311 14.052-0.32492 10.122 0.27494 23.955-0.81276 29.192-2.2954-6.0343-0.12803 21.774-1.7224 3.1886-0.17054 6.3771-0.34109 9.5656-0.51164 2.8231 0.0134 5.6495 0.1815 8.4692 0.0401 2.3548-0.11807 4.6766-0.62631 7.0268-0.81704 5.8628-0.47582 5.3456-0.0811 10.776-0.27176 1.2315-0.0432 2.4583-0.17578 3.6875-0.26367 3.4738 0.13959 1.8848 0.19829 4.7698-0.0628 0.5618-0.11437 0.45115-0.66692-0.11061-0.55253-3.0051-0.54212-1.3755-0.36651-4.9-0.40978-1.2823-0.11132-2.5607-0.28508-3.8468-0.33388-3.6281-0.13753-7.2647 0.20015-10.892-0.0539-2.4665-0.0958-4.9225-0.48477-7.3908-0.46343-5.9946 0.0518-11.94 1.4286-17.965 0.8544-14.464 0.52594-7.0733 0.36827-22.172 0.44359-13.925 0.40764-9.7195 0.6651-23.646 1.8176-8.892 0.73582-13.159 0.80449-21.914 1.1351-10.833 0.6591-21.677 1.1854-32.534 0.90772-0.11083-0.0446-0.15399 0.0644-0.04314 0.10901z"/>
+		</g>
+	</svg>
+</span>
+</section>
+
+<!-- SVG filters borrowed from Lucas Bebber (https://codepen.io/lbebber/details/KwGEQv)  -->
+<svg id="squiggle-filters" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<filter id="squiggly-0">
+	<feTurbulence id="turbulence" baseFrequency="0.011" numOctaves="3" result="noise" seed="0"/>
+	<feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+</filter>
+<filter id="squiggly-1">
+	<feTurbulence id="turbulence" baseFrequency="0.011" numOctaves="3" result="noise" seed="1"/>
+	<feDisplacementMap in="SourceGraphic" in2="noise" scale="8"/>
+</filter>
+<filter id="squiggly-2">
+	<feTurbulence id="turbulence" baseFrequency="0.011" numOctaves="3" result="noise" seed="2"/>
+	<feDisplacementMap in="SourceGraphic" in2="noise" scale="6"/>
+</filter>
+<filter id="squiggly-3">
+	<feTurbulence id="turbulence" baseFrequency="0.011" numOctaves="3" result="noise" seed="3"/>
+	<feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+</filter>
+<filter id="squiggly-4">
+	<feTurbulence id="turbulence" baseFrequency="0.011" numOctaves="3" result="noise" seed="4"/>
+	<feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+</filter>
+</defs> 
+</svg>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,134 @@
+.container-quick {
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-x: hidden;
+  //background-image: url("https://images.unsplash.com/photo-1497541271502-639c540968b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80");
+
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+:root {
+  --dark-font: #0f0f10;
+  --light-font: #79798c;
+}
+
+.content-section {
+  display: block;
+  margin-top: 32px;
+  overflow-x: hidden;
+  padding: 0 40px;
+}
+
+.section-header {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 16px;
+  
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &-link {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;    
+  }
+}
+
+.access-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.access-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.access-link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+  
+  &:nth-child(1) {
+    .access-icon { background-color: #6166fe; }
+  }
+  
+  &:nth-child(2) {
+    .access-icon { background-color: #6166fe;}
+  }
+  
+  &:nth-child(3) {
+    .access-icon { background-color: #3275f7;}
+  }
+  
+  &:nth-child(4) {
+    .access-icon { background-color: #3275f7;}
+  }
+  
+  &:nth-child(5) {
+    .access-icon { background-color: #22244a;}
+  }
+  
+   &:nth-child(6) {
+    .access-icon { background-color: #22244a;}
+  }
+}
+
+.access-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1042px) {
+  .access-icon { padding: 16px; }
+  
+  .access-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    
+  .access-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .access-link-wrapper {
+    width: 33.3%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body { padding: 5; }
+  
+  .content-section { padding: 5 20px; }
+}
