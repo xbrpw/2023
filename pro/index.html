@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- CodePen - Log In | Sign up Forms, Fingerprint -->
+<div class="m-layout openStart15" id="app">
+  <!--  <a class="m-logo" href="logo" target="_blank"><svg width="93" height="38" viewBox="0 0 93 38" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="45" cy="17" r="10" stroke="#776EF6" stroke-width="4"/> <circle cx="45" cy="17" r="2" fill="#776EF6"/> <path d="M76.0809 8.27901L84.1939 21.9707C85.3788 23.9705 83.9374 26.5 81.6129 26.5H65.3871C63.0626 26.5 61.6212 23.9705 62.8062 21.9707L70.9191 8.279C72.081 6.31809 74.919 6.31809 76.0809 8.27901Z" stroke="#776EF6" stroke-width="4"/> <rect x="4" y="5" width="24" height="4" rx="2" fill="#776EF6"/> <rect x="4" y="25" width="24" height="4" rx="2" fill="#776EF6"/> <path d="M6.00001 6.99947L5.99999 11.8609C5.99998 14.4773 8.01701 16.6513 10.626 16.8469L21.3739 17.653C23.9829 17.8487 25.9999 20.0227 25.9999 22.639L25.9999 26.9991" stroke="#776EF6" stroke-width="4"/> </svg></a> -->
+   <a class="m-logo" href="logo" target="_blank"><h2>MCL</h2></a>
+  <div class="m-container m-container--login">
+    <form class="m-form">
+      <h3 class="m-form_title">
+        ¡Hola!
+      </h3>
+      <div class="m-form_group">
+        <label class="m-form_label" for="username">Username</label><input class="m-form_input" id="username" name="username" type="text" value="luisangelmaciel" />
+      </div>
+      <div class="m-form_group">
+        <label class="m-form_label" for="password">Contraseña</label><input class="m-form_input" id="password" name="password" type="password" value="abc123" />
+      </div>
+      <div class="m-form_group">
+        <div class="m-form_checkbox">
+          <input id="ccheckbox" type="checkbox" /><label class="m-form_checkbox" for="ccheckbox">Recordarme</label>
+        </div>
+        <a class="m-form_recovery" href="#forgotPassword">¿Olvidaste la contraseña?</a>
+      </div>
+      <div class="m-form_group">
+        <a class="m-form_btn" onclick="openStartL()">iniciar sesión</a>
+      </div>
+      <div class="m-form_link">
+        <a class="m-form_btn-register" onclick="openRegister()">Primera vez, registrate por acá</a>
+      </div>
+      <div class="m-form_print" onclick="openStartL()">
+        <svg  viewBox="0 0 93 111" fill="none" xmlns="http://www.w3.org/2000/svg"><g class="path-1"> <path d="M12 31.4998L19.4689 24.2977C23.7277 20.1909 29.1058 17.4351 34.9268 16.3769L36.7647 16.0427C40.5528 15.354 44.438 15.4009 48.2084 16.1809L50.0337 16.5585C54.6144 17.5061 58.91 19.5118 62.5775 22.4153L63.2787 22.9704C67.0275 25.9383 69.9343 29.8357 71.7101 34.2752L73.0816 37.7039C74.3287 40.8218 74.5616 44.2535 73.7472 47.5113V47.5113C72.6363 51.955 73.4862 56.6617 76.0811 60.4362L77.5 62.5" stroke-width="4"/> <path d="M9 44.5L20.5 35.9995L27.8995 29.9456C30.2718 28.0046 33.0355 26.5992 36.0014 25.8255V25.8255C40.5396 24.6417 45.3418 24.9906 49.6612 26.8181L53.4721 28.4304C55.1445 29.1379 56.6807 30.1319 58.0115 31.3675V31.3675C61.1925 34.3212 63 38.4661 63 42.807L63 51.4539C63 53.4787 63.2169 55.4977 63.6471 57.4763V57.4763C64.8544 63.0302 67.7033 68.093 71.8239 72.0076L75.5 75.4999" stroke-width="4"/> <path d="M73.6906 85.3923L67.118 82.4102C61.5089 79.8652 56.8191 75.6554 53.6857 70.3526L52 67.5" stroke-width="4"/> <path d="M7.47317 57.8386L15.9442 55.017C20.8377 53.3871 25.0379 50.1532 27.8645 45.8388L30.2372 42.2174C32.0078 39.5148 34.7692 37.6158 37.9265 36.9294L38.8589 36.7267C42.3748 35.9624 46.038 37.0382 48.5822 39.5823V39.5823C51.0359 42.0359 52.1296 45.5372 51.5089 48.9511L51.1756 50.784C50.733 53.2186 49.6587 55.4943 48.0603 57.3833L42.5963 63.8407C40.5451 66.2649 38.122 68.348 35.4176 70.0122L28.9231 74.0089C27.3113 75.0007 25.6093 75.8379 23.8398 76.509L12 81"  stroke-width="4"/> <path d="M8.5 69.5L20.0629 65.6457C26.1902 63.6033 31.4949 59.6378 35.188 54.339L41 46"  stroke-width="4"/> <path d="M16.0191 91.5004L27.9172 85.4599C37.0064 80.8454 47.8167 81.1619 56.6203 86.3002L69.0178 93.5361"  stroke-width="4"/> <path d="M23.5 102L26.6656 99.9977C36.3436 93.8762 48.6624 93.7982 58.4171 99.7967L62 102"  stroke-width="4"/> <path d="M31.5 108V108C38.3437 103.049 47.6401 103.072 54.5 108V108"  stroke-width="4"/></g><g class="path-2"><path d="M12 31.4998L19.4689 24.2977C23.7277 20.1909 29.1058 17.4351 34.9268 16.3769L36.7647 16.0427C40.5528 15.354 44.438 15.4009 48.2084 16.1809L50.0337 16.5585C54.6144 17.5061 58.91 19.5118 62.5775 22.4153L63.2787 22.9704C67.0275 25.9383 69.9343 29.8357 71.7101 34.2752L73.0816 37.7039C74.3287 40.8218 74.5616 44.2535 73.7472 47.5113V47.5113C72.6363 51.955 73.4862 56.6617 76.0811 60.4362L77.5 62.5" stroke-width="4"/> <path d="M9 44.5L20.5 35.9995L27.8995 29.9456C30.2718 28.0046 33.0355 26.5992 36.0014 25.8255V25.8255C40.5396 24.6417 45.3418 24.9906 49.6612 26.8181L53.4721 28.4304C55.1445 29.1379 56.6807 30.1319 58.0115 31.3675V31.3675C61.1925 34.3212 63 38.4661 63 42.807L63 51.4539C63 53.4787 63.2169 55.4977 63.6471 57.4763V57.4763C64.8544 63.0302 67.7033 68.093 71.8239 72.0076L75.5 75.4999" stroke-width="4"/> <path d="M73.6906 85.3923L67.118 82.4102C61.5089 79.8652 56.8191 75.6554 53.6857 70.3526L52 67.5" stroke-width="4"/> <path d="M7.47317 57.8386L15.9442 55.017C20.8377 53.3871 25.0379 50.1532 27.8645 45.8388L30.2372 42.2174C32.0078 39.5148 34.7692 37.6158 37.9265 36.9294L38.8589 36.7267C42.3748 35.9624 46.038 37.0382 48.5822 39.5823V39.5823C51.0359 42.0359 52.1296 45.5372 51.5089 48.9511L51.1756 50.784C50.733 53.2186 49.6587 55.4943 48.0603 57.3833L42.5963 63.8407C40.5451 66.2649 38.122 68.348 35.4176 70.0122L28.9231 74.0089C27.3113 75.0007 25.6093 75.8379 23.8398 76.509L12 81"  stroke-width="4"/> <path d="M8.5 69.5L20.0629 65.6457C26.1902 63.6033 31.4949 59.6378 35.188 54.339L41 46"  stroke-width="4"/> <path d="M16.0191 91.5004L27.9172 85.4599C37.0064 80.8454 47.8167 81.1619 56.6203 86.3002L69.0178 93.5361"  stroke-width="4"/> <path d="M23.5 102L26.6656 99.9977C36.3436 93.8762 48.6624 93.7982 58.4171 99.7967L62 102"  stroke-width="4"/> <path d="M31.5 108V108C38.3437 103.049 47.6401 103.072 54.5 108V108"  stroke-width="4"/></g></svg>
+      </div>
+    </form>
+  </div>
+  <div class="m-container m-container--register">
+    <form class="m-form">
+      <h3 class="m-form_title">
+        Nuevo usuario
+      </h3>
+      <div class="m-form_group">
+        <label class="m-form_label" for="rusername">Username</label><input class="m-form_input" id="rusername" name="username" type="text" />
+      </div>
+      <div class="m-form_group">
+        <label class="m-form_label" for="rpassword">Contraseña</label><input class="m-form_input" id="rpassword" name="password" type="password" />
+      </div>
+      <div class="m-form_group">
+        <label class="m-form_label" for="cpassword">Contraseña</label><input class="m-form_input" id="cpassword" name="cpassword" type="password" />
+      </div>
+      <div class="m-form_group">
+        <label class="m-form_label" for="email">Email Address</label><input class="m-form_input" id="email" name="email" type="email" />
+      </div>
+      <div class="m-form_group">
+        <a class="m-form_btn" onclick="openStartR()">Registrar</a>
+      </div>
+      <div class="m-form_link">
+        <a class="m-form_btn-login" onclick="openLogin()">Iniciar sesión</a>
+      </div>
+    </form>
+  </div>
+  <div class="m-container m-container--start"><!-- width="100%" height="auto"  -->
+    <a class="m-login" href="#loginind" target="_blank"><img class="m-login-img" src="https://luisangelmaciel.github.io/img/luisangelmaciel_400x400.webp" alt="avatar" /></a>
+    <div class="m-content">
+      <h2 class="m-title">
+        Hey, <span id="usernameValue"></span>
+      </h2>
+      <p class="m-text">
+        You Lesson Today
+      </p>
+      <div class="m-flex">
+        <div class="m-box">
+          <div class="m-box_content">
+            <div class="m-box_text">
+              <h5 class="m-box_title">
+                Keep improving
+              </h5>
+              <p>
+                Your current score
+              </p>
+            </div>
+            <div class="m-progress">
+              <div class="m-progress_text">
+                75%
+              </div>
+              <svg class="m-progress_svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"> <circle r="40" cx="50" cy="50" stroke-width="7" fill="transparent" stroke="rgba(255, 255, 255, 0.09)"></circle> <circle id="fillcircle" r="40" cx="50" cy="50" stroke-width="7" stroke-dasharray="245" stroke-dashoffset="245" fill="transparent" stroke="#94cd77" stroke-linecap="round" class="meter" filter="url(#filter-1)"></circle>    <defs> <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1"><feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0.266666667   0 0 0 0 0.694117647   0 0 0 0 0.607843137  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-flex">
+        <div class="m-box m-box--group m-box--1">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Codepen 2023
+            </h5>
+            <p>
+              16 Pen´s
+            </p>
+          </div>
+        </div>
+        <div class="m-box m-box--group m-box--2">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Codepen 2022
+            </h5>
+            <p>
+              52 Pen´s
+            </p>
+          </div>
+        </div>
+        <div class="m-box m-box--group m-box--3">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Codepen 2021
+            </h5>
+            <p>
+              12 Pen´s
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3 class="m-title m-title--2">
+        Popular Codes
+      </h3>
+      <div class="m-slider" >
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="m-slide">
+                <div class="m-slide_title">
+                  Game: Goku vs Moro
+                </div>
+                <div class="m-slide_time">
+                  1520
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="m-slide">
+                <div class="m-slide_title">
+                  Sharon Spinners
+                </div>
+                <div class="m-slide_time">
+                  12000
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="m-slide">
+                <div class="m-slide_title">
+                  Eevee CSS
+                </div>
+                <div class="m-slide_time">
+                  1520
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="m-slide">
+                <div class="m-slide_title">
+                  Phiphi Editor
+                </div>
+                <div class="m-slide_time">
+                  1220
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="m-slide">
+                <div class="m-slide_title">
+                  Toxel CSS
+                </div>
+                <div class="m-slide_time">
+                  1520
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="m-slide">
+                <div class="m-slide_title">
+                  Business: Expressions 1
+                </div>
+                <div class="m-slide_time">
+                  15:20
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="m-flex" style="display:none">
+        <div class="m-box m-box--group m-box--1">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Listening
+            </h5>
+            <p>
+              84 Chapter
+            </p>
+          </div>
+        </div>
+        <div class="m-box m-box--group m-box--2">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Speaking
+            </h5>
+            <p>
+              120 Chapter 
+            </p>
+          </div>
+        </div>
+        <div class="m-box m-box--group m-box--3">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Test
+            </h5>
+            <p>
+              130 Chapter 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="m-flex" style="display:none">
+        <div class="m-box m-box--group m-box--1">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Listening
+            </h5>
+            <p>
+              84 Chapter
+            </p>
+          </div>
+        </div>
+        <div class="m-box m-box--group m-box--2">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Speaking
+            </h5>
+            <p>
+              120 Chapter 
+            </p>
+          </div>
+        </div>
+        <div class="m-box m-box--group m-box--3">
+          <div class="m-box_content">
+            <h5 class="m-box_title">
+              Test
+            </h5>
+            <p>
+              130 Chapter 
+            </p>
+          </div>
+        </div>
+      </div>
+     
+  </div>
+  <div class="m-menu">
+    <a class="m-menu_link m-menu_link--active" href="lamp" target="_blank"><i class="ri-layout-2-line"></i></a><a class="m-menu_link" href="lamp" target="_blank"><i class="ri-chat-smile-2-line"></i></a><a class="m-menu_link" href="lamp" target="_blank"><i class="ri-calendar-line"></i></a><a class="m-menu_link" href="lamp" target="_blank"><i class="ri-settings-3-line"></i></a><a class="m-menu_link" href="lamp" target="_blank"><i class="ri-more-fill"></i></a>
+  </div>
+  <div class="m-links-bottom">
+    <a href="#Termsodservice">Terms of Service, </a><a href="#PrivacyPolicy">Privacy policy</a>
+  </div>
+  <div class="m-svg">
+    <svg width="1275" height="1163" viewBox="0 0 1275 1163" fill="none" xmlns="http://www.w3.org/2000/svg"> <g filter="url(#filter0_d)"> <circle cx="517" cy="941" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="574" cy="862" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="653" cy="989" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="710" cy="878" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="661" cy="767" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="812" cy="893" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="961" cy="1129" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1053" cy="1023" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="968" cy="776" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1007" cy="641" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="786" cy="348" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="865" cy="475" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="922" cy="364" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="873" cy="253" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1024" cy="379" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1173" cy="615" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1265" cy="509" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1180" cy="262" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1219" cy="127" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="250" cy="231" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="329" cy="358" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="386" cy="247" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="337" cy="136" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="488" cy="262" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="637" cy="498" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="729" cy="392" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="644" cy="145" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="683" cy="10" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="10" cy="650" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="89" cy="777" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="146" cy="666" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="97" cy="555" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="248" cy="681" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="397" cy="917" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="445" cy="1111" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="59" cy="1153" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="181" cy="975" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="441" cy="699" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1193" cy="845" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1243" cy="1151" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="708" cy="679" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="60" cy="245" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="116" cy="33" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="828" cy="63" r="1" fill="#7A9FFF"/> </g> <g filter="url(#filter)"> <circle cx="1016" cy="167" r="1" fill="#7A9FFF"/> </g><g filter="url(#filter)"> <circle cx="941.704" cy="761.577" r="2.5" transform="rotate(-89.7249 941.704 761.577)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="862.979" cy="704.199" r="2.5" transform="rotate(-89.7249 862.979 704.199)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="990.357" cy="625.809" r="2.5" transform="rotate(-89.7249 990.357 625.809)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="879.631" cy="568.277" r="2.5" transform="rotate(-89.7249 879.631 568.277)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="768.398" cy="616.743" r="2.5" transform="rotate(-89.7249 768.398 616.743)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="895.121" cy="466.35" r="2.5" transform="rotate(-89.7249 895.121 466.35)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="1131.83" cy="318.485" r="2.5" transform="rotate(-89.7249 1131.83 318.485)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="1026.28" cy="225.977" r="2.5" transform="rotate(-89.7249 1026.28 225.977)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="778.871" cy="309.79" r="2.5" transform="rotate(-89.7249 778.871 309.79)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="644.06" cy="270.143" r="2.5" transform="rotate(-89.7249 644.06 270.143)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="350.003" cy="489.734" r="2.5" transform="rotate(-89.7249 350.003 489.734)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="477.38" cy="411.344" r="2.5" transform="rotate(-89.7249 477.38 411.344)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="366.655" cy="353.812" r="2.5" transform="rotate(-89.7249 366.655 353.812)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="255.421" cy="402.279" r="2.5" transform="rotate(-89.7249 255.421 402.279)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="382.145" cy="251.885" r="2.5" transform="rotate(-89.7249 382.145 251.885)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="618.857" cy="104.02" r="2.5" transform="rotate(-89.7249 618.857 104.02)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="513.3" cy="11.512" r="2.5" transform="rotate(-89.7249 513.3 11.512)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="265.895" cy="95.325" r="2.5" transform="rotate(-89.7249 265.895 95.325)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="131.084" cy="55.6776" r="2.5" transform="rotate(-89.7249 131.084 55.6776)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="230.431" cy="1025.17" r="2.5" transform="rotate(-89.7249 230.431 1025.17)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="357.808" cy="946.776" r="2.5" transform="rotate(-89.7249 357.808 946.776)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="247.083" cy="889.244" r="2.5" transform="rotate(-89.7249 247.083 889.244)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="135.849" cy="937.711" r="2.5" transform="rotate(-89.7249 135.849 937.711)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="262.573" cy="787.317" r="2.5" transform="rotate(-89.7249 262.573 787.317)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="499.286" cy="639.452" r="2.5" transform="rotate(-89.7249 499.286 639.452)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="393.728" cy="546.944" r="2.5" transform="rotate(-89.7249 393.728 546.944)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="146.323" cy="630.757" r="2.5" transform="rotate(-89.7249 146.323 630.757)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="11.512" cy="591.11" r="2.5" transform="rotate(-89.7249 11.512 591.11)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="648.274" cy="1267.17" r="2.5" transform="rotate(-89.7249 648.274 1267.17)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="775.651" cy="1188.79" r="2.5" transform="rotate(-89.7249 775.651 1188.79)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="664.926" cy="1131.25" r="2.5" transform="rotate(-89.7249 664.926 1131.25)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="553.692" cy="1179.72" r="2.5" transform="rotate(-89.7249 553.692 1179.72)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="680.416" cy="1029.33" r="2.5" transform="rotate(-89.7249 680.416 1029.33)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="917.128" cy="881.461" r="2.5" transform="rotate(-89.7249 917.128 881.461)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="1111.36" cy="834.392" r="2.5" transform="rotate(-89.7249 1111.36 834.392)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="1151.5" cy="1220.59" r="2.5" transform="rotate(-89.7249 1151.5 1220.59)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="974.091" cy="1097.74" r="2.5" transform="rotate(-89.7249 974.091 1097.74)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="699.342" cy="836.414" r="2.5" transform="rotate(-89.7249 699.342 836.414)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="848.951" cy="85.1243" r="2.5" transform="rotate(-89.7249 848.951 85.1243)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="1155.19" cy="36.5941" r="2.5" transform="rotate(-89.7249 1155.19 36.5941)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="680.624" cy="569.322" r="2.5" transform="rotate(-89.7249 680.624 569.322)" fill="#7AAFFF" fill-opacity="0.3"/></g> <g filter="url(#filter)"> <circle cx="243.518" cy="1215.23" r="2.5" transform="rotate(-89.7249 243.518 1215.23)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="31.7896" cy="1158.21" r="2.5" transform="rotate(-89.7249 31.7896 1158.21)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="65.2075" cy="446.366" r="2.5" transform="rotate(-89.7249 65.2075 446.366)" fill="#7AAFFF" fill-opacity="0.3"/> </g> <g filter="url(#filter)"> <circle cx="170.109" cy="258.867" r="2.5" transform="rotate(-89.7249 170.109 258.867)" fill="#7AAFFF" fill-opacity="0.3"/> </g>     <defs> <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter"><feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0.266666667   0 0 0 0 0.694117647   0 0 0 0 0.607843137  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></svg>
+  </div>
+</div>
+<div class="m-restart" onclick="restart()">
+  <i class="ri-restart-line"></i>
+</div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script  src="./script.js"></script>
+  <!-- <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script> --> 
+</body>
+</html>
