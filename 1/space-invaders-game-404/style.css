@@ -1,0 +1,19 @@
+html, body {
+height: 100vh; width: 100%; margin:0; padding:0px; overflow:hidden;background-color:black;color:white;
+}
+
+
+
+
+#space-invaders {
+  margin: 0 auto;
+  display: block;
+  background: white
+}
+body {
+
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0; padding:0; top:0;   height: 100vh;
+  background: radial-gradient(circle, rgba(33, 34, 36, 0) 3px, rgba(33, 34, 36, 0.5) 4px, rgba(33, 34, 36, 0) 5px) 50% 50%/14px 8px padding-box, radial-gradient(circle, rgba(33, 34, 36, 0) 3px, rgba(33, 34, 36, 0.5) 4px, rgba(33, 34, 36, 0) 5px) calc(50% + 7px) calc(50% + 4px)/14px 8px padding-box, radial-gradient(circle, #212224 1.6em, rgba(33, 34, 36, 0)) 50% 50%/100vw 100vh padding-box #000;
+}
