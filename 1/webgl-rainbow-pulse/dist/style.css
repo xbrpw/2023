@@ -1,0 +1,37 @@
+body {
+  color: #ffffff;
+  font-family: Monospace;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #000;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#container {
+  padding: 40vh 0;
+}
+
+#info, #controls {
+  position: absolute;
+  width: 100%;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#info {
+  top: 0;
+}
+
+#controlsRainbowPulse {
+  bottom: 0;
+}
+
+a {
+  color: #ffffff;
+  transition: 150ms all;
+}
+a:hover, a:focus {
+  color: #ffc107;
+}

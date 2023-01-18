@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Metallic button on lighted mesh</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle, rgba(33, 34, 36, 0) 3px, rgba(33, 34, 36, 0.5) 4px, rgba(33, 34, 36, 0) 5px) 50% 50%/14px 8px padding-box, radial-gradient(circle, rgba(33, 34, 36, 0) 3px, rgba(33, 34, 36, 0.5) 4px, rgba(33, 34, 36, 0) 5px) calc(50% + 7px) calc(50% + 4px)/14px 8px padding-box, radial-gradient(circle, #212224 1.6em, rgba(33, 34, 36, 0)) 50% 50%/100vw 100vh padding-box #000;
+    }
+
+    button {
+      align-self: center;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      border: solid 1.25em transparent;
+      width: 16em;
+      height: 16em;
+      border-radius: 50%;
+      box-shadow: 0 -1px 2px #e9edea, 0 1px 2px #0a0b0d, 0 0 0 3px #656765, inset 0 -1px 2px #e9edea, inset 0 1px 2px #0a0b0d, inset 0 0 0 3px #656765;
+      background: radial-gradient(circle, rgba(33, 34, 36, 0) 3px, rgba(33, 34, 36, 0.5) 4px, rgba(33, 34, 36, 0) 5px) 50% 50%/14px 8px padding-box, radial-gradient(circle, rgba(33, 34, 36, 0) 3px, rgba(33, 34, 36, 0.5) 4px, rgba(33, 34, 36, 0) 5px) calc(50% + 7px) calc(50% + 4px)/14px 8px padding-box, radial-gradient(circle, #212224 1.6em, rgba(33, 34, 36, 0)) 50% 50%/100vw 100vh padding-box, conic-gradient(#e1e2e4, #f2f4f3, #86878b, #f5f9f3, #5b5d5d, #d9dadc, #b7b8bc, #f0f0f2, #5a595e, #fbfbfb, #838488, #fcfefd, #e1e2e4) border-box #000;
+      font-size: 1em;
+      text-indent: -100vw;
+    }
+    button:after {
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: solid 1em transparent;
+      margin: -5.34375em;
+      width: 10.6875em;
+      height: 10.6875em;
+      border-radius: 50%;
+      box-shadow: 0 -1px 2px #e9edea, 0 1px 2px #0a0b0d, 0 0 0 3px #656765, inset 0 -1px 2px #e9edea, inset 0 1px 2px #0a0b0d, inset 0 0 0 3px #656765;
+      background: url(https://luisangelmaciel.github.io/Igglybuff/svg/refresh.svg) no-repeat 50%/50%, conic-gradient(#e1e2e4, #f2f4f3, #86878b, #f5f9f3, #5b5d5d, #d9dadc, #b7b8bc, #f0f0f2, #5a595e, #fbfbfb, #838488, #fcfefd, #e1e2e4) border-box;
+      content: "";
+    }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+
+<button>restart</button>
+
+  
+</body>
+</html>
