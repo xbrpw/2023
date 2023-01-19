@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+:root {
+  --yoda-hue: 120;
+  --yoda-saturation: 50;
+  --yoda-lightness: 50;
+  --sand-hue: 40;
+  --sand: #c5b087;
+}
+body {
+  background: radial-gradient(circle at top left, #fff, transparent 50%), linear-gradient(0deg, var(--sand), var(--sand) 43%, #c0e9f2 43%), var(--sand);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poller One', cursive;
+  font-variant: small-caps;
+}
+svg {
+  height: 90vmin;
+  max-height: 600px;
+  overflow: visible;
+  transform: translateZ(0);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.baby__eye {
+  overflow: hidden;
+}
+.baby__shadow,
+.baby__saber-shadow {
+  fill: hsl(var(--sand-hue), 25%, 15%);
+}
+.baby__hand,
+.baby__finger {
+  fill: hsl(var(--yoda-hue), 50%, calc(var(--yoda-lightness) * 1%));
+}
+.baby__robe {
+  fill: #bf8040;
+}
+.baby__robe-sleeve {
+  fill: #963;
+}
+.baby__robe-cuff {
+  fill: #e6d1b3;
+}
+.baby__robe-fold-shadow {
+  stroke: #ac7339;
+}
+.baby__robe-fold {
+  stroke: #86592d;
+}
+.baby__head {
+  fill: hsl(var(--yoda-hue), 50%, 60%);
+}
+.baby__face {
+  fill: none;
+  stroke: hsl(var(--yoda-hue), 50%, 35%);
+}
+.baby__eyelid {
+  fill: hsl(var(--yoda-hue), 50%, 30%);
+}
+.baby__ear--inner {
+  fill: #ffd6d6;
+}
+.baby__ear--outer {
+  fill: hsl(var(--yoda-hue), 50%, 50%);
+}
+.baby__forehead {
+  stroke: hsl(var(--yoda-hue), 50%, 35%);
+}
+.baby__hair {
+  stroke: #111;
+  stroke-opacity: 0.25;
+}
+.baby__collar--one {
+  fill: #bf8040;
+}
+.baby__collar--two {
+  fill: #963;
+}
+.baby__collar--three {
+  fill: #d9b38c;
+}
+.baby__collar--four {
+  fill: #c96;
+}
+.baby__collar--five {
+  fill: #d9b38c;
+}
+.baby__collar--six {
+  fill: #d9b38c;
+}
+h1 {
+  color: #9b804b;
+  font-weight: bold;
+  
+
+}
+
