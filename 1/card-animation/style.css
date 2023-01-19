@@ -1,0 +1,186 @@
+:root {
+  --dark-purple: #251a43;
+  --blue: #6767ce;
+  --purple: #94319d;
+  --easing: cubic-bezier(0.5, 0, 0.5, 1);
+  background: var(--dark-purple);
+}
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  font-size: 2vmin;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  grid-template-areas: "layer";
+}
+.cards > * {
+  grid-area: layer;
+}
+
+@property --offset {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+@property --card-spin {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+@property --card-tilt {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+@property --alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+@-webkit-keyframes rotate-card {
+  0%, 25% {
+    --card-spin: 0turn;
+    --card-tilt: -0.01turn;
+    --offset: 80%;
+    --alpha: 0;
+    border-color: red;
+  }
+  50% {
+    --card-spin: 0turn;
+    --card-tilt: -0.1turn;
+    --offset: 80%;
+    --alpha: 0.2;
+    border-color: green;
+  }
+  75% {
+    --card-spin: 1turn;
+    --card-tilt: -0.1turn;
+    --offset: 100%;
+    --alpha: 0.2;
+    border-color: white;
+  }
+  100% {
+    --card-spin: 1turn;
+    --card-tilt: -0.01turn;
+    --offset: 80%;
+    --alpha: 0;
+    border-color: pink;
+  }
+}
+@keyframes rotate-card {
+  0%, 25% {
+    --card-spin: 0turn;
+    --card-tilt: -0.01turn;
+    --offset: 80%;
+    --alpha: 0;
+    border-color: red;
+  }
+  50% {
+    --card-spin: 0turn;
+    --card-tilt: -0.1turn;
+    --offset: 80%;
+    --alpha: 0.2;
+    border-color: green;
+  }
+  75% {
+    --card-spin: 1turn;
+    --card-tilt: -0.1turn;
+    --offset: 100%;
+    --alpha: 0.2;
+    border-color: white;
+  }
+  100% {
+    --card-spin: 1turn;
+    --card-tilt: -0.01turn;
+    --offset: 80%;
+    --alpha: 0;
+    border-color: pink;
+  }
+}
+.card {
+  --height: 10em;
+  --width: calc(var(--height) * 1.625);
+  --d: var(--i) / var(--total);
+  --rotate-z-static: calc(var(--d) * 1turn);
+  --offset: 90%;
+  --card-tilt: 0turn;
+  --card-spin: 0turn;
+  width: var(--width);
+  height: var(--height);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: rotateZ(var(--rotate-z-static)) translateX(var(--offset)) translateZ(calc(var(--i) * -1px)) rotateX(var(--card-tilt));
+  -webkit-animation: rotate-card 6s var(--easing) infinite both;
+          animation: rotate-card 6s var(--easing) infinite both;
+  -webkit-animation-delay: calc(50ms * var(--i));
+          animation-delay: calc(50ms * var(--i));
+  border: solid 0px red;
+  border-radius: 1em;
+}
+.card:nth-child(odd) .card-inner {
+  --background: var(--purple);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  --background: var(--blue);
+  background: var(--background);
+  border-radius: inherit;
+  box-shadow: 0 0 2em #000;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: rotateZ(var(--card-spin));
+  overflow: hidden;
+}
+.card-inner .chip {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 4em;
+  height: 3em;
+  background: goldenrod;
+  border-radius: 10%;
+}
+.card-inner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #000 60%, transparent);
+  opacity: var(--alpha);
+  border-radius: inherit;
+}
+
+.highlight {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent 30%, white 70%, white);
+  z-index: 1;
+  border-radius: inherit;
+  opacity: 0.2;
+  transform: scale(2.5) rotateZ(calc(-1 * var(--card-spin)));
+}
