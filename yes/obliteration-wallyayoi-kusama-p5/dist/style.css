@@ -1,0 +1,20 @@
+html {
+  margin: 0;
+}
+canvas {
+  display: block;
+}
+div {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);  
+  font-family: monospace;
+}
+p {
+  line-height: 1.5;
+  text-align: center;
+}
+a {
+  color: currentColor;
+}

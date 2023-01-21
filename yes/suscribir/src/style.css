@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 20px;
+  color: #435757;
+  background:
+    linear-gradient(40deg, transparent 40%, #9ab593),
+    linear-gradient(-40deg, #ba7461 20%, #593e4e 90%);
+  font: 1.2em/1 'Noto Sans', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 20px 40px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fff;
+  line-height: 1.2;
+  font-size: 2.2em;
+  font-weight: normal;
+}
+
+h1 span {
+  font-size: .7em;
+}
+
+section {
+  margin-top: 30px;
+}
+
+section::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.top-label {
+  display: block;
+  margin: 10px 0;
+}
+
+input[type="email"], textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
+  border: none;
+  color: #593e4e;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+}
+
+input[type="email"]:focus, textarea:focus, button:focus {
+  outline: 2px solid #9ab593;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.side-label {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+.side-label::before, .side-label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input[type="radio"] + .side-label::before,
+input[type="radio"] + .side-label::after {
+  border-radius: 50%;
+}
+
+.side-label::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;  
+}
+
+input:focus + .side-label::before {
+  border-color: #9ab593;
+}
+
+.side-label::after {
+  display: none;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  background-color: #9ab593;
+}
+
+input:checked + .side-label::after {
+  display: block;
+}
+
+.how-other-disclosure {
+  display: none;
+  margin: 10px 0 0 35px;
+}
+
+#how-other:checked ~ .how-other-disclosure {
+  display: block;
+}
+
+.blocked {
+  margin-top: 40px;
+  color: rgba(255, 255, 255, .3);
+  text-align: center;
+}
+
+button {
+  display: none;
+  appearance: none;
+  margin: 40px auto 0;
+  padding: 5px 40px;
+  border: 2px solid #fff;
+  color: rgba(0, 0, 0, .8);
+  background-color: #9ab593;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#permitted:checked ~ .blocked {
+  display: none;
+}
+
+#permitted:checked ~ button {
+  display: block;
+}

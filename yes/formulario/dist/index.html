@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Contact Form Transitions with Radio Buttons | @keyframers 3.6</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+
+  1. Text Stroke on Hover
+  2. "Clipping" Animations
+    2.1 Clip path for the radio
+    2.2 Text translate
+  3. Advanced Choreography with data-state & CSS variables
+
+-->
+
+<div id="app" data-state="talk">
+  <form action="">
+    <fieldset class="big-inputs" data-group="talk">
+      <legend>Let's talk</legend>
+      <p>Start a conversation with the @keyframers.</p>
+      <div class="radio-group" data-to="email" style="--total: 3">
+        <label class="radio" style="--i: 0">
+          <input type="radio" name="purpose" />
+          <span>New project request</span>
+        </label>
+        <label class="radio" style="--i: 1">
+          <input type="radio" name="purpose" />
+          <span>Media Inquiry</span>
+        </label>
+        <label class="radio" style="--i: 2">
+          <input type="radio" name="purpose" />
+          <span>Something else?</span>
+        </label>
+      </div>
+    </fieldset>
+    
+    <fieldset data-group="email">
+      
+      <legend><button type="button" data-to="talk" class="back">⬅</button> What's your email?</legend>
+      <p>We gotta email you! No spam.</p>
+      <label class="email">
+        <input type="email" name="email" placeholder="Type your email" />
+      </label>
+    </fieldset>
+  </form>
+</div>
+
+<a href="https://youtu.be/jK0zbL4UCs8" target="_blank" data-keyframers-credit style="color: #000"></a>
+<script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

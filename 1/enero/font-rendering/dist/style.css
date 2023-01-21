@@ -1,0 +1,43 @@
+body {width:100%}
+main {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  width: 60%;
+  margin: 1em 8%;
+  padding: 0;
+}
+main h1, main h2, main h3, main h4, main h5 {
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+main h1 {
+  font-size: 60px;
+}
+main h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+
+.wfs {
+  -webkit-font-smoothing: antialiased;
+}
+
+.mfs {
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ol {
+  text-rendering: optimizeLegibility;
+}
+
+.wts {
+  -webkit-text-stroke: 0.2px #000;
+}
+
+.ts {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.01);
+}

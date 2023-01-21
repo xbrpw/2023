@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simulated Website Screenshots using Iframes</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div id="editable01" class="w3-modal w3-container w3-white">
+    <div style="margin: 0; padding: 0;
+  box-sizing: border-box; width:100%;  height:100vh; overflow:hidden;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('editable01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+       <iframe src="" frameborder="0" onload="this.style.opacity = 1" height="100vh;" width="100%" name="editalo"></iframe>
+      </div>
+    </div>
+  </div>
+<div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'London')">Home</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'About')"></button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'More')"></button>
+  </div>
+  
+<div id="London" class=" Tab">   
+    
+<iframe src="https://xbrpw.github.io/editable/split-text/index.html"     name="tab-editable" height="380px" width="100%" title="Puedes editar el contenido" style="border:none;  " allowfullscreen ></iframe>
+    
+  <div id="page-1">
+   <div class="w3-display-container w3-light-grey" style="height:400px;">  
+      <div class="thumbnail-container" title="14 de febrero">
+        <div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/velventines/index.html" frameborder="0" onload="this.style.opacity = 1" height="380px" width="100%"></iframe></div>
+    <div class="w3-display-topleft w3-container w3-margin w3-display-hover">
+       <button onclick="document.getElementById('editable01').style.display='block'" class="w3-button w3-black"><a href="https://xbrpw.github.io/editable/velventines/index.html" target="editalo">Open Modal</a></button>
+        </div>
+    <div class="w3-display-topright  w3-container w3-margin w3-display-hover">Top Right</div>
+    <div class="w3-display-bottomleft  w3-container w3-margin w3-display-hover">Bottom Left</div>
+    <div class="w3-display-bottomright   w3-container w3-margin w3-display-hover">Bottom Right</div>
+    <div class="w3-display-left  w3-container w3-margin  w3-display-hover">Left</div>
+    <div class="w3-display-right  w3-container w3-margin w3-display-hover">Right</div>
+    <div class="w3-display-middle w3-hide ">Mouse over this box!</div>
+    <div class="w3-display-topmiddle   w3-container w3-margin w3-display-hover">Top Mid</div>
+    <div class="w3-display-bottommiddle   w3-container w3-margin w3-display-hover">Bottom Mid</div>
+  </div>
+
+  
+  <div class="thumbnail-container" title="Aquí esta tu taza"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/michaaaael/dist/index.html" frameborder="0" onload="this.style.opacity = 1"  height="338px" width="540px"></iframe></div></div>
+  <div class="thumbnail-container" title="Haciendo menos aburrida la internet"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/make-the-web-less-boring/dist/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+  <div class="thumbnail-container" title="Sliced text effect"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/sliced-text-effect/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+  <div class="thumbnail-container" title="Emoji con lentes"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/sunglasses/dist/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+  <div class="thumbnail-container" title="Lo retro esta de moda"><div class="thumbnail">
+  <iframe src="https://xbrpw.github.io/editable/80s-retro/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+ </div>  </div>
+
+
+ 
+<div> 
+  </div> </div>
+
+ <div id="About" class="w3-container Tab" style="display:none">
+  </div>
+
+<div id="More" class=" w3-container Tab" style="display:none">
+    <h2>More</h2>
+    <p>More is the capital of Japan.</p>
+  </div>
+</div>
+
+<script>
+function openTab(evt, TabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("Tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(TabName).style.display = "block";
+  evt.currentTarget.className += "";
+}
+</script>
+
+
+
+<div id="page-2" style="display:none">
+  <div class="thumbnail-container" title="Thumbnail Image of designcode.io"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/svg-text-masking-testing/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+  <div class="thumbnail-container" title="Escudo - Placa de nacimiento"><div class="thumbnail"  >
+    <iframe src="https://xbrpw.github.io/editable/helvetica-neue-text-with-animation/dist/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+  <div class="thumbnail-container" title="Como hacer una sombra doble en SASS"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/two-toned-text-shadow-sass-function/dist/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div>
+  </div>
+  <div class="thumbnail-container" title="Qué diria tu epitafio"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/epitafio/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+  <div class="thumbnail-container" title="Arte"><div class="thumbnail">  <iframe src="https://xbrpw.github.io/editable/batman-middle-finger/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+  </div></div>
+  <div class="thumbnail-container" title="Retro synthwave"><div class="thumbnail"></div></div>
+</div>
+<div id="page-3" style="display:none">
+    <div class="thumbnail-container" title="Thumbnail Image of designcode.io"><div class="thumbnail">
+    <iframe src="https://xbrpw.github.io/editable/svg-text-masking-testing/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe></div></div>
+   <iframe src="http://xbrpw.github.io/editable/retro-synthwave/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+   <iframe src="http://xbrpw.github.io/editable/retro-synthwave/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+</div>
+
+
+<!-- 
+https://xbrpw.github.io/editable/batman-middle-finger/index.html
+https://xbrpw.github.io/editable/tombstone-generator/dist/index.html
+https://xbrpw.github.io/editable/boleto-ticket-brake/index.html
+https://xbrpw.github.io/editable/old-time-movie.html
+https://xbrpw.github.io/editable/lapida/index.html
+https://xbrpw.github.io/editable/logger-custom-logs/dist/index.html 
+https://xbrpw.github.io/editable/tombstone-generator/dist/index.html
+https://xbrpw.github.io/editable/vintage-ticket/dist/index.html
+https://xbrpw.github.io/editable/svg-text-masking-testing/index.html
+https://xbrpw.github.io/editable/split-text/index.html
+https://xbrpw.github.io/editable/bouncy-type-animation/index.html
+ -->
+<!-- partial -->
+  
+</body>
+</html>

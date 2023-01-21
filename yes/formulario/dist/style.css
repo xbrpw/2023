@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+  --duration: 0.6s;
+  --delay: 0s;
+  --timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+  -webkit-animation-duration: var(--duration);
+          animation-duration: var(--duration);
+  -webkit-animation-timing-function: var(--timing-function);
+          animation-timing-function: var(--timing-function);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  transition-property: none;
+  transition-delay: var(--delay);
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+
+html {
+  font-family: "Work Sans", Helvetica, sans-serif;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg);
+}
+
+:root {
+  --font-size-large: 6vw;
+  --easing: cubic-bezier(.6, 0, .4, 1);
+  --color-bg: #e4e4e4;
+  --shadow-size: 1px;
+  --stroke-shadow:
+    var(--shadow-size) var(--shadow-size) 0 black,
+    calc(var(--shadow-size) * -1) calc(var(--shadow-size) * -1) 0 black,
+    var(--shadow-size) calc(var(--shadow-size) * -1) 0 black,
+    calc(var(--shadow-size) * -1) var(--shadow-size) 0 black;
+}
+
+#app > form {
+  display: grid;
+}
+#app > form > * {
+  grid-area: 1/1;
+}
+
+fieldset {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+p {
+  margin: 0 0 0.5em;
+  margin-bottom: 2em;
+}
+
+legend {
+  margin: 0 0 0.5em;
+  padding: 0;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  overflow: hidden;
+}
+
+.radio {
+  display: block;
+  margin: 0.1em 0;
+  justify-content: start;
+  padding: 0.1em;
+  cursor: pointer;
+}
+.radio > span {
+  font-weight: bold;
+  font-size: var(--font-size-large);
+  display: grid;
+  grid-template-columns: 6vw auto;
+  grid-template-rows: auto;
+  grid-template-areas: "radio label";
+  grid-column-gap: 0.25em;
+  transition-property: transform;
+}
+.radio > span:before, .radio > span:after {
+  content: "";
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: 1px solid black;
+  align-self: center;
+  justify-self: center;
+  grid-area: radio;
+}
+.radio > span:after {
+  transition: -webkit-clip-path 0.6s var(--easing);
+  transition: clip-path 0.6s var(--easing);
+  transition: clip-path 0.6s var(--easing), -webkit-clip-path 0.6s var(--easing);
+  border: none;
+  width: 0.8em;
+  height: 0.8em;
+  background: black;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+.radio > input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.radio > input[type=radio]:checked ~ span:after {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.radio > span {
+  -webkit-animation-name: clip-in;
+          animation-name: clip-in;
+  --duration: calc( 0.8s + var(--i) * 0.3s );
+  --delay: 0.2s;
+}
+@-webkit-keyframes clip-in {
+  from {
+    transform: translateY(110%);
+  }
+}
+@keyframes clip-in {
+  from {
+    transform: translateY(110%);
+  }
+}
+
+/* Hover effect */
+.radio-group:hover > .radio > span, .radio-group:focus > .radio > span {
+  color: var(--color-bg);
+  text-shadow: var(--stroke-shadow);
+}
+.radio-group:hover > .radio:hover > span, .radio-group:focus > .radio:hover > span {
+  color: black;
+  text-shadow: none;
+}
+
+label.email:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: black;
+  bottom: 0;
+  left: 0;
+}
+
+input[type=email] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-large);
+  font-weight: bold;
+}
+input[type=email]:focus {
+  outline: none;
+}
+input[type=email]::-moz-placeholder {
+  color: var(--color-bg);
+  text-shadow: var(--stroke-shadow);
+}
+input[type=email]:-ms-input-placeholder {
+  color: var(--color-bg);
+  text-shadow: var(--stroke-shadow);
+}
+input[type=email]::placeholder {
+  color: var(--color-bg);
+  text-shadow: var(--stroke-shadow);
+}
+
+#app:before {
+  position: absolute;
+  bottom: 120%;
+  font-family: monospace;
+  content: 'data-state="' attr(data-state) '"';
+  font-size: 1em;
+  opacity: 0.5;
+  text-align: center;
+}
+#app [data-group] {
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity;
+  --delay: calc( var(--duration) * 0.5 );
+}
+#app[data-state=talk] [data-group=talk], #app[data-state=email] [data-group=email] {
+  opacity: 1;
+  pointer-events: auto;
+  --delay: calc( var(--duration) * 0.7 );
+}
+#app .radio > span {
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  transition-property: transform;
+  transform: translateY(100%);
+  --duration: calc( 0.8s + var(--i) * 0.3s );
+}
+#app .email > input {
+  transition-property: transform;
+}
+#app .email:after {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition-property: transform;
+}
+#app[data-state=talk] .radio > span {
+  transform: translateY(0);
+}
+#app[data-state=talk] .email > input {
+  transform: translateY(100%);
+}
+#app[data-state=email] .radio > span {
+  transform: translateY(-100%);
+}
+#app[data-state=email] .email > input {
+  --delay: calc(var(--duration));
+}
+#app[data-state=email] .email:after {
+  transform: none;
+  --delay: calc(var(--duration));
+}
+
+.back {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+}
+.back:focus {
+  outline: none;
+}

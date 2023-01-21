@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Profile Cards with CSS Scroll Snap</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Muli:300,800,900" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="main-content">
+  <div class="options__wrapper">
+    <h1> <span>Dota 2</span><br/><span>Heroes</span></h1>
+    <div class="options" id="scroll-event">
+      <div class="options__item" data-type="strength"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/axe.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Axe</p><span>strength</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="agility"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/naga.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Naga Siren</p><span>agility</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="intelligence"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/invoker.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Invoker</p><span>intelligence</span><span>range</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="agility"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/bounty.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Bounty Hunter</p><span>agility</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="intelligence"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/necro.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Necrophos</p><span>intelligence</span><span>range</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="intelligence"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/enchantress.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Enchantress</p><span>intelligence</span><span>range</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="strength"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/earthsh.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Earthshaker</p><span>strength</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="intelligence"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/storm.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Storm Spirit</p><span>intelligence</span><span>range</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="agility"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/ember.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Ember Spirit</p><span>agility</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="strength"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/earth.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Earth Spirit</p><span>strength</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="intelligence"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/rubick.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Rubick</p><span>intelligence</span><span>range</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="agility"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/troll.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Troll Warlord</p><span>agility</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="strength"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/kunkka.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Kunkka</p><span>strength</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="intelligence"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/puck.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Puck</p><span>intelligence</span><span>range</span>
+        </div>
+      </div>
+      <div class="options__item" data-type="agility"><img src="https://meowlivia.s3.us-east-2.amazonaws.com/codepen/dota/jugger.png" height="100%"/>
+        <div class="options__item__info">
+          <p>Juggernaut</p><span>agility</span><span>melee</span>
+        </div>
+      </div>
+      <div class="options__item"></div>
+    </div>
+  </div>
+</div>
+<!--aside.context
+.explanation
+	| Some kind of explanation that is 
+	a(href="" target="_blank") interesting here
+	| .
+
+-->
+<!--footer
+a(href="https://twitter.com/meowlivia_" target="_blank")
+	i.icon-social-twitter.icons
+a(href="https://github.com/oliviale" target="_blank")
+	i.icon-social-github.icons
+a(href="https://dribbble.com/oliviale" target="_blank")
+	i.icon-social-dribbble.icons
+-->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

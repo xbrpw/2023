@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Turbulence</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<p class="hover">select mode + hover = ?</p>
+<div class="wrapper">
+  <svg viewBox="0 0 180 100">
+    <filter id='noise' x='0%' y='0%' width='100%' height='100%'>
+        <feTurbulence type="fractalNoise" baseFrequency="0" result="noise" numOctaves="3" seed="10"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>    
+  </svg>
+  <div class="split">
+    <div class="list-outer">
+      <ul id="imageList">
+        <li class="bold">image blend</li>
+        <li class="active" data-mode="normal">normal</li> 
+        <li data-mode="multiply">multiply</li>
+        <li data-mode="screen">screen</li>
+        <li data-mode="overlay">overlay</li>
+        <li data-mode="darken">darken</li>
+        <li data-mode="lighten">lighten</li>
+        <li data-mode="color-dodge">color-dodge</li>
+        <li data-mode="color-burn">color-burn</li>
+        <li data-mode="difference">difference</li>
+        <li data-mode="exclusion">exclusion</li>
+        <li data-mode="hue">hue</li>
+        <li data-mode="saturation">saturation</li>
+        <li data-mode="color">color</li>
+        <li data-mode="luminosity">luminosity</li>
+      </ul>
+      <ul id="overlayList">
+        <li class="bold">overlay blend</li>
+        <li data-mode="normal">normal</li> 
+        <li class="active" data-mode="multiply">multiply</li>
+        <li data-mode="screen">screen</li>
+        <li data-mode="overlay">overlay</li>
+        <li data-mode="darken">darken</li>
+        <li data-mode="lighten">lighten</li>
+        <li data-mode="color-dodge">color-dodge</li>
+        <li data-mode="color-burn">color-burn</li>
+        <li data-mode="difference">difference</li>
+        <li data-mode="exclusion">exclusion</li>
+        <li data-mode="hue">hue</li>
+        <li data-mode="saturation">saturation</li>
+        <li data-mode="color">color</li>
+        <li data-mode="luminosity">luminosity</li>
+      </ul>
+    </div>
+    <div id="container">
+      <div id="inner">
+        <div id="mask" class="turb-mask"></div>
+        <img id="image" src="https://source.unsplash.com/Pzv28NRtgko/400x450/">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+main {
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  width: 60%;
+  margin: 5em 20%;
+  padding: 0;
+  h1, h2, h3, h4, h5 { font-weight: 700; font-family: 'Playfair Display', serif; margin: 0; }
+  h1 { font-size: 72px; }
+  h2 { font-size: 36px; font-weight: 400; }
+  .well {
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 2em;
+    margin-top: 1em;
+  }
+}
+.wfs { -webkit-font-smoothing: antialiased; }
+.mfs { -moz-osx-font-smoothing: grayscale; }
+.ol { text-rendering: optimizeLegibility; }
+.wts { -webkit-text-stroke: 0.2px #000; }
+.ts { text-shadow: 1px 1px 1px rgba(0,0,0,0.01); }

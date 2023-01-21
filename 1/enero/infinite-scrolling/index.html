@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Infinite scrolling text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://luisangelmaciel.github.io/favicon.png" sizes="192x192">
+  <link rel="stylesheet" href="./style.cssx">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Montserrat:800,200);
+body {  overflow: hidden;}
+
+.Infinite-scrolling-text-container  {
+  font-family: montserrat;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #1e2134;
+  line-height: 1.7;
+  color: #fff;
+  transform: skewY(-5deg);
+}
+
+.bg-text-container {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  z-index: -999;
+}
+
+@keyframes text-scrolling {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+.animate-text {
+  animation: text-scrolling 20s linear infinite;
+  will-change: transform;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+.animate-text.left {
+  animation-direction: reverse;
+}
+
+.spantxts {
+  font-size: 280px;
+  color: transparent;
+  -webkit-text-stroke: 2px #30442a;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 0.75;
+  min-width: auto;
+  font-weight: 800;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<body>
+<section class="Infinite-scrolling-text-container">
+  <div class="bg-text-container">
+    <div class="animate-text">
+      <span class="spantxts">Driven Better&nbsp;</span>
+      <span class="spantxts">Driven Better&nbsp;</span>
+    </div>
+    <div class="animate-text left">
+      <span class="spantxts">Driven Better&nbsp;</span>
+      <span class="spantxts">Driven Better&nbsp;</span>
+    </div>
+  </div>
+</section>
+  
+  
+  <div class="container" style="  padding: 30px;  max-width: 1000px;  width: 100%;  margin: 0 auto;">
+    <div class="col" style="  max-width: 600px;  margin: 0;">
+      <h1 style="  font-size: 90px;  margin: 0;">Heading</h1>
+      <p style="font-size: 18px;  font-weight: 200;  margin: 0;">Lobortis primis, ultrices? Earum mollis! Ad consequuntur laboriosam ut possimus, minus expedita, adipisci fermentum, officia maecenas voluptatibus eiusmod, laboriosam maiores aspernatur ad egestas tenetur tempora.</p>
+    </div>
+  </div>
+  
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+<script>
+/* Set width of all animated text to match container */
+let parent = document.querySelectorAll('.animate-text');
+for(let i = 0; i < parent.length; i++) {
+  parent[i].style.width = parent[i].children[0].clientWidth + "px"; 
+};
+</script>
+</body>
+</html>

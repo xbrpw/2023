@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Table with Sticky Header and Column</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-container-wrapper">
+    <div class="table">
+      <div class="table__header">
+        <div class="table__col-group table__col-group--sticky">
+          <span class="table__cell">Sticky</span>
+        </div>
+        <div class="table__col-group table__col-group--scrollable table__scrollable-header-container">
+          <div id="headerScrollable" class="table__header-section--right">
+            <div class="table__header-items">
+              <span class="table__cell">Header 2</span>
+              <span class="table__cell">Header 3</span>
+              <span class="table__cell">Header 4</span>
+              <span class="table__cell">Header 5</span>
+              <span class="table__cell">Header 6</span>
+              <span class="table__cell">Header 7</span>
+              <span class="table__cell">Header 8</span>
+              <span class="table__cell">Header 9</span>
+              <span class="table__cell">Header 10</span>
+              <span class="table__cell">Header 11</span>
+              <span class="table__cell">Header 12</span>
+              <span class="table__cell">Header 13</span>
+              <span class="table__cell">Header 14</span>
+              <span class="table__cell">Header 15</span>
+              <span class="table__cell">Header 16</span>
+              <span class="table__cell">Header 17</span>
+              <span class="table__cell">Header 18</span>
+              <span class="table__cell">Header 19</span>
+              <span class="table__cell">Header 20</span>
+              <span class="table__cell">Header 21</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table__body">
+        <div class="table__col-group table__col-group--sticky">
+          <div id="bodySticky" class="table__body-section--left">
+            <ul class="table__list table__list--left">
+              <li>
+                <span class="table__cell">Cell(2, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(3, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(4, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(5, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(6, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(7, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(8, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(9, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(10, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(11, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(12, 1)</span>
+              </li>
+              <li>
+                <span class="table__cell">Cell(13, 1)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="bodyScrollable" class="table__col-group table__col-group--scrollable table__body-section--right">
+          <ul class="table__list table__list--right">
+            <li>
+              <span class="table__cell">Cell(2, 2)</span>
+              <span class="table__cell">Cell(2, 3)</span>
+              <span class="table__cell">Cell(2, 4)</span>
+              <span class="table__cell">Cell(2, 5)</span>
+              <span class="table__cell">Cell(2, 6)</span>
+              <span class="table__cell">Cell(2, 7)</span>
+              <span class="table__cell">Cell(2, 8)</span>
+              <span class="table__cell">Cell(2, 9)</span>
+              <span class="table__cell">Cell(2, 10)</span>
+              <span class="table__cell">Cell(2, 11)</span>
+              <span class="table__cell">Cell(2, 12)</span>
+              <span class="table__cell">Cell(2, 13)</span>
+              <span class="table__cell">Cell(2, 14)</span>
+              <span class="table__cell">Cell(2, 15)</span>
+              <span class="table__cell">Cell(2, 16)</span>
+              <span class="table__cell">Cell(2, 17)</span>
+              <span class="table__cell">Cell(2, 18)</span>
+              <span class="table__cell">Cell(2, 19)</span>
+              <span class="table__cell">Cell(2, 20)</span>
+              <span class="table__cell">Cell(2, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(3, 2)</span>
+              <span class="table__cell">Cell(3, 3)</span>
+              <span class="table__cell">Cell(3, 4)</span>
+              <span class="table__cell">Cell(3, 5)</span>
+              <span class="table__cell">Cell(3, 6)</span>
+              <span class="table__cell">Cell(3, 7)</span>
+              <span class="table__cell">Cell(3, 8)</span>
+              <span class="table__cell">Cell(3, 9)</span>
+              <span class="table__cell">Cell(3, 10)</span>
+              <span class="table__cell">Cell(3, 11)</span>
+              <span class="table__cell">Cell(3, 12)</span>
+              <span class="table__cell">Cell(3, 13)</span>
+              <span class="table__cell">Cell(3, 14)</span>
+              <span class="table__cell">Cell(3, 15)</span>
+              <span class="table__cell">Cell(3, 16)</span>
+              <span class="table__cell">Cell(3, 17)</span>
+              <span class="table__cell">Cell(3, 18)</span>
+              <span class="table__cell">Cell(3, 19)</span>
+              <span class="table__cell">Cell(3, 20)</span>
+              <span class="table__cell">Cell(3, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(4, 2)</span>
+              <span class="table__cell">Cell(4, 3)</span>
+              <span class="table__cell">Cell(4, 4)</span>
+              <span class="table__cell">Cell(4, 5)</span>
+              <span class="table__cell">Cell(4, 6)</span>
+              <span class="table__cell">Cell(4, 7)</span>
+              <span class="table__cell">Cell(4, 8)</span>
+              <span class="table__cell">Cell(4, 9)</span>
+              <span class="table__cell">Cell(4, 10)</span>
+              <span class="table__cell">Cell(4, 11)</span>
+              <span class="table__cell">Cell(4, 12)</span>
+              <span class="table__cell">Cell(4, 13)</span>
+              <span class="table__cell">Cell(4, 14)</span>
+              <span class="table__cell">Cell(4, 15)</span>
+              <span class="table__cell">Cell(4, 16)</span>
+              <span class="table__cell">Cell(4, 17)</span>
+              <span class="table__cell">Cell(4, 18)</span>
+              <span class="table__cell">Cell(4, 19)</span>
+              <span class="table__cell">Cell(4, 20)</span>
+              <span class="table__cell">Cell(4, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(5, 2)</span>
+              <span class="table__cell">Cell(5, 3)</span>
+              <span class="table__cell">Cell(5, 4)</span>
+              <span class="table__cell">Cell(5, 5)</span>
+              <span class="table__cell">Cell(5, 6)</span>
+              <span class="table__cell">Cell(5, 7)</span>
+              <span class="table__cell">Cell(5, 8)</span>
+              <span class="table__cell">Cell(5, 9)</span>
+              <span class="table__cell">Cell(5, 10)</span>
+              <span class="table__cell">Cell(5, 11)</span>
+              <span class="table__cell">Cell(5, 12)</span>
+              <span class="table__cell">Cell(5, 13)</span>
+              <span class="table__cell">Cell(5, 14)</span>
+              <span class="table__cell">Cell(5, 15)</span>
+              <span class="table__cell">Cell(5, 16)</span>
+              <span class="table__cell">Cell(5, 17)</span>
+              <span class="table__cell">Cell(5, 18)</span>
+              <span class="table__cell">Cell(5, 19)</span>
+              <span class="table__cell">Cell(5, 20)</span>
+              <span class="table__cell">Cell(5, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(6, 2)</span>
+              <span class="table__cell">Cell(6, 3)</span>
+              <span class="table__cell">Cell(6, 4)</span>
+              <span class="table__cell">Cell(6, 5)</span>
+              <span class="table__cell">Cell(6, 6)</span>
+              <span class="table__cell">Cell(6, 7)</span>
+              <span class="table__cell">Cell(6, 8)</span>
+              <span class="table__cell">Cell(6, 9)</span>
+              <span class="table__cell">Cell(6, 10)</span>
+              <span class="table__cell">Cell(6, 11)</span>
+              <span class="table__cell">Cell(6, 12)</span>
+              <span class="table__cell">Cell(6, 13)</span>
+              <span class="table__cell">Cell(6, 14)</span>
+              <span class="table__cell">Cell(6, 15)</span>
+              <span class="table__cell">Cell(6, 16)</span>
+              <span class="table__cell">Cell(6, 17)</span>
+              <span class="table__cell">Cell(6, 18)</span>
+              <span class="table__cell">Cell(6, 19)</span>
+              <span class="table__cell">Cell(6, 20)</span>
+              <span class="table__cell">Cell(6, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(7, 2)</span>
+              <span class="table__cell">Cell(7, 3)</span>
+              <span class="table__cell">Cell(7, 4)</span>
+              <span class="table__cell">Cell(7, 5)</span>
+              <span class="table__cell">Cell(7, 6)</span>
+              <span class="table__cell">Cell(7, 7)</span>
+              <span class="table__cell">Cell(7, 8)</span>
+              <span class="table__cell">Cell(7, 9)</span>
+              <span class="table__cell">Cell(7, 10)</span>
+              <span class="table__cell">Cell(7, 11)</span>
+              <span class="table__cell">Cell(7, 12)</span>
+              <span class="table__cell">Cell(7, 13)</span>
+              <span class="table__cell">Cell(7, 14)</span>
+              <span class="table__cell">Cell(7, 15)</span>
+              <span class="table__cell">Cell(7, 16)</span>
+              <span class="table__cell">Cell(7, 17)</span>
+              <span class="table__cell">Cell(7, 18)</span>
+              <span class="table__cell">Cell(7, 19)</span>
+              <span class="table__cell">Cell(7, 20)</span>
+              <span class="table__cell">Cell(7, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(8, 2)</span>
+              <span class="table__cell">Cell(8, 3)</span>
+              <span class="table__cell">Cell(8, 4)</span>
+              <span class="table__cell">Cell(8, 5)</span>
+              <span class="table__cell">Cell(8, 6)</span>
+              <span class="table__cell">Cell(8, 7)</span>
+              <span class="table__cell">Cell(8, 8)</span>
+              <span class="table__cell">Cell(8, 9)</span>
+              <span class="table__cell">Cell(8, 10)</span>
+              <span class="table__cell">Cell(8, 11)</span>
+              <span class="table__cell">Cell(8, 12)</span>
+              <span class="table__cell">Cell(8, 13)</span>
+              <span class="table__cell">Cell(8, 14)</span>
+              <span class="table__cell">Cell(8, 15)</span>
+              <span class="table__cell">Cell(8, 16)</span>
+              <span class="table__cell">Cell(8, 17)</span>
+              <span class="table__cell">Cell(8, 18)</span>
+              <span class="table__cell">Cell(8, 19)</span>
+              <span class="table__cell">Cell(8, 20)</span>
+              <span class="table__cell">Cell(8, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(9, 2)</span>
+              <span class="table__cell">Cell(9, 3)</span>
+              <span class="table__cell">Cell(9, 4)</span>
+              <span class="table__cell">Cell(9, 5)</span>
+              <span class="table__cell">Cell(9, 6)</span>
+              <span class="table__cell">Cell(9, 7)</span>
+              <span class="table__cell">Cell(9, 8)</span>
+              <span class="table__cell">Cell(9, 9)</span>
+              <span class="table__cell">Cell(9, 10)</span>
+              <span class="table__cell">Cell(9, 11)</span>
+              <span class="table__cell">Cell(9, 12)</span>
+              <span class="table__cell">Cell(9, 13)</span>
+              <span class="table__cell">Cell(9, 14)</span>
+              <span class="table__cell">Cell(9, 15)</span>
+              <span class="table__cell">Cell(9, 16)</span>
+              <span class="table__cell">Cell(9, 17)</span>
+              <span class="table__cell">Cell(9, 18)</span>
+              <span class="table__cell">Cell(9, 19)</span>
+              <span class="table__cell">Cell(9, 20)</span>
+              <span class="table__cell">Cell(9, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(10, 2)</span>
+              <span class="table__cell">Cell(10, 3)</span>
+              <span class="table__cell">Cell(10, 4)</span>
+              <span class="table__cell">Cell(10, 5)</span>
+              <span class="table__cell">Cell(10, 6)</span>
+              <span class="table__cell">Cell(10, 7)</span>
+              <span class="table__cell">Cell(10, 8)</span>
+              <span class="table__cell">Cell(10, 9)</span>
+              <span class="table__cell">Cell(10, 10)</span>
+              <span class="table__cell">Cell(10, 11)</span>
+              <span class="table__cell">Cell(10, 12)</span>
+              <span class="table__cell">Cell(10, 13)</span>
+              <span class="table__cell">Cell(10, 14)</span>
+              <span class="table__cell">Cell(10, 15)</span>
+              <span class="table__cell">Cell(10, 16)</span>
+              <span class="table__cell">Cell(10, 17)</span>
+              <span class="table__cell">Cell(10, 18)</span>
+              <span class="table__cell">Cell(10, 19)</span>
+              <span class="table__cell">Cell(10, 20)</span>
+              <span class="table__cell">Cell(10, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(11, 2)</span>
+              <span class="table__cell">Cell(11, 3)</span>
+              <span class="table__cell">Cell(11, 4)</span>
+              <span class="table__cell">Cell(11, 5)</span>
+              <span class="table__cell">Cell(11, 6)</span>
+              <span class="table__cell">Cell(11, 7)</span>
+              <span class="table__cell">Cell(11, 8)</span>
+              <span class="table__cell">Cell(11, 9)</span>
+              <span class="table__cell">Cell(11, 10)</span>
+              <span class="table__cell">Cell(11, 11)</span>
+              <span class="table__cell">Cell(11, 12)</span>
+              <span class="table__cell">Cell(11, 13)</span>
+              <span class="table__cell">Cell(11, 14)</span>
+              <span class="table__cell">Cell(11, 15)</span>
+              <span class="table__cell">Cell(11, 16)</span>
+              <span class="table__cell">Cell(11, 17)</span>
+              <span class="table__cell">Cell(11, 18)</span>
+              <span class="table__cell">Cell(11, 19)</span>
+              <span class="table__cell">Cell(11, 20)</span>
+              <span class="table__cell">Cell(11, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(12, 2)</span>
+              <span class="table__cell">Cell(12, 3)</span>
+              <span class="table__cell">Cell(12, 4)</span>
+              <span class="table__cell">Cell(12, 5)</span>
+              <span class="table__cell">Cell(12, 6)</span>
+              <span class="table__cell">Cell(12, 7)</span>
+              <span class="table__cell">Cell(12, 8)</span>
+              <span class="table__cell">Cell(12, 9)</span>
+              <span class="table__cell">Cell(12, 10)</span>
+              <span class="table__cell">Cell(12, 11)</span>
+              <span class="table__cell">Cell(12, 12)</span>
+              <span class="table__cell">Cell(12, 13)</span>
+              <span class="table__cell">Cell(12, 14)</span>
+              <span class="table__cell">Cell(12, 15)</span>
+              <span class="table__cell">Cell(12, 16)</span>
+              <span class="table__cell">Cell(12, 17)</span>
+              <span class="table__cell">Cell(12, 18)</span>
+              <span class="table__cell">Cell(12, 19)</span>
+              <span class="table__cell">Cell(12, 20)</span>
+              <span class="table__cell">Cell(12, 21)</span>
+            </li>
+            <li>
+              <span class="table__cell">Cell(13, 2)</span>
+              <span class="table__cell">Cell(13, 3)</span>
+              <span class="table__cell">Cell(13, 4)</span>
+              <span class="table__cell">Cell(13, 5)</span>
+              <span class="table__cell">Cell(13, 6)</span>
+              <span class="table__cell">Cell(13, 7)</span>
+              <span class="table__cell">Cell(13, 8)</span>
+              <span class="table__cell">Cell(13, 9)</span>
+              <span class="table__cell">Cell(13, 10)</span>
+              <span class="table__cell">Cell(13, 11)</span>
+              <span class="table__cell">Cell(13, 12)</span>
+              <span class="table__cell">Cell(13, 13)</span>
+              <span class="table__cell">Cell(13, 14)</span>
+              <span class="table__cell">Cell(13, 15)</span>
+              <span class="table__cell">Cell(13, 16)</span>
+              <span class="table__cell">Cell(13, 17)</span>
+              <span class="table__cell">Cell(13, 18)</span>
+              <span class="table__cell">Cell(13, 19)</span>
+              <span class="table__cell">Cell(13, 20)</span>
+              <span class="table__cell">Cell(13, 21)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  <p>NOTE: currently works on Google Chrome only</p>
+  </div>
+  
+</body>
+
+</html>
