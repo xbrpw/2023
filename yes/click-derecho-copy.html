@@ -1,0 +1,44 @@
+<link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+<link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
+
+<div><button onclick="myFunctionstyle()" class="gosh"><i class="fa fa-copy" aria-hidden="true"></i></button>
+<input type="text" value="<style> </style>" id="copystyle" class="goshimp" style="display:none"> <span onclick="myFunctionstyle()" class="size18px" >&lt;style&gt; &lt;/style&gt;</span></div>
+
+<div><button onclick="myFunctionscript()" class="gosh"><i class="fa fa-copy" aria-hidden="true"></i></button>
+<input type="text" value="<script> </script>" id="copyscript" class="goshimp" style="display:none"> <span onclick="myFunctionscript()" class="size18px" >&lt;script&gt; &lt;/script&gt;</span></div>
+
+
+<style> .gosh {background:transparent;border:none;font-size:20px}  .goshimp {background:transparent;border:none;font-size:18px} .size18px{font-size:18px} </style>
+
+<script>
+//style
+function myFunctionstyle() {
+  // Get the text field
+  var copyText = document.getElementById("copystyle");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);  
+ 
+}
+
+//script
+function myFunctionscript() {
+  // Get the text field
+  var copyText = document.getElementById("copyscript");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);  
+ 
+}
+</script>
+
+</body>
+</html>

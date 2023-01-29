@@ -1,0 +1,9 @@
+
+<a target="_blank">Email</a>
+<script>
+  const email = 'luis.angel.maciel.padilla@gmail.com'
+  const subject = 'Hola! Me interesa hacer...';
+  const body = 'Hola Luis Angel\n\nHe visitado tu página y me ha interesado...\n\nMSaludos\n\n=)';
+  let href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  document.querySelector('a').setAttribute('href', href)
+</script>

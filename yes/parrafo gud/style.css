@@ -1,0 +1,8 @@
+html {  
+  box-sizing: border-box;  width: 100%;
+  height: 100%;  background: #E7EEF7;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
