@@ -1,0 +1,75 @@
+
+$pixie-dust: darken(#D585FF, 10%), darken(#00FFEE, 10%);
+$disco-club: darken(#FC466B, 10%), darken(#3F5EFB, 10%);
+$ooey-gooey: #0700b8, #00ff88;
+
+$schemes: $pixie-dust, $disco-club, $ooey-gooey;
+
+$whichScheme: nth($schemes, random(length($schemes))); 
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800,900');
+
+$numletters: 4;
+
+* {
+	box-sizing: border-box;
+}
+html, body {
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+section.canvas {
+	
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(nth($whichScheme, 1), nth($whichScheme, 2));
+	z-index: -99;
+}
+.ball {
+	border-radius: 50%;
+	// background: #ff2e4c;
+	position: absolute;
+	opacity: 1;
+	overflow: visible;
+	white-space: nowrap;
+}
+ul.word {
+	display: flex;
+		justify-content: center;
+		align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	// background: green;
+	li {
+		font-weight: 700;
+		font-size: 100px;
+		color: white;
+		margin-right: .7vw;
+		// text-shadow: 0px 10px 10px rgba(blue, .1);
+		// opacity: .89;
+		margin-left: -.5vw; 
+		
+		@media (min-width: 800px) {
+			font-size: 20vw;
+		}
+		// mix-blend-mode: multiply;
+	}
+	@for $i from 1 through $numletters {
+		// li:nth-child(#{$i}n) {
+		// 	z-index: random(100);
+		// }
+		li:nth-child(even) {
+			z-index: -98;
+		}
+		li:nth-child(odd) {
+			z-index: 99;
+		}
+		// li {
+		// 	transform: rotate(#{$i*100}deg);
+		// }
+	}
+}
