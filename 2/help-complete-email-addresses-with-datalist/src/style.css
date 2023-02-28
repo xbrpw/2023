@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: large;
+  max-width: 500px;
+  margin: 0 auto;
+}
+input[type=email] {
+  font-size: large;
+  width: 400px;
+}
+label {
+  display: block;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+}

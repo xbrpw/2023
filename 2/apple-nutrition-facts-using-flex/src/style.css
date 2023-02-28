@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+}
+body{
+  font-family: "Open Sans", sans-serif;
+  color: #285430;
+}
+.box{
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #285430;
+  margin: 20px auto;
+  padding: 5px 10px;
+}
+header h1{
+  text-align: center;
+  margin: 8px 0 0.5px 0;
+  letter-spacing: 0.15px;
+}
+.bold-text{
+  font-weight: 800;
+}
+.divider{
+  border-bottom: 1px solid #285430;
+  margin: 2px 0;
+}
+p{
+  disply: flex;
+  justify-content: sapce-between;
+  align-items: flex-end;
+  margin: 0;
+}
+.small-text{
+  font-size: 0.85rem;
+}
+.center{
+  text-align: center;
+}
+.large {
+  height: 10px;
+}
+.large, .medium {
+  background-color: #285430;
+  border: 0;
+}
+.medium {
+  height: 5px;
+}
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.calories-info h2 {
+  margin: 0;
+  line-height: 1.3rem;
+}
+.calories-info h2 span {
+  margin: 1px;
+  font-size: 0.85rem;
+  font-weight: 200;  
+}
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+.indent {
+  margin-left: 1em;
+}
+.double-indent {
+  margin-left: 2em;
+}
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+.daily-value p{
+  display: flex;
+  justify-content: space-between;
+}
+.note{
+  font-size:0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}

@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 Stack Findover (https://codepen.io/stack-findover/pen/yLgwbrL)
+Copyright (c) 2023 Luis Angel Maciel (https://codepen.io/luisangelmaciel/pen/KKBodzQ)
+Fork of an original work How to create a custom right click menu (https://codepen.io/luisangelmaciel/pen/KKBodzQ)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
