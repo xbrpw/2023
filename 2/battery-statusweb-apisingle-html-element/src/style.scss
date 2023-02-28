@@ -1,0 +1,79 @@
+@use 'sass:math';
+@use "sass:map";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,300italic,500italic,700italic,900,300);
+
+@function range($min, $max) {
+  $rnd: random();
+  @return $min + floor($rnd * (($max - $min) + 1));
+}
+
+@function randomColor() {
+  @return rgba(range(0, 255), range(0, 100), range(0, 200), 255);
+}
+
+@mixin flex-center() {
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+}
+
+@mixin flex-body() {
+  @include flex-center;
+  width: 100vw;
+  height: 100vh;
+}
+
+:root {
+  --width: 10px;
+  --color: #FFFFFF;
+  --base: #AAAAAA;
+  --icon: '\26A1';
+}
+
+body {
+  @include flex-body();
+  font-family: "roboto";  
+  background: var(--base);
+}
+
+.battery {
+  width: 110px;
+  height: 50px;
+  border: solid 5px black;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &:before {
+    content:'';
+    position: absolute;
+    background: black;
+    border-radius: 5px;
+    width: 10px;
+    height: 40px;
+    right: -10px;
+    top: 5px;
+  }
+  
+  &:after {
+    content:'';
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    height: 40px;
+    z-index: -1;
+    transition: all ease 100ms;
+    border: solid 5px var(--base);
+    border-radius: 10px;
+  }
+}
+
+.status {
+  &:after {
+    width: var(--width);
+    background: var(--color);
+  }
+}

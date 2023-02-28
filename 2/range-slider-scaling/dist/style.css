@@ -1,0 +1,13 @@
+form {
+color:inherit;
+}
+label, 
+input[type=text] {
+  color:inherit;
+}
+label {
+  display: block;
+}
+input[type=text] {
+  color:inherit;
+}

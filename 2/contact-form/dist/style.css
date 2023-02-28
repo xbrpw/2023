@@ -1,0 +1,289 @@
+@font-face {
+  font-family: "montserratthin";
+  src: url("http://www.testomic.com/public/codepen-assets/fonts/montserrat-thin-webfont.woff2") format("woff2"), url("http://www.testomic.com/public/codepen-assets/fonts/fonts/montserrat-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratlight";
+  src: url("http://www.testomic.com/public/codepen-assets/fonts/montserrat-light-webfont.woff2") format("woff2"), url("http://www.testomic.com/public/codepen-assets/fonts/montserrat-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratregular";
+  src: url("http://www.testomic.com/public/codepen-assets/fonts/montserrat-regular-webfont.woff2") format("woff2"), url("http://www.testomic.com/public/codepen-assets/fonts/montserrat-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://www.testomic.com/public/codepen-assets/img/scene.jpg);
+  overflow: hidden;
+  background-size: cover;
+}
+
+.contact-form {
+  z-index: 999;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.92;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-background {
+  width: 100%;
+  height: 100%;
+  background: #22252C;
+  -webkit-clip-path: polygon(88% calc(100% - 210px - 6%), 100% calc(100% - 190px), 100% 100%, 0 100%, 0 calc(100% - 210px));
+  clip-path: polygon(83% 52%, 100% 69%, 100% 100%, 0 100%, 0 66%);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: calc(50% - calc(56% + 150px) / 2);
+  bottom: 100px;
+}
+
+.cross {
+  position: absolute;
+  display: inline-block;
+  z-index: 99999;
+  width: 15px;
+  height: 15px;
+  left: calc(88% - 15px);
+  bottom: calc(210px + 6% - 25px);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.cross:hover {
+  transform: rotate(90deg);
+}
+
+.text-input {
+  position: absolute;
+  height: 22px;
+  width: 28%;
+}
+
+.name {
+  bottom: 40px;
+}
+
+.email {
+  bottom: 0%;
+}
+
+.message {
+  left: calc(28% + 25px);
+  bottom: 0%;
+  height: 63px;
+  type: "text";
+  multiline: true;
+}
+.message label {
+  vertical-align: top;
+}
+
+label {
+  position: absolute;
+  font-size: 12px;
+  font-family: "montserratlight";
+  color: #e2e2e2;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  bottom: -6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+input, textarea {
+  position: absolute;
+  background: transparent;
+  font-family: "montserratlight";
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #c54d74;
+  border-style: solid;
+  padding-left: 10px;
+  margin-right: 20px;
+  color: white;
+}
+
+textarea {
+  padding-top: 6px;
+  height: calc(100% - 5px);
+  resize: none;
+}
+
+.active {
+  opacity: 0;
+}
+
+.submit {
+  position: absolute;
+  border-radius: 5px;
+  color: white;
+  background-color: #c54d74;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  width: 100px;
+  height: 72px;
+  bottom: -8px;
+  left: calc(56% + 50px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: white;
+}
+
+.error-mark {
+  position: absolute;
+  font-size: 32px;
+  font-family: "montserratlight";
+  color: red;
+  width: 100%;
+  height: 100%;
+  bottom: -2px;
+  right: -7px;
+  text-align: right;
+  opacity: 0;
+}
+
+.submit-icon {
+  pointer-events: none;
+  position: absolute;
+  width: 44px;
+  bottom: 20px;
+  left: calc(50% - 22px);
+}
+
+.result-message {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  text-align: center;
+  left: -100px;
+  bottom: 26px;
+  font-size: 14px;
+  font-color: white;
+  font-family: "montserratlight";
+  color: white;
+}
+
+.result {
+  pointer-events: none;
+  position: absolute;
+  width: 100px;
+  height: 72px;
+  z-index: 9999;
+  bottom: -8px;
+  left: calc(56% + 50px);
+  overflow: hidden;
+}
+
+.horline {
+  position: absolute;
+  z-index: 9999;
+  background-color: #c54d74;
+  bottom: 125px;
+  left: calc(56% + 25px);
+  height: 1px;
+  width: 13%;
+}
+
+.vertline {
+  position: absolute;
+  z-index: 9999;
+  background-color: #c54d74;
+  bottom: calc(126px - 125px);
+  left: calc(56% + 250px);
+  height: 125px;
+  width: 1px;
+}
+
+/**
+* Footer
+*/
+footer {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #22252C;
+  bottom: 0;
+}
+
+.contact-icon {
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  bottom: -15px;
+  left: calc(100% - 40px);
+}
+
+/**	
+* Nonatomic Branding
+*/
+#link {
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  bottom: 15px;
+  width: 250px;
+  left: 0;
+  text-align: center;
+  z-index: 9999;
+}
+
+.img-url {
+  text-decoration: none;
+}
+
+.url {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #c54d74;
+}
+
+a:active {
+  color: white;
+}
+
+#small-logo {
+  width: 30px;
+  transform: translate(-10px, 12px);
+  opacity: 1;
+}

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&family=Raleway:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+:root {
+  --c-peach: #e5a97e;
+  --c-peach-light: #e5a97e44;
+  --bg-color: #E6D9D0;
+  --fg-color: #17171e;
+  --accent-color: var(--c-peach);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+label, button {
+  display: block;
+  margin: 20px;
+}
+
+input[type=text] {
+  padding: 10px;
+  min-width: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+textarea {
+  font-family: "Raleway", sans-serif;
+  min-width: 50%;
+}
+
+.preview-area {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  margin: 0px;
+  min-height: 80vh;
+}
+
+.featured-image {
+  position: relative;
+  z-index: 0;
+  background: var(--bg-color);
+  color: var(--fg-color);
+  max-width: 1260px;
+  aspect-ratio: 1260/620;
+  width: 100%;
+  padding: 100px 180px;
+}
+.featured-image.square {
+  aspect-ratio: 1;
+  max-width: 850px;
+}
+.featured-image h1 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 65px;
+  line-height: 1.25;
+  position: relative;
+  margin: 4rem 0;
+}
+.featured-image h1::before {
+  content: "";
+  width: 90px;
+  aspect-ratio: 1/1;
+  background-color: var(--accent-color);
+  position: absolute;
+  top: -5%;
+  left: -2.5%;
+  z-index: -1;
+}
+.featured-image p {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+}
+.featured-image .site-tag {
+  position: absolute;
+  z-index: -1;
+  right: 80px;
+  bottom: 50px;
+  background: transparent;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+.featured-image .site-tag .tag-content {
+  background: transparent;
+}
+.featured-image .site-tag svg {
+  width: 400px;
+  overflow: visible;
+}
+.featured-image .site-tag p {
+  font-size: 24px;
+  margin: 0;
+}
+.featured-image .site-tag p + p {
+  font-weight: 400;
+}

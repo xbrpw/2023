@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Iceland);
+html {
+  height: 100%;
+}
+
+body {
+  background: -webkit-radial-gradient(center 0px, ellipse cover, #727272 0%, #141414 100%);
+}
+
+.the {
+  width: 200px;
+  margin: 120px auto;
+  position: relative;
+  -webkit-filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8));
+}
+
+.daft {
+  background: -webkit-linear-gradient(top, #0e0e0f 0%, #454747 29%, #a6a6a8 47%, #c9c9c9 51%, #a6a6a8 55%, #454747 69%, #222323 91%, #3c3e3f 97%);
+  left: 0;
+  right: 0;
+  height: 50px;
+  position: absolute;
+  border-left: 1px solid #080808;
+  border-right: 1px solid #080808;
+  box-shadow: 0px 14px 20px -6px white inset;
+}
+.daft:after {
+  content: '';
+  left: 10px;
+  right: 10px;
+  display: block;
+  top: -36px;
+  position: absolute;
+  height: 25px;
+  background: -webkit-linear-gradient(left, #757B7C 0%, #A6A6A8 10%, white 29%, #A6A6A8 52%, #EAEFEF 79%, #A8A8A8 92%, #716F75 100%);
+  z-index: 99;
+  border-radius: 3px;
+  -webkit-transform: perspective(100) rotateX(20deg);
+  -webkit-transform-origin: bottom;
+  border-top: 1px solid #4D4D4D;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.48) inset, 0px -3px 10px rgba(0, 0, 0, 0.48);
+}
+.daft:before {
+  content: '';
+  left: -5px;
+  right: -5px;
+  display: block;
+  top: 3px;
+  position: absolute;
+  height: 45px;
+  background: -webkit-linear-gradient(top, #0E0E0F 0%, #454747 29%, #A6A6A8 47%, #C9C9C9 51%, #A6A6A8 55%, #454747 69%, #222323 91%, #3C3E3F 97%);
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.punk {
+  border-bottom-left-radius: 25px 110px;
+  border-bottom-right-radius: 25px 110px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: -10px;
+  height: 90px;
+  box-shadow: 0px -16px 20px -10px black inset, 0px 5px 25px rgba(0, 0, 0, 0.5) inset;
+  background: -webkit-linear-gradient(-45deg, #0e0e0f 0%, #454747 10%, #a6a6a8 22%, #c9c9c9 33%, #a6a6a8 42%, #454747 56%, #818384 71%, #a8a8a8 83%, #252426 100%);
+}
+.punk:after {
+  content: '';
+  background: #111;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 55px;
+  top: 10px;
+  box-shadow: 0px -5px 30px black inset;
+  border-bottom-left-radius: 20px 100px;
+  border-bottom-right-radius: 20px 100px;
+}
+.punk:before {
+  content: '';
+  background: -webkit-linear-gradient(left, #757B7C 0%, #A6A6A8 10%, white 29%, #A6A6A8 52%, #EAEFEF 79%, #A8A8A8 92%, #716F75 100%);
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 95px;
+  top: -75px;
+  box-shadow: 0px -5px 30px black inset;
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+  z-index: -1;
+}
+
+.helmet {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  height: 50px;
+  background: -webkit-linear-gradient(left, #757B7C 0%, #A6A6A8 10%, white 29%, #A6A6A8 52%, #EAEFEF 79%, #A8A8A8 92%, #716F75 100%);
+  border-bottom-left-radius: 80px 111px;
+  border-bottom-right-radius: 80px 111px;
+  top: 70px;
+  z-index: -1;
+  box-shadow: 0px -5px 25px #000 inset;
+}
+.helmet:before {
+  content: '';
+  left: 55px;
+  right: 55px;
+  display: block;
+  position: absolute;
+  height: 5px;
+  background: #3A3A3A;
+  z-index: 99;
+  top: 25px;
+  border-radius: 10px;
+  box-shadow: 0px -3px 5px black inset, 0px 1px 0px white;
+}
+.helmet:after {
+  content: '';
+  left: 45px;
+  right: 45px;
+  display: block;
+  height: 60px;
+  background: -webkit-linear-gradient(left, #757B7C 0%, #A6A6A8 -10%, white 25%, #A6A6A8 50%, #EAEFEF 90%, #A8A8A8 114%, #716F75 100%);
+  position: absolute;
+  top: 5px;
+  -webkit-transform: perspective(100) rotateX(145deg);
+  box-shadow: 0px 0px 20px #000;
+}
+
+@-webkit-keyframes led {
+  0% {
+    text-shadow: 0px 0px 20px red;
+  }
+  20% {
+    text-shadow: 0px 0px 20px #811919;
+  }
+  30% {
+    text-shadow: 0px 0px 20px red;
+  }
+  34% {
+    text-shadow: 0px 0px 20px #811919;
+  }
+  70% {
+    text-shadow: 0px 0px 20px red;
+  }
+  90% {
+    text-shadow: 0px 0px 20px #811919;
+  }
+  95% {
+    text-shadow: 0px 0px 20px red;
+  }
+  100% {
+    text-shadow: 0px 0px 20px #811919;
+  }
+}
+.awesome {
+  font-family: 'Iceland', cursive;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 55px;
+  background: transparent;
+  border-bottom-left-radius: 20px 100px;
+  border-bottom-right-radius: 20px 100px;
+  box-shadow: 0px 0px 30px 25px #630000 inset;
+}
+.awesome:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 55px;
+  background: transparent;
+  border-bottom-left-radius: 20px 100px;
+  border-bottom-right-radius: 20px 100px;
+  z-index: 9999;
+  box-shadow: 0px 0px 20px 10px black inset;
+}
+.awesome p {
+  font-size: 35px;
+  position: absolute;
+  color: #9C0000;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  top: 10px;
+  -webkit-animation: led linear 3s infinite;
+}

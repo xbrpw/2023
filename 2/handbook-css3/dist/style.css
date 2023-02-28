@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+body{ overcroll_hidden;
+  background: -webkit-radial-gradient(center, ellipse cover, #4B4242 0%,#413D3D 100%);
+	background:    -moz-radial-gradient(center, ellipse cover, #4B4242 0%,#413D3D 100%);
+	background:      -o-radial-gradient(center, ellipse cover, #4B4242 0%,#413D3D 100%);
+
+}
+	.book{
+		background: -webkit-linear-gradient(left, #559ad4 0%, #559ad4 1%, rgba(255,255,255,0) 3%), -webkit-linear-gradient(-45deg, #52A5EA 0%,#3B8FD6 46%,#2A7DC2 90%,#3E97E4 100%);
+		background:    -moz-linear-gradient(left, #559ad4 0%, #559ad4 1%, rgba(255,255,255,0) 3%),    -moz-linear-gradient(-45deg, #52A5EA 0%,#3B8FD6 46%,#2A7DC2 90%,#3E97E4 100%);
+		background:      -o-linear-gradient(left, #559ad4 0%, #559ad4 1%, rgba(255,255,255,0) 3%),      -o-linear-gradient(-45deg, #52A5EA 0%,#3B8FD6 46%,#2A7DC2 90%,#3E97E4 100%);
+		margin:0px auto;
+		margin-top:40px;
+		width:300px;
+		height: 350px;
+		border-radius: 10px 25px 25px 10px;
+		box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.3) inset, 0px 2px 0px #244f73, 0px 3px 0px #27567e, 0px 10px 40px #222;
+		border-left:1px solid #242424;
+	}
+	h1, p{
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		color:#1362a5;
+		text-align: center;
+		padding-top: 100px;
+		text-shadow:0px 1px 3px #69AFEC;
+		font-size: 35px;
+		margin:0px;
+	}
+	p{
+		font-family: 'Arial', sans-serif;
+		padding-top: 5px;
+		font-size: 22px;
+		box-shadow: 0px -1px #1362a5;
+		border-top: 1px solid #69AFEC;
+		margin:0px 60px;
+	}
+	.book:after{
+		content: '';
+		position: absolute;
+		height: 40px;
+		width: 1px;
+		margin-left: -1px;
+		background: #b8cbdb;
+		border-right: 1px solid #315c83;
+		margin-top: 70px;    
+    contenteditable:true;
+	}
+	.book:before{
+		content: '';
+		position: absolute;
+		height: 40px;
+		width: 1px;
+		margin-left: -1px;
+		background: #b8cbdb;
+		border-right: 1px solid #315c83;
+		margin-top: 40px;contenteditable:true;
+	}

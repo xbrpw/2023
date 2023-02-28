@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #f6f8fa;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.form-group {
+  display: block;
+}
+.form-group .form-group-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.form-group .form-group-error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+  transform: translateY(-100%);
+  position: absolute;
+  display: block;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  z-index: -1;
+}
+.form-group input[type=email] {
+  height: 2.5rem;
+  font-size: 0.9rem;
+  padding: 0 0.5rem 0 2.125rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #d4d8dc;
+  border-bottom-width: 2px;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  color: inherit;
+  background: #ffffff;
+}
+.form-group input[type=email]:focus {
+  border-color: #9ca3af;
+}
+.form-group input[type=email]:invalid:not(:-moz-placeholder-shown, :focus) {
+  border-bottom-color: #dc2626;
+}
+.form-group input[type=email]:invalid:not(:-ms-input-placeholder, :focus) {
+  border-bottom-color: #dc2626;
+}
+.form-group input[type=email]:invalid:not(:placeholder-shown, :focus) {
+  border-bottom-color: #dc2626;
+}
+.form-group input[type=email]:invalid:not(:-moz-placeholder-shown, :focus) ~ .form-group-error {
+  transform: none;
+  opacity: 1;
+}
+.form-group input[type=email]:invalid:not(:-ms-input-placeholder, :focus) ~ .form-group-error {
+  transform: none;
+  opacity: 1;
+}
+.form-group input[type=email]:invalid:not(:placeholder-shown, :focus) ~ .form-group-error {
+  transform: none;
+  opacity: 1;
+}
+.form-group input[type=email]:valid {
+  border-bottom-color: #10b981;
+}
+.form-group input[type=email]::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #6b7280;
+}
+.form-group input[type=email]::-moz-placeholder {
+  font-weight: 300;
+  color: #6b7280;
+}
+.form-group input[type=email]:-ms-input-placeholder {
+  font-weight: 300;
+  color: #6b7280;
+}
+.form-group input[type=email]:-moz-placeholder {
+  font-weight: 300;
+  color: #6b7280;
+}
+.form-group .form-group-input-container {
+  position: relative;
+}
+.form-group .form-group-input-container svg {
+  position: absolute;
+  top: 1.25rem;
+  left: 0.65rem;
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  color: #9da6af;
+  transform: translateY(-50%);
+}

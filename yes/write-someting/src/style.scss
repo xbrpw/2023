@@ -1,0 +1,36 @@
+
+.text-write {
+  font: inherit;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  border: none;
+  color: #75B4F8;
+  -webkit-text-fill-color: #47525D;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &::-webkit-input-placeholder {
+    animation: fade 3s infinite;
+    -webkit-text-fill-color: #ccc;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  
+  25% {
+    opacity: 1;
+  }
+  
+  75% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}

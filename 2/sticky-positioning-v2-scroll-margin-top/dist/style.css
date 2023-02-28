@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+div {
+  padding: 2rem;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: lightgray;
+}
+
+.buffer {
+  height: 25vh;
+}
+
+.targeted {
+  scroll-margin-top: 5rem;
+  height: 100vh;
+}
