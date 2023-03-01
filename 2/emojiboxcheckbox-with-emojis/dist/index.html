@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - ✅ Emojibox - Checkbox with emojis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.1.0/css/all.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>✅ Emojibox</h1><small>Checkbox with emojis (without JS)</small>
+<h3>Standard checkbox (non-emoji)</h3>
+<input class="boringbox" type="checkbox" id="j"/>
+<label for="j">I want to receive the newsletter</label>
+<h3>I want to receive the newsletter</h3>
+<input type="checkbox" id="o"/>
+<label for="o"><span>👍</span><span>👎</span></label>
+<h3>I am a...</h3>
+<input type="checkbox" id="u"/>
+<label for="u"><span>👩</span><span>👨</span></label>
+<h3>Mute sound </h3>
+<input type="checkbox" id="a"/>
+<label for="a"><span>🔊</span><span>🔇</span></label>
+<h3>Mute sound (monkey version)</h3>
+<input type="checkbox" id="n"/>
+<label for="n"><span>🐵</span><span>🙉</span></label>
+<h3>Football is...</h3>
+<input type="checkbox" id="m"/>
+<label for="m"><span>⚽</span><span>🏈</span></label>
+<h3>How much do you agree with Donald Trump's politics?</h3>
+<input type="checkbox" id="a1"/>
+<label for="a1"><span>😊</span><span>😐🔫</span></label>
+<h3>Solo Player / Multi Player</h3>
+<input type="checkbox" id="r"/>
+<label for="r"><span>👤</span><span>👥</span></label>
+<h3>Slow or fast? </h3>
+<input type="checkbox" id="c"/>
+<label for="c"><span>🚶</span><span>🏃</span></label>
+<h3>?</h3>
+<input type="checkbox" id="e"/>
+<label for="e"><span>🍑</span><span>🍆</span></label>
+<h2>Non-binary option / Radiobox</h2>
+<p>In case two options are not enough, you are able to use a radiobox for more options</p>
+<p>(no JS needed, there's some special CSS magic happening for that)</p>
+<h3>How stressed are you at work?</h3>
+<section>
+  <input type="radio" id="l1" name="work" value="1" checked="checked"/>
+  <label for="l1">😪</label>
+  <input type="radio" id="l2" name="work" value="2"/>
+  <label for="l2">😕</label>
+  <input type="radio" id="l3" name="work" value="3"/>
+  <label for="l3">😎</label>
+  <input type="radio" id="l4" name="work" value="4"/>
+  <label for="l4">😩</label>
+  <input type="radio" id="l5" name="work" value="5"/>
+  <label for="l5">🤯</label>
+</section>
+<h3>Which of these is your favorite Kanye West song?</h3>
+<section>
+  <input type="radio" id="c1" name="song" value="Gold Digger" checked="checked"/>
+  <label for="c1">🥇⛏️</label>
+  <input type="radio" id="c2" name="song" value="Ni**as in Paris"/>
+  <label for="c2">👨🏿👨🏿🗼</label>
+  <input type="radio" id="c3" name="song" value="Heartless"/>
+  <label for="c3">💔</label>
+  <input type="radio" id="c4" name="song" value="Stronger"/>
+  <label for="c4">💪➕</label>
+</section>
+<h3>FontAwesome icons are possible as well</h3>
+<input type="checkbox" id="o1"/>
+<label for="o1"><i class="far fa-eye"></i><i class="far fa-eye-slash"></i></label>
+<h3>In fact, you could use any anything (like span + text)</h3>
+<input type="checkbox" id="m1"/>
+<label for="m1"><span>Cool!</span><span>Meh...</span></label>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

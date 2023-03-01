@@ -1,0 +1,11 @@
+.container
+  .rafflebox
+    .pointer
+    .boxwrapper
+      %ul.giftwrapper
+        - (1..10).each do |i|
+          %li.gift 
+            %img{:src => "http://placehold.it/125x125?text=Prize+#{i}", :data => {:prize => "Prize #{i}"}}
+            %p Gift #{i}
+%button.button Let's Go Luck
+

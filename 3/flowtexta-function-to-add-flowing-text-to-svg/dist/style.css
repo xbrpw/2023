@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,800);
+
+body, html{
+font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+html {
+	padding: 10px;
+}
+
+h2 {
+		font-family: 'Inconsolata', monospace ;
+}
+svg {
+	box-shadow: 0 0 4px black;
+	height: 100%;
+	min-height:300px;
+}
+
+text {
+	font-size: 12pt;
+	fill: black;
+}
+
+.html {
+	box-sizing: border-box;
+	box-shadow: 0 0 4px black;
+	height: 100%;
+}
+
+.app, .controls {
+	display: flex;
+	flex-direction: column;
+}
+.preview {
+	display: flex;
+	flex-direction: row;
+	height:100%;
+}
+.preview div {
+	height:100%;
+}
+text, .html {
+	font-size: 12pt;
+}
+
+.svgCode {
+	font-size: 12pt;
+	padding-top: 10px;
+font-family: 'Inconsolata', monospace ;	
+}
+
+.preview > * {
+		margin: 0 10px 0 0;
+}
+.function {
+	margin: 10px;
+	padding: 5px;
+	background: #eee;
+	font-family: 'Inconsolata', monospace ;	
+	height:2em;
+}

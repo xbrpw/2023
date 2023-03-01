@@ -1,0 +1,101 @@
+h1 ✅ Emojibox
+small Checkbox with emojis (without JS)
+
+h3 Standard checkbox (non-emoji)
+input(type="checkbox" id="j").boringbox
+label(for="j") I want to receive the newsletter
+
+h3 I want to receive the newsletter
+input(type="checkbox" id="o")
+label(for="o")
+  span 👍
+  span 👎
+
+h3 I am a...
+input(type="checkbox" id="u")
+label(for="u")
+  span 👩
+  span 👨
+  
+h3 Mute sound 
+input(type="checkbox" id="a")
+label(for="a")
+  span 🔊
+  span 🔇
+
+h3 Mute sound (monkey version)
+input(type="checkbox" id="n")
+label(for="n")
+  span 🐵
+  span 🙉
+
+h3 Football is...
+input(type="checkbox" id="m")
+label(for="m")
+  span ⚽
+  span 🏈
+  
+h3 How much do you agree with Donald Trump's politics?
+input(type="checkbox" id="a1")
+label(for="a1")
+  span 😊
+  span 😐🔫
+  
+h3 Solo Player / Multi Player
+input(type="checkbox" id="r")
+label(for="r")
+  span 👤
+  span 👥
+  
+h3 Slow or fast? 
+input(type="checkbox" id="c")
+label(for="c")
+  span 🚶
+  span 🏃
+
+h3 ?
+input(type="checkbox" id="e")
+label(for="e")
+  span 🍑
+  span 🍆
+
+
+h2 Non-binary option / Radiobox
+p In case two options are not enough, you are able to use a radiobox for more options
+p (no JS needed, there's some special CSS magic happening for that)
+
+h3 How stressed are you at work?
+section
+  input(type="radio" id="l1" name="work" value="1" checked)
+  label(for="l1") 😪
+  input(type="radio" id="l2" name="work" value="2")
+  label(for="l2") 😕
+  input(type="radio" id="l3" name="work" value="3")
+  label(for="l3") 😎
+  input(type="radio" id="l4" name="work" value="4")
+  label(for="l4") 😩
+  input(type="radio" id="l5" name="work" value="5")
+  label(for="l5") 🤯
+
+h3 Which of these is your favorite Kanye West song?
+section
+  input(type="radio" id="c1" name="song" value="Gold Digger" checked)
+  label(for="c1") 🥇⛏️
+  input(type="radio" id="c2" name="song" value="Ni**as in Paris")
+  label(for="c2") 👨🏿👨🏿🗼
+  input(type="radio" id="c3" name="song" value="Heartless")
+  label(for="c3") 💔
+  input(type="radio" id="c4" name="song" value="Stronger")
+  label(for="c4") 💪➕
+  
+h3 FontAwesome icons are possible as well
+input(type="checkbox" id="o1")
+label(for="o1")
+  i.far.fa-eye
+  i.far.fa-eye-slash
+
+h3 In fact, you could use any anything (like span + text)
+input(type="checkbox" id="m1")
+label(for="m1")
+  span Cool!
+  span Meh...

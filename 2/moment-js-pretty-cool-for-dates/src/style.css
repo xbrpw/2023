@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,800);
+
+html, body, .app {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+}
+
+.app {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.app>div {
+	display: flex;
+	flex-direction: column;
+	align-items: column;
+	justify-content: center;
+}
+
+dl {
+	display: flex;
+}
+
+input, select {
+	font-size: 130%;
+	padding: 5px;
+	font-family: 'Inconsolata', monospace ;
+	box-sizing: border-box;
+	appearance: none; 
+	width: 50% !Important; 
+	margin: 4px !Important;
+	border: solid 1px black;
+	border-radius: 6px;
+}
+
+label {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+}
+
+small {
+	color: #000066;
+}
+
+dl, h1 {
+	margin: 0;
+}
+
+.output {
+	margin-top: 2em;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) { 
+		body {
+			font-size: 140%;
+		}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (orientation: portrait) { 
+body {
+			font-size: 200%;
+	padding: 0 10px;
+		}
+		label, dl {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		code, label span {
+			font-size: 130%;
+			font-weight: 600;
+		}
+		dd {
+			font-size: 130%;
+		}
+}

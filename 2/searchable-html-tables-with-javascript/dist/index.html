@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Searchable HTML Tables with JavaScript</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>
+  Searchable HTML Tables with JavaScript
+</h1>
+<style>
+  .table {
+  font-family: "Fira Sans", sans-serif;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  border-top: 2px solid #009578;
+  border-bottom: 2px solid #009578;
+}
+
+.table td,
+.search-input {
+  font-size: 1em;
+  padding: 0.6em 1em;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-family: "Fira Sans", sans-serif;
+}
+
+</style>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        <input type="text" class="search-input" placeholder="Full Name">
+      </th>
+      <th>
+        <input type="text" class="search-input" placeholder="Occupation">
+      </th>
+      <th>
+        <input type="text" class="search-input" placeholder="Country">
+      </th>
+      <th>
+        <input type="text" class="search-input" placeholder="Favorite Movie">
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Seward Fursey</td>
+      <td>Nuclear Power Engineer</td>
+      <td>Russia</td>
+      <td>Bird</td>
+    </tr>
+    <tr>
+      <td>Fernanda Well</td>
+      <td>Recruiter</td>
+      <td>France</td>
+      <td>Titus</td>
+    </tr>
+    <tr>
+      <td>Deva Griswaite</td>
+      <td>Nurse</td>
+      <td>Bhutan</td>
+      <td>Cup, The (Phörpa)</td>
+    </tr>
+    <tr>
+      <td>Becka Kohlerman</td>
+      <td>Senior Sales Associate</td>
+      <td>Portugal</td>
+      <td>2-Headed Shark Attack</td>
+    </tr>
+    <tr>
+      <td>Dunc Faragher</td>
+      <td>Occupational Therapist</td>
+      <td>Brazil</td>
+      <td>Life is to Whistle (Vida es silbar, La)</td>
+    </tr>
+    <tr>
+      <td>Adelbert Zanini</td>
+      <td>Recruiting Manager</td>
+      <td>Indonesia</td>
+      <td>Class Trip, The (La classe de neige)</td>
+    </tr>
+    <tr>
+      <td>Rosamund Spooner</td>
+      <td>Account Coordinator</td>
+      <td>China</td>
+      <td>The Inner Circle</td>
+    </tr>
+    <tr>
+      <td>Eleonore Meaders</td>
+      <td>VP Quality Control</td>
+      <td>Indonesia</td>
+      <td>Take Me Home</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".search-input").forEach((inputField) => {
+    const tableRows = inputField
+      .closest("table")
+      .querySelectorAll("tbody > tr");
+    const headerCell = inputField.closest("th");
+    const otherHeaderCells = headerCell.closest("tr").children;
+    const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell);
+    const searchableCells = Array.from(tableRows).map(
+      (row) => row.querySelectorAll("td")[columnIndex]
+    );
+
+    inputField.addEventListener("input", () => {
+      const searchQuery = inputField.value.toLowerCase();
+
+      for (const tableCell of searchableCells) {
+        const row = tableCell.closest("tr");
+        const value = tableCell.textContent.toLowerCase().replace(",", "");
+
+        row.style.visibility = null;
+
+        if (value.search(searchQuery) === -1) {
+          row.style.visibility = "collapse";
+        }
+      }
+    });
+  });
+});
+
+</script>
+<!-- partial -->
+  
+</body>
+</html>

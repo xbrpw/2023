@@ -1,0 +1,101 @@
+$red: #E74C3C;
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: darken($red, 10%);
+}
+
+::-moz-selection {
+  background: darken($red, 10%);
+}
+
+html, body {
+  background: #E74C3C;
+}
+
+.title {
+  text-align: center;
+  font-weight: 300;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.top-wrapper {
+  width: 60%;
+  max-width: 700px;
+  margin: 0 auto;
+  
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.input {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: left;
+  padding: 15px;
+  height: 250px;
+  border: none;
+  
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+.run, .clear {
+  height: 50px;
+  width: 49%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: left;
+  background: $red;
+  border: 1px solid white;
+  color: white;
+  margin-top: 5%;
+  transition: 300ms ease;
+  
+  &:hover {
+    background: white;
+    color: $red;
+  }
+  
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+.run {
+  margin-right: 1%;
+}
+
+.clear {
+  margin-left: 1%;
+}
+
+.output {
+  letter-spacing: 2px;
+  display: block;
+  width: 60%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-family: 'monospace';
+  color: white;
+  
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+}

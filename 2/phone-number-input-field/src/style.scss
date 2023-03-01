@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+// ------------------------------------------------ //
+// -------------------- BASICS -------------------- //
+// ------------------------------------------------ //
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #efefef;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0 1em;
+  color: #081627;
+}
+
+// ----------------------------------------------------------- //
+// -------------------- INPUT BASE STYLES -------------------- //
+// ----------------------------------------------------------- //
+
+input[type="search"],
+input[type="tel"],
+input[type="text"] {
+  font-size: 1rem;
+  border: 0;
+  font-family: inherit;
+  outline: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  max-width: 100%;
+
+  @mixin placeholder() {
+    font-weight: 300;
+    color: #6b7280;
+  }
+
+  &::-webkit-input-placeholder {
+    @include placeholder;
+  }
+  &::-moz-placeholder {
+    @include placeholder;
+  }
+  &:-ms-input-placeholder {
+    @include placeholder;
+  }
+  &:-moz-placeholder {
+    @include placeholder;
+  }
+}
+
+:root {
+  --border-radius: 0.75em;
+  --border-color: #c3c3c3;
+  --border-color-active: #0047a5;
+  --dropdown-border-color: #eaeaec;
+  --dropdown-trigger-background-color: #f3f5f9;
+  --dropdown-trigger-hover-background-color: #e6eaf1;
+  --input-error-color: #ff0000;
+  --input-label-color: #85898f;
+  --input-prefix-color: #656b73;
+  --input-phonenumber-color: #081627;
+  --list-item-hover-background: #f3f5f9;
+}
+
+// -------------------------------------------- //
+// --------------- PN-SELECT  ----------------- //
+// ------------------------------------------- //
+
+.pn-select {
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color);
+  display: grid;
+  grid-template-columns: 4.5em 1fr;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-out;
+  max-width: 20em;
+  width: 100%;
+  z-index: 1;
+
+  &:focus,
+  &:focus-within {
+    border-color: var(--border-color-active);
+    box-shadow: 0 0 2px 0 var(--border-color-active);
+  }
+}
+
+// -------------------------------------------------- //
+// -------------------- DROPDOWN -------------------- //
+// -------------------------------------------------- //
+
+.pn-dropdown {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--dropdown-border-color);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.135);
+  opacity: 0;
+  padding: 0 0.5em 0.5em;
+  pointer-events: none;
+  position: absolute;
+  top: 140%;
+  transform-origin: left top;
+  transition: all 0.15s ease-out;
+  width: 100%;
+  visibility: hidden;
+
+  .pn-select--open & {
+    pointer-events: all;
+    transform: none;
+    opacity: 1;
+    top: 120%;
+    visibility: visible;
+  }
+}
+
+// ------------------------------------------------ //
+// -------------------- SEARCH -------------------- //
+// ------------------------------------------------ //
+
+.pn-search {
+  position: relative;
+  display: flex;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: var(--dropdown-border-color);
+  margin-bottom: 0.5em;
+
+  svg {
+    display: block;
+    height: 1.25rem;
+    left: 0.5em;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+  }
+
+  input[type="search"] {
+    padding-left: 2.5rem;
+    height: 3rem;
+    width: 100%;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+}
+
+// ---------------------------------------------- //
+// -------------------- LIST -------------------- //
+// ---------------------------------------------- //
+
+.pn-list {
+  margin-right: -0.5em;
+  max-height: 10.5em;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #ffffff;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  // ------------ WHEN HOVERED TWEAK COLORS SO IT 'SHOWS UP'
+
+  &:hover {
+    --scrollbar-background: #ffffff;
+    --thumb-background: #c0c4ca;
+
+    scrollbar-color: var(--thumb-background) var(--scrollbar-background);
+
+    &::-webkit-scrollbar-track {
+      background: var(--scrollbar-background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--thumb-background);
+      border-radius: 6px;
+      border: 3px solid var(--scrollbar-background);
+    }
+  }
+
+  // ------------ NO SCROLL MODIFIER
+
+  &--no-scroll {
+    margin-right: 0;
+  }
+}
+
+// ---------------------------------------------------- //
+// -------------- SELECTED PREFIX/BUTTON -------------- //
+// ---------------------------------------------------- //
+
+.pn-selected-prefix {
+  align-items: center;
+  appearance: none;
+  background: var(--dropdown-trigger-background-color);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  transition: background 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    background: var(--dropdown-trigger-hover-background-color);
+  }
+
+  &__flag {
+    height: auto;
+    width: 1.25rem;
+  }
+
+  &__icon {
+    display: block;
+    height: 1.25rem;
+    margin-left: 0.5em;
+    margin-right: -0.25em;
+    transition: all 0.15s ease-out;
+    width: 1.25rem;
+
+    .pn-select--open & {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// --------------------------------------------------- //
+// -------------- INPUTS - PHONE+PREFIX -------------- //
+// --------------------------------------------------- //
+
+.pn-input {
+  background: #ffffff;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  line-height: 1;
+  overflow: hidden;
+  padding: 0.5em 1em;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__label {
+    color: var(--input-label-color);
+    font-size: 0.7rem;
+    position: relative;
+    top: -0.25em;
+  }
+
+  &__error {
+    bottom: 0;
+    color: var(--input-error-color);
+    font-size: 0.785rem;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    z-index: -1;
+  }
+
+  // ---- INPUTS
+
+  input[type="text"] {
+    background: transparent;
+    position: absolute;
+    color: var(--input-prefix-color);
+    max-width: 3rem;
+    pointer-events: none;
+  }
+
+  input[type="tel"] {
+    // background: rgba(black, 0.2);
+    color: var(--input-phonenumber-color);
+    padding-left: calc(calc(var(--prefix-length) * 1ch) + 1.5ch);
+    font-weight: 500;
+
+    &:not(:placeholder-shown):invalid + .pn-input__error {
+      opacity: 1;
+      transform: translateY(175%);
+    }
+  }
+}
+
+// --------------------------------------------------- //
+// -------------------- LIST ITEM -------------------- //
+// --------------------------------------------------- //
+
+.pn-list-item {
+  align-items: center;
+  border-radius: 0.5em;
+  display: flex;
+  font-weight: 400;
+  padding: 0.6em 0.75em;
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
+  outline: none;
+
+  &__flag {
+    width: 1.25em;
+    height: auto;
+    margin-right: 1em;
+    display: block;
+  }
+
+  &__country {
+    margin-right: 0.25em;
+  }
+
+  // ------------ HOVER
+
+  &:hover,
+  &:focus {
+    background-color: var(--list-item-hover-background);
+  }
+
+  // ------------ MODIFIERS
+
+  &--selected {
+    pointer-events: none;
+    font-weight: 500;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23103155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-position: right 0.75em top 50%;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    background-position: right 0.75em top 50%;
+  }
+
+  &--no-results {
+    pointer-events: none;
+  }
+}
+
+// ---------------------------------------------------- //
+// ------------------ DRIBBBLE CREDS ------------------ //
+// ---------------------------------------------------- //
+
+.dribble-creds {
+  bottom: 2em;
+  font-size: 0.875rem;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+
+  a {
+    color: #ea4c89;
+    text-decoration: underline;
+  }
+}

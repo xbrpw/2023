@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+////////////////////////////////////////////////////////////////////////////////
+//                                 VARIABLES                                  //
+////////////////////////////////////////////////////////////////////////////////
+
+$large-width: 768px;
+$medium-width-max: 767px;
+$medium-width-min: 480px;
+
+$spacing-x: 1rem;
+$spacing-y: 0.75rem;
+
+:root {
+	--post-color: #0f0f0f;
+	--post-background-color: #ffffff;
+	--post-header-background-color: rgba(0, 0, 0, 0.075);
+	--post-button-hover-background-color: rgba(0, 0, 0, 0.05);
+	--light-color: #8a8a8a;
+	--border-color: #dadada;
+	--input-color: #efefef;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//                                 DARK MODE                                  //
+////////////////////////////////////////////////////////////////////////////////
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--post-color: #ffffff;
+		--post-background-color: #242424;
+		--post-header-background-color: rgba(255, 255, 255, 0.05);
+		--post-button-hover-background-color: rgba(255, 255, 255, 0.1);
+		--light-color: #8a8a8a;
+		--border-color: #3f3f3f;
+		--input-color: #3b3b3b;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//                                   STYLES                                   //
+////////////////////////////////////////////////////////////////////////////////
+
+#app {
+	font-family: "Open Sans", sans-serif;
+	/*background-image: linear-gradient(-45deg, #3084ff, #1dbdff);*/
+	width: 100vw;
+	height: 100vh;
+	padding: 0rem 0rem;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.post {
+	color: var(--post-color);
+	/*background-color: var(--post-background-color);*/
+	width: 100%;
+	max-width: $large-width;
+	margin: auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-radius: 0rem;
+	/*box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);*/
+	h1, h2, h3, h4, h5, h6, p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.post-header {
+	background-color: var(--post-header-background-color);
+	padding: $spacing-y $spacing-x;
+	border-bottom: solid 1px var(--border-color);
+}
+
+.post-top {
+	color: var(--light-color);
+	padding: $spacing-y $spacing-x;
+	display: flex;
+	flex-direction: column;
+}
+
+.post-identifier {
+	padding-top: $spacing-y;
+	p:first-child {
+		margin-bottom: 0.25rem;
+	}
+}
+
+.post-avatar figure {
+	--size: 5em;
+	background-color: #ffffff;
+	width: var(--size);
+	height: var(--size);
+	border: solid 1px var(--border-color);
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+	img {
+		width: 100%;
+		vertical-align: top;
+	}
+}
+
+.post-author-link {
+	color: #3f8bef;
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 64ms ease-out;
+	&:hover {
+		color: #1f6bcf;
+	}
+}
+
+.post-content {
+	padding: 0 $spacing-x $spacing-y;
+	border-bottom: solid 1px var(--border-color);
+	position: relative;
+}
+
+.content-reactions {
+	color: var(--light-color);
+	padding-top: $spacing-y !important;
+}
+
+.post-commands {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-react-popup {
+	background-color: var(--post-background-color);
+	width: calc(100% - #{$spacing-x * 2});
+	padding: $spacing-y / 2 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: absolute;
+	left: $spacing-x;
+	bottom: -0.5rem;
+	box-sizing: border-box;
+	box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.7);
+	border-radius: 1rem;
+	animation: show 128ms linear;
+	&.hiding {
+		animation: hide 128ms linear;
+	}
+	@keyframes show {
+		0% {
+			opacity: 0;
+			transform: translateY(100%) scale(0);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+	@keyframes hide {
+		0% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+		100% {
+			opacity: 0;
+			transform: translateY(100%) scale(0);
+		}
+	}
+}
+
+.react-face {
+	$size: 8vw;
+	background-size: cover;
+	image-rendering: crisp-edges;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+	transition: transform 128ms ease-out;
+	&:hover {
+		transform: scale(2);
+	}
+}
+
+.react-face.smile {
+	background-image: url("https://assets.codepen.io/430361/reacc-smile.svg");
+}
+
+.react-face.happy {
+	background-image: url("https://assets.codepen.io/430361/reacc-happy.svg");
+}
+
+.react-face.surprised {
+	background-image: url("https://assets.codepen.io/430361/reacc-surprised.svg");
+}
+
+.react-face.sad {
+	background-image: url("https://assets.codepen.io/430361/reacc-sad.svg");
+}
+
+.react-face.angry {
+	background-image: url("https://assets.codepen.io/430361/reacc-angry.svg");
+}
+
+.post-button {
+	font-family: inherit;
+	color: inherit;
+	background-color: transparent;
+	width: 100%;
+	height: 3.1rem;
+	padding: 0.75rem 2.75rem;
+	border: 0;
+	border-bottom: solid 1px var(--border-color);
+	border-radius: 0;
+	box-sizing: border-box;
+	transition: background-color 64ms ease-out;
+	&:hover, &:focus {
+		background-color: var(--post-button-hover-background-color);
+	}
+	&:last-child {
+		border-bottom: 0;
+	}
+	& > span {
+		margin-left: 0.5rem;
+	}
+}
+
+.post-comments {
+	padding: $spacing-y 0;
+	border-top: solid 1px var(--border-color);
+	box-sizing: border-box;
+}
+
+.comment-container {
+	width: 100%;
+	padding: $spacing-y $spacing-x;
+	border-bottom: solid 1px var(--border-color);
+	box-sizing: border-box;
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.comment-top {
+	padding-bottom: $spacing-y;
+	display: flex;
+	.post-avatar figure {
+		--size: 2rem;
+	}
+	.post-identifier {
+		padding-top: 0;
+		color: var(--light-color);
+	}
+}
+
+.comment-input {
+	color: #ffffff;
+	padding: 0 $spacing-x $spacing-y;
+	border-bottom: solid 1px var(--border-color);
+	display: flex;
+	.post-avatar figure {
+		--size: 2rem;
+	}
+}
+
+.text-comment {
+	color: var(--post-color);
+	font-family: inherit;
+	background-color: var(--input-color);
+	width: 100%;
+	padding: $spacing-y / 2 $spacing-x / 2;
+	border: 0;
+	margin: 0 $spacing-x / 2;
+	outline: 0;
+	resize: none;
+	box-sizing: border-box;
+	border-radius: 1rem;
+}
+
+.send-button {
+	color: #ffffff;
+	background-color: #388bff;
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	flex-shrink: 0;
+	border-radius: 50%;
+	box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+	transition: background-color 64ms ease-out;
+	&:hover, &:focus {
+		background-color: #5aadff;
+	}
+	&:active {
+		background-color: #1669ff;
+	}
+}
+
+.spinner-container {
+	text-align: center;
+	width: 100%;
+	padding: 0 $spacing-x;
+	box-sizing: border-box;
+}
+
+.spinner {
+	$size: 1.5rem;
+	$border-size: 0.2rem;
+	width: $size;
+	height: $size;
+	border: solid $border-size var(--light-color);
+	border-top: solid $border-size transparent;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 50%;
+	animation: spinner-animation linear 1024ms infinite;
+	@keyframes spinner-animation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.margin-left-half {
+	margin-left: 0.5rem !important;
+}
+
+.margin-left-quarter {
+	margin-left: 0.25rem !important;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//                               RESPONSIVENESS                               //
+////////////////////////////////////////////////////////////////////////////////
+
+$post-react-popup-width: calc(#{$medium-width-min} - #{$spacing-x * 4});
+
+@mixin responsive-common() {
+	.post-top {
+		flex-direction: row;
+	}
+	
+	.post-identifier {
+		padding-top: 0;
+		padding-left: $spacing-x / 2;
+	}
+	
+	.post-commands {
+		flex-direction: row;
+	}
+	
+	.post-button {
+		border-bottom: 0;
+		border-right: solid 1px var(--border-color);
+		&:last-child {
+			border-right: 0;
+		}
+	}
+	
+	.post-react-popup {
+		width: $post-react-popup-width;
+	}
+	
+	.react-face {
+		$size: $medium-width-min * 0.1;
+		width: $size;
+		height: $size;
+	}
+}
+
+@media (min-width: $medium-width-min) and (max-width: $medium-width-max) {
+	@include responsive-common();
+}
+
+@media (min-width: $large-width) {
+	@include responsive-common();
+	
+	.post-button {
+		width: auto;
+	}
+}

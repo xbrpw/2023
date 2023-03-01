@@ -1,0 +1,126 @@
+body {
+  transition: all 0.5s ease;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/home.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  position: absolute;
+  top: -9999px;
+}
+
+.images {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  left: -10px;
+  top: 20%;
+  border: 7px solid #999;
+  background: #999;
+  border-radius: 3px;
+  -moz-box-shadow:    6px 6px 0px 0px #444;
+  -webkit-box-shadow: 6px 6px 0px 0px #444;
+  box-shadow:         6px 6px 0px 0px #444;
+  z-index: 2;
+}
+
+.env {
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.env.home {
+  background: #999 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/pixel_house.jpg) no-repeat center center;
+}
+
+.env.park {
+  background: #999 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/pixel_park.jpg) no-repeat center center;
+}
+
+.env.beach {
+  background: #999 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/pixel_beach.jpg) no-repeat center center;
+}
+
+.env.ski {
+  background: #999 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/pixel_snow.jpg) no-repeat center center;
+}
+
+.env.space {
+  background: #999 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/pixel_space.jpg) no-repeat center center;
+}
+
+.env.active {
+  border: 3px solid #ff9120;
+}
+
+.canvas-wrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.canvas {
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.woof {
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 20;
+  left: 65%;
+  top: 50%;
+  opacity: 0;
+}
+
+.woof.barking {
+  opacity: 1;
+}
+
+.row {
+  clear: both;
+  position: relative;
+}
+
+.block {
+  float: left;
+}
+
+.black {
+  background: #333;
+}
+
+.grey {
+  background: #666;
+}
+
+.brown {
+  background: #ACA582;
+}
+
+.white {
+  background: #eee;
+}
+
+.pink {
+  background: #CC8099;
+}
+
+.woofbg {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.orange {
+  background: #ff9120;
+}

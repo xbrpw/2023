@@ -1,0 +1,146 @@
+:root {
+  --home-color: #DAA89B;
+  --about-color: #AE847E;
+  --contact-color: #AAC0AA;
+  --services-color: #3E7CB1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  background-color: #ffffff;
+  display: block;
+  margin: 0;
+  padding: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.view {
+  color: #ffffff;
+  height: 100vh;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+}
+
+.view__title {
+  margin: 0;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home ,
+.legend__item--home .legend__bg {
+  background-color: var(--home-color);
+}
+
+.about,
+.legend__item--about .legend__bg {
+  background-color: var(--about-color);
+}
+
+.contact,
+.legend__item--contact .legend__bg {
+  background-color: var(--contact-color);
+}
+
+.services,
+.legend__item--services .legend__bg {
+  background-color: var(--services-color);
+}
+
+.percentage {
+  height: 200px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+}
+
+.percentage__value {
+  font-size: 10rem;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+}
+
+.percentage__extension {
+  font-size: 3rem;
+}
+
+.sub {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.legend {
+  background-color: #ffffff;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.legend__bg {
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  width: 100%;
+  z-index: 2;
+}
+
+.legend__item {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+.legend__title {
+  position: relative;
+  z-index: 3;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.legend__item--home {
+  z-index: 10;
+}
+
+.legend__item--about {
+  z-index: 9;
+}
+
+.legend__item--contact {
+  z-index: 8;
+}
+
+.legend__item--services {
+  z-index: 7;
+}

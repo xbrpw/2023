@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFAFB;
+}
+
+section {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin-top: 8%;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+section .actions {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+}
+section .actions button {
+  background: transparent;
+  margin-bottom: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 28px;
+  padding-bottom: 4px;
+  width: 18%;
+  cursor: pointer;
+}
+section .actions button:hover {
+  background: #21FA90;
+  border: 1px solid #21FA90;
+}
+section textarea, section input {
+  color: grey;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 18px;
+}
