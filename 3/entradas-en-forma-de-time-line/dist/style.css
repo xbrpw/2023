@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);
+body {
+  margin-top: 3em;
+  font-family: "Ubuntu";
+  font-weight: 300;
+}
+
+.articles {
+  border-left: 10px solid #eee;
+  margin-left: 140px;
+  padding-left: 1em;
+}
+
+article {
+  padding: 0em 1em 4em 1em;
+  position: relative;
+}
+
+.article__title {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 2em;
+  position: relative;
+  top: -0.25em;
+  font-family: "Ubuntu";
+}
+
+.article__date {
+  position: absolute;
+  font-family: "Ubuntu Mono";
+  top: 7px;
+  left: -142px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+.article__date:after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border: 5px solid #eee;
+  position: absolute;
+  border-radius: 100%;
+  right: -40px;
+  top: -10px;
+  transition: all 0.2s ease;
+}
+
+h2:hover + .article__date:after,
+.article__date:hover:after {
+  transform: scale(1.45) translateZ(0);
+  transition: all 0.2s ease;
+}
+
+.highlight {
+  border: 1px solid #ddd;
+  background: #eee;
+  padding: 1em;
+  border-radius: 5px;
+  color: #272727;
+}
+.highlight code {
+  font-family: "Ubuntu Mono";
+}
+
+@media all and (max-width: 35em) {
+  .articles {
+    margin-left: 0px;
+    border-left: 0px solid #fff;
+  }
+
+  .article__date {
+    left: 0;
+    position: relative;
+  }
+  .article__date:after {
+    display: none;
+  }
+
+  .article__title {
+    top: 0;
+    margin-bottom: 0;
+  }
+
+  .articles {
+    padding-left: 0;
+  }
+}
