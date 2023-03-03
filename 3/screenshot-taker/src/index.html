@@ -1,0 +1,33 @@
+<style>.container {
+  margin-top: 10px;
+  border: solid 1px black;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<div>Screenshot</div>
+
+<button onclick="report()">Take screenshot</button>
+
+<div class="container">
+  <iframe src="https://grid.is/embed/gbohi-estimator-for-rehabs-t7vo6ujySnKbzqEDyxrhwg?width=full&scale_to_fit=true" width="100%" height="500" data-document-id="b7bbe8ea-e8f2-4a72-9bce-a103cb1ae1c2" style="border: 0px;"></iframe>
+  <script type="text/javascript" src="https://grid.is/static/embed/v1/script.js"></script></div>
+  <img width="100%" class="screen">
+  <div>
+
+</div>
+
+<script>
+function report() {
+  let region = document.querySelector("body"); // whole screen
+  html2canvas(region, {
+    onrendered: function(canvas) {
+      let pngUrl = canvas.toDataURL(); // png in dataURL format
+      let img = document.querySelector(".screen");
+      img.src = pngUrl; 
+
+      // here you can allow user to set bug-region
+      // and send it with 'pngUrl' to server
+    },
+  });
+}
+</script>

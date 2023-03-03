@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  border-radius: 10px;
+border-radius: 0px;
+background: #e8dede;
+box-shadow: inset -20px 20px 43px #bab2b2,
+            inset 20px -20px 43px #ffffff;
+  font-family: 'Noto Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  position: relative;
+  color: black;
+  opacity: 0;
+  transition: .8s ease-in-out;
+}
+
+#progress {
+  position: absolute;
+ border-radius: 0px;
+background: #c8c6dc;
+box-shadow: inset -20px 20px 43px #a09eb0,
+            inset 20px -20px 43px #f0eeff;
+  height: 100vh;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#register {
+ margin-top:5px;
+  position: relative;
+  width: 550px;
+  border-radius: 50px;
+border-radius: 10px;
+background: #e8dede;
+box-shadow: inset -20px 20px 43px #bab2b2,
+            inset 20px -20px 43px #ffffff;
+  transition: transform .1s ease-in-out;
+}
+
+#register.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: .8s ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0);
+}
+
+#forwardButton {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  font-size: 40px;
+  color:#0e0d1c;
+  float: right;
+  cursor: pointer;
+  z-index: 20
+}
+#previousButton {
+  position: absolute;
+  font-size: 40px;
+  left: 30px; /* same as padding on container */
+  top: 0px;
+  z-index: 20;
+  color: #0e0d1c;
+  float: right;
+  cursor: pointer;
+}
+#previousButton:hover {color: #c49000}
+#forwardButton:hover {color: #c49000}
+.wrong #forwardButton {color: #ff2d26}
+.close #forwardButton, .close #previousButton {color: #fff}
+
+#inputContainer {
+  position: relative;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 60px 10px 10px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+#inputContainer input {
+  position: relative;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+  font-family: 'Noto Sans', sans-serif;text-align:center;
+}
+
+#inputLabel {
+  position: absolute;
+  pointer-events: none;
+  top: 32px; /* same as container padding + margin */
+  left: 20px; /* same as container padding */
+  font-size: 20px;   justify-content: center;
+  align-items: center; text-align:center;
+  font-weight: bold;text-align:center;
+  transition: .2s ease-in-out;
+}
+
+#inputContainer input:valid + #inputLabel {
+  top: 6px;
+  left: 42px; /* space for previous arrow */
+  /*margin-left: 0!important;*/
+  font-size: 14px;
+  font-weight: normal;
+  color: #9e9e9e;justify-content: center;
+  align-items: center; text-align:center;
+}
+
+#inputProgress {
+  border-bottom: 3px solid #fbc02d;
+  width: 0;
+  transition: width .6s ease-in-out;
+}
+
+.wrong #inputProgress {
+  border-color: #ff2d26;
+}
+
+@media (max-width: 420px) {
+  #forwardButton {right: 10px}
+  #previousButton {left: 10px}
+  #inputLabel {left: 0}
+  #inputContainer {padding-left: 0; margin-right:20px}
+}

@@ -1,0 +1,120 @@
+$base-color: rgb(136, 48, 78);
+*:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 1.2em 0;
+  text-align: center;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.rm {
+  font-size: .7em;
+}
+
+label {
+  font-size: 1.2em;
+  padding: 1.2em 1em 0.5em 0;
+}
+
+label + input:not([type="submit"]) {
+  margin-bottom: 1.5em;
+}
+
+input:not([type="submit"]) {
+  font-size: 1em;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, .5);
+  outline: none;
+  transition: color .2s, background .2s;
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+  }
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.3em;
+  //border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
+label[for="qt"] {
+  margin-right: 1em;
+  flex: 2;
+}
+
+input[type="number"] {
+  margin-bottom: 0 !important;
+  flex: 1;
+  min-width: 0;
+  max-width: 4em;
+}
+
+input[type="submit"] {
+  align-self: flex-end;
+  outline: none;
+  font-size: 1.2em;
+  display: inline-block;
+  position: relative;
+  padding: .5em .8em;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  background: $base-color;
+  transition: color .5s, background .5s;
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    background: darken($base-color, 20%);
+    color: #fff;
+  }
+  &:active,
+  &:focus {
+    top: 2px;
+  }
+}
+
+.input-group {
+  position: relative;
+}
+.toggle {
+  background: none;
+  border: none;
+  color: $base-color;
+  display: inline-block;
+  font-size: .9em;
+  font-weight: 600;
+  padding: .5em;
+  position: absolute;
+  right: 0.6em;
+  bottom: 2.4em;
+  z-index: 1;
+}
+
+input[id="txtPassword"]:focus + .toggle {
+    color: #fff;
+}

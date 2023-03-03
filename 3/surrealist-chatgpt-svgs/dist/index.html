@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - surrealist chatGPT SVGs</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/x-template" id="icon-card">
+		<div class="icon-card">
+			<div class="icon-container">
+				<div class="icon-container-top">
+					<button
+						v-if="!copied"
+						@click="copySVG"
+						class="copy-code"
+					>
+						<svg class="icon icon-copy" width="100" height="100" viewBox="0 0 100 100">
+							<path d="M10,10 L90,10 L90,90 L10,90 L10,10" fill="#6c757d" />
+							<path d="M35,30 L65,30 L65,70 L35,70 L35,30" fill="#fff" />
+						</svg>
+						Copy code
+					</button>
+					<button
+						v-else
+					>
+						<svg class="icon icon-tick" viewBox="0 0 100 100">
+  <path d="M50,10 C40,20 30,40 30,60 C30,80 40,100 50,100 C60,100 70,80 70,60 C70,40 60,20 50,10" fill="white" />
+</svg>
+						Copied!
+					</button>
+				</div>
+				<div class="icon-container-body">
+					<div v-html="svg">
+					</div>
+				</div>
+			</div>
+			<p class="icon-prompt">
+				"Write an SVG that looks like a <span class="tag">{{ tags[0] }}</span> indicating a <span class="tag">{{ tags[1] }}</span> operation"
+			</p>
+		</div>
+	</script>
+</head> 
+<body>
+<main id="app">
+	<icon-card
+		v-for="icon in icons"
+		:tags="icon.tags"
+		:prompt="icon.prompt"
+		:svg="icon.svg"
+	>
+	</icon-card>
+</div>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

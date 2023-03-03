@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-image: url("https://assets.codepen.io/t-90/dog.jpg");
+  background-image: image-set(
+    "https://assets.codepen.io/t-90/dog.avif" type("image/avif"),
+    "https://assets.codepen.io/t-90/dog.webp" type("image/webp"),
+    "https://assets.codepen.io/t-90/dog.jpg" type("image/jpg")
+  );
+  background-size: contain;
+  background-position: center;
+}

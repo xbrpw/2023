@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url(https://unpkg.com/open-props/open-props.min.css);
+@import url(https://unpkg.com/open-props/normalize.min.css);
+
+:root {
+  --font-size: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
+  --speed: 0.25s;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--gray-12);
+}
+
+::-moz-selection {
+  background: hsl(320 80% 50%);
+}
+
+::selection {
+  background: hsl(320 80% 50%);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.info {
+  display: grid;
+  color: var(--gray-0);
+  padding: var(--size-1);
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  line-height: 1;
+  font-weight: bold;
+}
+
+.info__line {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4);
+}
+
+.char {
+  --blurriness: calc(var(--font-size) * 0.25);
+  display: inline-block;
+  filter: blur(calc(var(--blur, 1) * var(--blurriness)));
+  transition: filter 5s;
+}
+
+.char:hover {
+  --blur: 0;
+  transition: filter 0.2s;
+}

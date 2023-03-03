@@ -1,0 +1,81 @@
+<div class="container" ng-app="myApp" ng-controller="Example">
+	<div class="jumbotron">
+		<div class="container">
+			<h2>Simple share links</h2>
+			<p>I need a simple share area with 3 share links. Don't want to use any online service - just simple share functionality. My go at that is based on post: <a href="https://fourtonfish.makes.org/thimble/make-your-own-social-media-sharing-buttons">Make Your Own Social Media Sharing Buttons</a>.</p>
+			<div class="col-md-12 tags"><strong>Tags:</strong>
+				<span ng-repeat="tag in tags">
+            <a href="https://codepen.io/search?q={{tag}}&limit=all&depth=everything&show_forks=false"><code class="btn btn-primary btn-xs">{{tag}}</code></a></span>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="form-group">
+				<label for="input" class="col-sm-2 control-label">URL:</label>
+				<div class="col-sm-10">
+					<input type="url" name="" id="input" class="form-control" ng-model="url">
+				</div>
+				<label for="input" class="col-sm-2 control-label">Text:</label>
+				<div class="col-sm-10">
+					<input type="url" name="" id="input" class="form-control" ng-model="text">
+				</div>
+				<label for="input" class="col-sm-2 control-label">Via:</label>
+				<div class="col-sm-10">
+					<input type="url" name="" id="input" class="form-control" ng-model="via">
+				</div>
+
+			</div>
+			<div class="col-md-2">
+				<h4>Example</h4>
+			</div>
+			<div class="col-md-10">
+				<h4>Code</h4>
+			</div>
+			<div class="col-md-2">
+				<ul class="sharing-buttons">
+					<li><a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url | encodeURIComponent}}&summary={{text}}&source={{via}}" target="_blank"><i class="fa fa-linkedin-square"></i>Share on linkedin</a></li>
+					<li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url | encodeURIComponent}}" target="_blank"><i class="fa fa-facebook-square"></i>Share on Facebook</a>
+					</li>
+					<li><a class="twitter" href="https://twitter.com/intent/tweet?url={{url | encodeURIComponent}}&text={{text}}&via={{via}}" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=420,width=550');return false;"><i class="fa fa-twitter-square"></i>Tweet</a>
+					</li>
+					<li><a class="google-plus" href="https://plus.google.com/share?url={{url | encodeURIComponent}}" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus-square"></i>Share on Google+</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<h5>Icons</h5>
+				<pre>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"&gt;</pre>
+				<h5>HTML</h5>
+				<pre>
+&lt;ul class=&quot;sharing-buttons&quot;&gt;
+	&lt;li&gt;&lt;a class=&quot;linkedin&quot; href=&quot;https://www.linkedin.com/shareArticle?mini=true&amp;url={{url | encodeURIComponent}}&amp;summary={{text}}&amp;source={{via}}&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-linkedin-square&quot;&gt;&lt;/i&gt;Share on linkedin&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;facebook&quot; href=&quot;https://www.facebook.com/sharer/sharer.php?u={{url | encodeURIComponent}}&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-facebook-square&quot;&gt;&lt;/i&gt;Share on Facebook&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?url={{url | encodeURIComponent}}&amp;text={{text}}&amp;via={{via}}&quot; onclick=&quot;javascript:window.open(this.href,&#39;&#39;,&#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=420,width=550&#39;);return false;&quot;&gt;&lt;i class=&quot;fa fa-twitter-square&quot;&gt;&lt;/i&gt;Tweet&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;google-plus&quot; href=&quot;https://plus.google.com/share?url={{url | encodeURIComponent}}&quot; onclick=&quot;javascript:window.open(this.href,&#39;&#39;,&#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;&quot;&gt;&lt;i class=&quot;fa fa-google-plus-square&quot;&gt;&lt;/i&gt;Share on Google+&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>About sharing links</h4>
+				<p>Sharing links is a living thing. Providers like Facebook and Twitter can change the interface whenever they want (its a free service).
+					<h5>Facebook</h5>
+					Note that only one parameter can be used, <a href="https://developers.facebook.com/x/bugs/357750474364812/" target="_blank">Facebook has decided in April 2014</a>:</p>
+				<blockquote>The sharer will no longer accept custom parameters and facebook will pull the information that is being displayed in the preview the same way that it would appear on facebook as a post, from the url OG meta tags.</blockquote>
+				<h5>Twitter</h5>
+				<p>Read more about <a href="https://dev.twitter.com/web/intents ">Working with Web intents</a>. I have choosen not to follow all suggestions, in the name of simplicity.</p>
+				<h5>Google+</h5>
+				<p>Read more about <a href="https://developers.google.com/+/web/share/ ">Google+Platform &gt; Share</a>.</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+<br />
+<br />
+<br />

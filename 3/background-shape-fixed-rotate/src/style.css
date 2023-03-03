@@ -1,0 +1,34 @@
+body {
+  background-color: #9b59b6;
+  background: #9b59b6;
+}
+
+.shape {
+  background-color: #9b59b6;
+  background: #9b59b6;
+}
+
+
+#shape1 {
+  background-color: #9b59b6;  background: #9b59b6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200px;
+  transform: rotate(-50deg);
+  z-index: -100;
+  border: 50px solid #8e44ad;
+}
+
+#shape2 {
+  background-color: #9b59b6;  background: #9b59b6;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 200%;
+  width: 300px;
+  transform: rotate(-50deg);
+  z-index: -50;
+  border: 50px solid #8e44ad;
+}

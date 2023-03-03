@@ -1,0 +1,26 @@
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper {
+  margin: 2em auto;
+  width: 400px;
+}
+
+select {
+  display: inline-block;
+  width: 100%;
+}
+
+.unit-wrapper {
+  display: flex;
+}
+
+.unit-address {
+  flex-grow: 1;
+  font-style: normal;
+}
+
+.unit-pno {
+  margin-left: 1em
+}
