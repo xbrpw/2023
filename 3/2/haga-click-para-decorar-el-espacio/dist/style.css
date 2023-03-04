@@ -1,0 +1,282 @@
+canvas {
+  display: block;
+}
+
+html {
+  margin: 0;overflow:hidden; width:100%; heigth:100vh;
+}
+
+.touch {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);  
+  font-family: monospace;
+}
+p {
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:inherit;cursor: pointer;font-height:bolder}
+
+ .fadeinout-5s {
+    -webkit-animation: 
+      fade-in 0s ease,      
+      fade-out 5s ease 5s forwards;
+            animation: 
+      fade-in 0s ease,      
+      fade-out 5s ease 5s forwards;
+  }
+
+  @-webkit-keyframes fade-in {
+    from { opacity: 0}
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0}
+  }
+
+  @-webkit-keyframes fade-out {
+    to { opacity: 0}
+  }
+
+  @keyframes fade-out {
+    to { opacity: 0}
+  }
+
+  @-webkit-keyframes slide-in {
+    from { transform: translateY(10px) }
+  }
+
+  @keyframes slide-in {
+    from { transform: translateY(10px) }
+  }
+
+   .fadeinout-4s {
+    -webkit-animation: 
+      fade-in 15s ease,      
+      fade-out 4s ease 4s forwards;
+            animation: 
+      fade-in 15s ease,      
+      fade-out 4s ease 4s forwards;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0}
+  }
+
+  @keyframes fade-out {
+    to { opacity: 0}
+  }
+
+  @keyframes slide-in {
+    from { transform: translateY(10px) }
+  }
+
+
+   .te-divertiste {
+    -webkit-animation: 
+      fade-in 15s ease,      
+      fade-out 10s ease 10s forwards;
+            animation: 
+      fade-in 15s ease,      
+      fade-out 10s ease 10s forwards;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0}
+  }
+
+  @keyframes fade-out {
+    to { opacity: 0}
+  }
+
+.te-divertiste: activate {color:grey}
+.te-divertiste: hover {color:grey}
+
+
+/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+footer,header{display:block}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* End extract */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}h2{font-size:30px}
+h2{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
+.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-button:disabled{cursor:not-allowed;opacity:0.3}:disabled *{pointer-events:none}
+.w3-modal{z-index:3;display:none;padding-top:100px; padding-right:18px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.w3-container:after,.w3-container:before{content:"";display:table;clear:both}
+@media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}}
+@media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
+@media (min-width:993px){.w3-modal-content{width:900px}}.w3-display-topright{position:absolute;right:0;top:0}
+.w3-container{padding:16px 16px}
+.w3-card-4{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}.w3-center{text-align:center!important}
+.w3-button:hover{color:#000!important;background-color:#ccc!important}
+/* Colors */
+.w3-black{color:#fff!important;background-color:#000!important}
+
+.elementToFadeInAndOut1s { color:black;
+    -webkit-animation: fadeinout 1s linear 1 forwards;
+    animation: fadeinout 1s linear 1 forwards;}
+.elementToFadeInAndOut2s { color:black;
+    -webkit-animation: fadeinout 2s linear 1 forwards;
+    animation: fadeinout 2s linear 1 forwards;}
+.elementToFadeInAndOut3s { color:black;
+    -webkit-animation: fadeinout 3s linear 1 forwards;
+    animation: fadeinout 3s linear 1 forwards;}
+.elementToFadeInAndOut5s { color:black;
+    -webkit-animation: fadeinout 5s linear 1 forwards;
+    animation: fadeinout 5s linear 1 forwards;}
+.elementToFadeInAndOut4s { color:black;
+    -webkit-animation: fadeinout 4s linear 1 forwards;
+    animation: fadeinout 4s linear 1 forwards;}
+.elementToFadeInAndOut6s { color:black;
+    -webkit-animation: fadeinout 6s linear 1 forwards;
+    animation: fadeinout 6s linear 1 forwards;}
+.elementToFadeInAndOut7s { color:black;
+    -webkit-animation: fadeinout 7s linear 1 forwards;
+    animation: fadeinout 7s linear 1 forwards;}
+.elementToFadeInAndOut8s { color:black;
+    -webkit-animation: fadeinout 8s linear 1 forwards;
+    animation: fadeinout 8s linear 1 forwards;}
+.elementToFadeInAndOut9s { color:black;
+    -webkit-animation: fadeinout 9s linear 1 forwards;
+    animation: fadeinout 9s linear 1 forwards;}
+.elementToFadeInAndOut10s { color:black;
+    -webkit-animation: fadeinout 10s linear 1 forwards;
+    animation: fadeinout 10s linear 1 forwards;}
+.elementToFadeInAndOut11s { color:black;
+    -webkit-animation: fadeinout 11s linear 1 forwards;
+    animation: fadeinout 11s linear 1 forwards;}  
+.elementToFadeInAndOut12s { color:black;
+    -webkit-animation: fadeinout 12s linear 1 forwards;
+    animation: fadeinout 12s linear 1 forwards;}
+.elementToFadeInAndOut13s { color:black;
+    -webkit-animation: fadeinout 13s linear 1 forwards;
+    animation: fadeinout 13s linear 1 forwards;}  
+.elementToFadeInAndOut14s { color:black;
+    -webkit-animation: fadeinout 14s linear 1 forwards;
+    animation: fadeinout 14s linear 1 forwards;}
+.elementToFadeInAndOut20s { color:black;
+    -webkit-animation: fadeinout 20s linear 1 forwards;
+    animation: fadeinout 20s linear 1 forwards;}
+
+@-webkit-keyframes fadeinout {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.elementToFadeInAndOut1sr { color:black;
+    -webkit-animation: fadeinoutr 1s linear 1 forwards;
+    animation: fadeinoutr 1s linear 1 forwards;}
+.elementToFadeInAndOut2sr { color:black;
+    -webkit-animation: fadeinoutr 2s linear 1 forwards;
+    animation: fadeinoutr 2s linear 1 forwards;}
+.elementToFadeInAndOut3sr { color:black;
+    -webkit-animation: fadeinoutr 3s linear 1 forwards;
+    animation: fadeinoutr 3s linear 1 forwards;}
+.elementToFadeInAndOut5sr { color:black;
+    -webkit-animation: fadeinoutr 5s linear 1 forwards;
+    animation: fadeinoutr 5s linear 1 forwards;}
+.elementToFadeInAndOut4sr { color:black;
+    -webkit-animation: fadeinoutr 4s linear 1 forwards;
+    animation: fadeinoutr 4s linear 1 forwards;}
+.elementToFadeInAndOut6sr { color:black;
+    -webkit-animation: fadeinoutr 6s linear 1 forwards;
+    animation: fadeinoutr 6s linear 1 forwards;}
+.elementToFadeInAndOut7sr { color:black;
+    -webkit-animation: fadeinoutr 7s linear 1 forwards;
+    animation: fadeinoutr 7s linear 1 forwards;}
+.elementToFadeInAndOut8sr { color:black;
+    -webkit-animation: fadeinoutr 8s linear 1 forwards;
+    animation: fadeinoutr 8s linear 1 forwards;}
+.elementToFadeInAndOut9sr { color:black;
+    -webkit-animation: fadeinoutr 9s linear 1 forwards;
+    animation: fadeinoutr 9s linear 1 forwards;}
+.elementToFadeInAndOut10sr { color:black;
+    -webkit-animation: fadeinoutr 10s linear 1 forwards;
+    animation: fadeinoutr 10s linear 1 forwards;}
+.elementToFadeInAndOut11sr { color:black;
+    -webkit-animation: fadeinoutr 11s linear 1 forwards;
+    animation: fadeinoutr 11s linear 1 forwards;}  
+.elementToFadeInAndOut12sr { color:black;
+    -webkit-animation: fadeinoutr 12s linear 1 forwards;
+    animation: fadeinoutr 12s linear 1 forwards;}
+.elementToFadeInAndOut13sr { color:black;
+    -webkit-animation: fadeinoutr 13s linear 1 forwards;
+    animation: fadeinoutr 13s linear 1 forwards;}  
+.elementToFadeInAndOut14sr { color:black;
+    -webkit-animation: fadeinoutr 14s linear 1 forwards;
+    animation: fadeinoutr 14s linear 1 forwards;}
+.elementToFadeInAndOut15sr { color:black;
+    -webkit-animation: fadeinoutr 15s linear 1 forwards;
+    animation: fadeinoutr 15s linear 1 forwards;}
+.elementToFadeInAndOut20sr { color:black;
+    -webkit-animation: fadeinoutr 20s linear 1 forwards;
+    animation: fadeinoutr 20s linear 1 forwards;}
+.elementToFadeInAndOut25sr { color:black;
+    -webkit-animation: fadeinoutr 25s linear 1 forwards;
+    animation: fadeinoutr 25s linear 1 forwards;}
+  
+@-webkit-keyframes fadeinoutr {
+  0% { opacity: 0; }
+  5% { opacity: 0; }
+  10% { opacity: 0; }
+  20% { opacity: 0; }
+  30% { opacity: 0; }
+  40% { opacity: 0; }
+  50% { opacity: 0; }
+  60% { opacity: 0; }
+  70% { opacity: 0; }
+  80% { opacity: 0; }
+  90% { opacity: 0; }
+  100% { opacity: 0; }
+  95% { opacity: 0; }
+  90% { opacity: 0; }
+  80% { opacity: 0; }
+  70% { opacity: 0; }
+  60% { opacity: 0; }
+  50% { opacity: 0; }
+  40% { opacity: 0; }
+  30% { opacity: 0; }
+  20% { opacity: 0; }
+  10% { opacity: .1; }
+  0% { opacity: 1; }
+}
+@keyframes fadeinoutr {
+  0% { opacity: 0; }
+  5% { opacity: 0; }
+  10% { opacity: 0; }
+  20% { opacity: 0; }
+  30% { opacity: 0; }
+  40% { opacity: 0; }
+  50% { opacity: 0; }
+  60% { opacity: 0; }
+  70% { opacity: 0; }
+  80% { opacity: 0; }
+  90% { opacity: 0; }
+  100% { opacity: 0; }
+  95% { opacity: 0; }
+  90% { opacity: 0; }
+  80% { opacity: 0; }
+  70% { opacity: 0; }
+  60% { opacity: 0; }
+  50% { opacity: 0; }
+  40% { opacity: 0; }
+  30% { opacity: 0; }
+  20% { opacity: 0; }
+  10% { opacity: .1; }
+  0% { opacity: 1; }
+}

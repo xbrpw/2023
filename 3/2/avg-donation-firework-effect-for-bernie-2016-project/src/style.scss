@@ -1,0 +1,253 @@
+$bg: #eef0f7;
+$navy: #001459;
+$blue: #0f6dd5;
+$red: #F03634;
+
+body{
+  margin: 0;
+  background: $bg;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bg{
+  width: 250px;
+  height: 250px;
+  //border: 1px solid green;
+  //background-color: $bg;
+  position: relative;
+  z-index: 9;
+  border-radius: 50%;
+  margin-top: 75px;
+  margin-left: 75px;
+  span{
+    transition: opacity 0.70s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+  &:hover span{
+    opacity: 0.1;
+    transition: opacity 0.25s ease;
+  }
+}
+
+.donate-27{
+  background-color: $red;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: "freight-sans-pro";
+  font-weight: 700;
+  padding: 1em 2em;
+  line-height: 1;
+  font-size: 1.2em;
+  width: 11.15em;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  display: none;
+  position: absolute;
+  top: 37%;
+  left: calc(50% - 5.5em);
+  z-index: 99;
+  transition: background-color 0.2s ease;
+  &:hover{
+    background-color: #ff4240;  }
+  &.bounceIn{
+    display: block;
+  }
+}
+
+.burst{
+  width: 20px;
+  position: absolute;
+}
+
+.burst-1{
+  top: 7%;
+  left: calc(50% - 10px);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-2{
+  top: 18.2%;
+  left: calc(78.5% - 10px);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-3{
+  top: calc(50% - 12px);
+  left: calc(87.5%);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-4{
+  top: 75.4%;
+  left: calc(78.5% - 10px);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-5{
+  top: 87%;
+  left: calc(50% - 10px);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-6{
+  top: 75.4%;
+  left: calc(21.5% - 10px);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-7{
+  top: calc(50% - 12px);
+  left: calc(7.2%);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.burst-8{
+  top: 18.2%;
+  left: calc(21.5% - 10px);
+  animation: burst-grow 2s infinite ease;
+  animation-delay: 0.65s;
+}
+
+.sm-flash{
+  width: 130px;
+  position: absolute;
+  left: calc(50% - 65px);
+  top: calc(50% - 65px);
+  animation: sm-flash-grow 2s infinite ease;
+  animation-delay: 0.25s;
+}
+
+.big-flash{
+  width: 150px;
+  position: absolute;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+  animation: big-flash-grow 2s infinite ease;
+}
+
+.st0,
+.blue-fill{
+  fill:#0f6dd5;
+}
+
+.st1{
+  fill:#c2c6d2;
+}
+
+.red-fill{fill:#F03634;}
+
+.lg-label{
+  text-transform: uppercase;
+  cursor: default;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: "freight-sans-pro";
+  font-weight: 500;
+  line-height: 1;
+  color: $blue;
+  font-size: 1.2em;
+  margin-bottom: 0.1em;
+}
+
+.lg{
+  display: block;
+  cursor: default;
+  text-align: center;
+  width: 100%;
+  color: $navy;
+  font-size: 9em;
+  font-family: "jubilat";
+  font-weight: 400;
+  margin-right: 0em;
+  line-height: 0.8;
+  margin-right: 0.05em;
+  //border: 1px solid blue;
+  sup{
+    font-size: 0.45em;
+  }
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.tile{
+  margin: 100px auto;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  border: 1px solid $bg;
+  position: relative;
+}
+
+@keyframes big-flash-grow {
+  0%   {
+    //transform: rotate(0deg)
+    opacity: 0;
+  }
+  30%   {
+    //transform: rotate(0deg)
+    opacity: 0;
+  }
+  60%{
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.2,2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes sm-flash-grow {
+  0%   {
+    //transform: rotate(0deg)
+    opacity: 0;
+  }
+  30%   {
+    //transform: rotate(0deg)
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2,2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes burst-grow {
+  0%   {
+    //transform: rotate(0deg)
+    opacity: 0;
+  }
+  30%   {
+    //transform: rotate(0deg)
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3,3);
+    opacity: 0;
+  }
+}
