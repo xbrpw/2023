@@ -1,0 +1,122 @@
+/* Marquee styles */
+.marquee {
+  --gap: 0rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 40s linear infinite;
+}
+
+/* Reverse animation */
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content;
+}
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Enable position absolute animation on the duplicate content (last-child) */
+.enable-animation .marquee--pos-absolute .marquee__content:last-child {
+  animation-name: scroll-abs;
+}
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Other page demo styles */
+.marquee__content > * {
+  /*flex: 0 0 0 0;*/
+  /*color: white;*/
+  /*background: dodgerblue;*/
+  margin: 0px;
+  padding: 0rem 0rem;
+  /*border-radius: 0.25rem;*/
+  text-align: center;
+}
+
+.marquee {
+  /*border: 2px dashed lightgray;*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;*/
+}
+
+section {
+  margin-block: 0rem;
+}
+
+section > * + * {
+  margin-block-start: 0rem;
+}
+
+img {
+  /*width: 100%;*/
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  /*scale: 0.9;*/
+}
+.blanco-y-negro {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}

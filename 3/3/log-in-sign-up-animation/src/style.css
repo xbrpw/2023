@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran");
+
+* { box-sizing: border-box; }
+
+:root {
+    --primary: rgb(52, 87, 220);
+    --secondary: rgb(255, 255, 255);
+}
+
+body {
+    font-family: "Catamaran", sans-serif;
+    margin: 0;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    z-index: 1;
+}
+.home-button {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+.signup-open .home-button {
+    color: var(--secondary);
+}
+
+/* Form styling */
+.login-section {
+    position: relative;
+    min-height: 100vh;
+}
+
+.login-section button {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 5px;
+    border: none;
+    padding: 1.3em 6em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.login-section input {
+    margin-bottom: 1.5em;
+    width: 100%;
+    padding: 0.5em;
+}
+.login-section .checkbox input {
+    width: auto;
+}
+
+.login-section label:not(.checkbox) {
+    font-weight: bold;
+}
+
+/* Left and right section styling */
+.login-container,
+.signup-container {
+    padding: 0.5em;
+}
+
+h3,
+.explanatory-text {
+    text-align: center;
+}
+
+.login-section > section {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2em 1em 0 2em;
+}
+
+.signup-container.signup-container {
+    left: 50%;
+    padding: 2em 2em 0 1em;
+}
+
+form > *:not(.checkbox) {
+    display: block;
+}
+
+.forgot-link {
+    float: right;
+}
+
+.name-container.name-container {
+    display: flex;
+    flex-direction: row;
+}
+.name-container > div {
+    width: 50%;
+}
+.name-container input {
+    max-width: 100%;
+}
+
+/* Overlay styling */
+.switcher-overlay.switcher-overlay {
+    color: var(--secondary);
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s;
+    height: 100%;
+    width: 50%;
+    padding: 0 5em 0 1em;
+    overflow: hidden;
+}
+
+.switcher-overlay svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--primary);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.switcher-overlay > div {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.switcher-overlay button {
+    width: auto;
+    border: 1px solid var(--secondary);
+}
+
+.login-open .switcher-overlay  {
+    transform: translateX(100%);
+    padding: 0 1em 0 5em;
+}
+.login-open .switcher-overlay path {
+    d: path('M 0,0 L 100,0 L 100,100 L 20,100 z'); 
+}
+.login-open .login-text,
+.signup-open .signup-text {
+    display: none;
+}
+
+/* Handle small screens */
+@media (max-width: 623px) {
+    .login-section.login-section > section {
+        width: 100%;
+        position: static;
+    }
+    
+    .switcher-overlay.switcher-overlay {
+        height: auto !important;
+        position: static;
+        color: black;
+        transform: none;
+        padding: 0 1em;
+    }
+    
+    .switcher-overlay > div {
+        transform: none;
+    }
+    
+    .switcher-overlay svg {
+        display: none;
+    }
+    
+    .signup-open .home-button {
+        color: var(--primary);
+    }
+}
+
+/* Little animation for the diagonal line */
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0%); }
+    30% { transform: translateX(5px); }
+}
+@keyframes bounceLeft {
+    0%, 100% { transform: translateX(0%); }
+    30% { transform: translateX(-5px); }
+}

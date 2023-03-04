@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Material Design Transition Effect lista de contactos </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Passion+One|Roboto+Condensed:400,300,700|Roboto:400,300,500'><link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body ng-app="mdApp">
+       
+  <section ng-controller="mdController as Ctrl">
+    <ul>
+      <li ng-repeat="user in Ctrl.users">
+        <a ng-click="Ctrl.showProfile($event, $index)">
+          <div class="imageWrapper">
+            <img src="{{user.avatar}}" >
+          </div>
+
+          <div class="info">
+            <h3>{{user.name}}</h3>
+            <p>{{user.title}}</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <div class="profile ">
+      <header ng-style="{backgroundColor:Ctrl.user.color}">
+        <h3>{{Ctrl.user.name}}</h3>
+        <small>{{Ctrl.user.title}}</small>
+      </header>
+
+      <ul class="w3-container">
+        <li>
+          <quote>{{Ctrl.user.description}}</quote>
+        </li>
+
+        <li>
+          <h4>Address:</h4>
+          <p>{{Ctrl.user.address}}</p>
+        </li>
+
+        <li>
+          <h4>Phone:</h4>
+          <p>{{Ctrl.user.phone}}</p>
+        </li>
+
+        <li>
+          <h4>Email:</h4>
+          <p>{{Ctrl.user.email}}</p>
+        </li>
+      </ul>
+
+      <a class="close-button" 
+         ng-style="{backgroundColor:Ctrl.user.color}"
+         ng-click="Ctrl.closeProfile($event)">&#10005;</a>
+    </div>    
+  </section>
+</body>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

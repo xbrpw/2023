@@ -1,0 +1,54 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body ng-app="mdApp">
+       
+  <section ng-controller="mdController as Ctrl">
+    <ul>
+      <li ng-repeat="user in Ctrl.users">
+        <a ng-click="Ctrl.showProfile($event, $index)">
+          <div class="imageWrapper">
+            <img src="{{user.avatar}}" >
+          </div>
+
+          <div class="info">
+            <h3>{{user.name}}</h3>
+            <p>{{user.title}}</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <div class="profile ">
+      <header ng-style="{backgroundColor:Ctrl.user.color}">
+        <h3>{{Ctrl.user.name}}</h3>
+        <small>{{Ctrl.user.title}}</small>
+      </header>
+
+      <ul class="w3-container">
+        <li>
+          <quote>{{Ctrl.user.description}}</quote>
+        </li>
+
+        <li>
+          <h4>Address:</h4>
+          <p>{{Ctrl.user.address}}</p>
+        </li>
+
+        <li>
+          <h4>Phone:</h4>
+          <p>{{Ctrl.user.phone}}</p>
+        </li>
+
+        <li>
+          <h4>Email:</h4>
+          <p>{{Ctrl.user.email}}</p>
+        </li>
+      </ul>
+
+      <a class="close-button" 
+         ng-style="{backgroundColor:Ctrl.user.color}"
+         ng-click="Ctrl.closeProfile($event)">&#10005;</a>
+    </div>    
+  </section>
+</body>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Log in / Sign up animation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<header>
+    <a href="/" class="home-button">BoardMe</a>
+</header>
+
+<section class="login-section">
+    <section class="login-container">
+        <h3>Login to Your Account</h3>
+        <p class="explanatory-text">Log in to your account so you can continue building and editing your onboarding flows.</p>
+
+        <form method="get">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" size="30" placeholder="Enter your email address" required>
+
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" size="30" placeholder="Enter your password" required>
+
+            <label class="checkbox"><input type="checkbox" name="save" value="" />Remember me</label>
+
+            <a href="/forgot-password" class="forgot-link">Forgot password</a>
+
+            <button id="login-submit" value="" type="submit">Log in</button>
+        </form>
+    </section><!--
+    
+ --><section class="signup-container">
+        <h3>Sign Up for an Account</h3>
+        <p class="explanatory-text">Let's get you all set up so you can start creating your first onboarding experience.</p>
+
+        <form method="send">
+            <div class="name-container">
+                <div>
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" size="30" placeholder="Your first name" required>
+                </div>
+
+                <div>
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" size="30" placeholder="Your last name" required>
+                </div>
+            </div>
+
+            <label for="signup-email">Email</label>
+            <input type="email" id="singup-email" size="30" placeholder="Enter your email address" required>
+
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" size="30" placeholder="Enter a strong password" required>
+
+            <label class="checkbox"><input type="checkbox" name="accept-terms" value="" />I accept BoardMe's <a href="/terms" target="_blank">Terms &amp; Conditions</a></label>
+
+            <button id="signup-submit" value="" type="submit">Sign up</button>
+        </form>
+    </section>
+    
+    <section class="switcher-overlay">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M 0,0 L 100,0 L 80,100 L 0,100 z"></path>
+        </svg>
+        <div class="signup-text">
+            <h3>Don't have an account yet?</h3>
+            <p class="explanatory-text">Let's get you all set up so you can start creating your first onboarding experience.</p>
+            <button class="switch">Sign up</button>
+        </div>
+
+        <div class="login-text">
+            <h3>Already signed up?</h3>
+            <p class="explanatory-text">Log in to your account so you can continue building and editing your onboarding flows.</p>
+            <button class="switch">Log in</button>
+        </div>
+    </section>
+
+</section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

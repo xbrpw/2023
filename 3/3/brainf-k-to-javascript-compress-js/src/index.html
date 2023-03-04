@@ -1,0 +1,9 @@
+<label for=upload>Upload File (Drag and drop onto the button or click)</label> <input type=file id=upload accept=".b,.bf,.txt">
+<h1>BrainF**k to JS</h1>
+<textarea id="input" placeholder="input BF here" cols=100 rows=20></textarea>
+<br>
+<h2>EOF value</h2>
+<input type=radio name="eof" id=negOne value="-1"> <label for=negOne>-1</label> <input type=radio name="eof" id=zero value="0" checked> <label for=zero>0</label> <input type=radio name="eof" id=noChange value="none"> <label for=noChange>No Change</label><br><br><button onclick="document.getElementById('output').innerHTML = generateBf()" id=gen style="font-size:24px">Generate JS</button> <input type=checkbox id=compressed onclick="showHide(this)"> <label for=compressed style="font-size:24px">Compress JS?</label><span id=spacingStuff>&nbsp;&nbsp;&nbsp;<label for=spacing style="font-size:24px">Spacing:</label> <input type=number id=spacing min=0 max=8 value=4 style="font-size:16px"></span>
+<br>
+<h3>Copy JS by clicking the code</h3><span class="notif" style="display:none;" id=copiedNotif>Code Copied!</span>
+<pre><p id=output onclick="copyElementText(this.id);notif();"></pre>

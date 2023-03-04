@@ -1,0 +1,242 @@
+/*Common*/
+
+@font-face {
+	font-family: "Material Symbols Outlined";
+	font-style: normal;
+	src: url(https://example.com/material-symbols.woff) format("woff");
+}
+
+.material-symbols-outlined {
+	font-family: "Material Symbols Outlined";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+* {
+	transition: all ease 1s;
+}
+body {
+	transition: all linear 1s;
+	background: #6aab93;
+}
+.hide {
+	display: none;
+}
+button {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	font-size: 30px;
+	padding: 8px 16px;
+	color: #4e8570;
+	background: #bbf138;
+	border: 0;
+	font-weight: 700;
+	cursor: pointer;
+}
+h1 {
+	text-align: center;
+	font-size: 60px;
+}
+h1 span {
+	min-width: 200px;
+	display: inline-block;
+}
+h1:before,
+h1:after {
+	content: "";
+	background: transparent;
+	display: inline-block;
+	border: 20px solid #459778;
+	margin: 0 16px;
+	transform: rotate(45deg);
+	transition: all ease-in-out 0.5s;
+}
+
+h1:before {
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+}
+h1:after {
+	border-right-color: transparent;
+	border-top-color: transparent;
+}
+.container {
+	background: #fff;
+	width: 400px;
+	height: 300px;
+
+	position: relative;
+	border-radius: 0 0 150px 150px;
+	margin: 124px auto;
+}
+.triangle-1,
+.triangle-2 {
+	transform: rotate(45deg);
+	position: absolute;
+	border: 50px solid;
+}
+.triangle-1 {
+	left: -50px;
+	top: 20px;
+}
+.triangle-2 {
+	right: -50px;
+	top: 20px;
+}
+.nose {
+	border: 50px solid #000;
+	border-right-color: rgb(0, 0, 0);
+	border-bottom-color: rgb(0, 0, 0);
+	border-left-color: rgb(0, 0, 0);
+	position: absolute;
+	top: 71%;
+	left: calc(50% - 50px);
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+.eyes .eye {
+	width: 35px;
+	height: 45px;
+	background: #000;
+	border-radius: 100%;
+}
+.eyes {
+	display: flex;
+	justify-content: space-between;
+	top: 47%;
+	position: absolute;
+	width: 100%;
+	max-width: 70%;
+	left: 15%;
+}
+.eye span {
+	background: #ddd;
+	width: 8px;
+	height: 12px;
+	display: block;
+	left: 4px;
+	position: relative;
+	border-radius: 100%;
+	top: 8px;
+}
+.nose span {
+	width: 4px;
+	height: 15px;
+	display: block;
+	background: #000;
+	position: relative;
+}
+.cat .triangle-1,
+.cat .triangle-2 {
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+}
+.cat .triangle-2 {
+	top: -20px;
+	right: 19px;
+	transform: scaleY(1.5) rotate(55deg);
+}
+.cat .triangle-1 {
+	top: -18px;
+	left: 16px;
+	transform: scaleY(1.5) rotate(34deg);
+}
+.cat .nose {
+	border-width: 30px;
+	left: calc(50% - 30px);
+}
+.cat .container {
+	border-radius: 60px 60px 180px 180px;
+}
+.cat .eye:last-of-type {
+	transform: rotate(25deg);
+	width: 50px;
+	height: 65px;
+}
+.cat .eye:last-of-type span {
+	transform: rotate(-25deg);
+	right: 20px;
+	width: 22px;
+}
+.cat .eye:first-of-type {
+	transform: rotate(-25deg);
+	width: 50px;
+	height: 65px;
+}
+.cat .eye:first-of-type span {
+	transform: rotate(25deg);
+	left: 20px;
+	width: 22px;
+}
+.panda .container {
+	border-radius: 90px 90px 100px 100px;
+}
+.panda .eye:first-of-type {
+	width: 80px;
+	height: 120px;
+	transform: rotate(23deg);
+}
+.panda .eye:last-of-type {
+	width: 80px;
+	height: 120px;
+	transform: rotate(-23deg);
+}
+.panda .nose {
+	transform: scaley(0.7);
+}
+.panda .nose span {
+	height: 44px;
+}
+.panda .eye:last-of-type {
+	width: 40px;
+	height: 80px;
+	transform: rotate(-23deg);
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 30px;
+	position: relative;
+	right: 20px;
+}
+.panda .eye:last-of-type span {
+	right: 20px;
+}
+.panda .eye:first-of-type {
+	width: 40px;
+	height: 80px;
+	transform: rotate(23deg);
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 30px;
+	left: 20px;
+	position: relative;
+}
+.panda .eye:first-of-type span {
+	left: 20px;
+}
+.panda .triangle-1,
+.panda .triangle-2 {
+	top: 0px;
+}
+
+.panda .triangle-1 {
+	left: -9px;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	transform: rotate(90deg);
+	border-radius: 30px;
+}
+.panda .triangle-2 {
+	right: -9px;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	transform: rotate(180deg);
+	border-radius: 30px;
+}

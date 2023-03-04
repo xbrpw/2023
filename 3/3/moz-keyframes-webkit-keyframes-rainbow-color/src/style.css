@@ -1,0 +1,16 @@
+        html {
+            height: 100%;
+            background: url('https://luisangelmaciel.github.io/twitter-blue/tweeplus/img/hole.png');
+            background-color: #333;
+        }
+        
+        body {
+            min-height: 100%; margin: 0;
+            color: inherit;
+            font: inherit;
+            border: 0;
+            background: url('https://luisangelmaciel.github.io/twitter-blue/tweeplus/img/spotlight.svg') fixed;
+            color: white;
+            text-shadow: .1em .1em .1em rgba(0, 0, 0, .6);
+        }
+        

@@ -1,0 +1,301 @@
+:root {
+	--g1: #83ff80;
+	--g2: #3ac436;
+}	
+	
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: 
+		linear-gradient(140deg, #fff0 0%,  #fff5 20%, #fff9 34% 36%, #fff9 38%, #fff0 74% 100%), 
+		repeating-linear-gradient(40deg, #725f5840 0.1px, #8b888740 0.12px, #bfbfbf40 0.1px), 
+		repeating-linear-gradient(-50deg, #725f5880 0.1px, #8b888780 0.12px, #bfbfbf80 0.1px), 
+		radial-gradient(circle at 50% 100%, #000, #222);
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    width: 85vmin;
+    height: 85vmin;
+    border-radius: 100%;
+    --screw1: #bdbdbd 0.55vmin, #fff0 calc(0.55vmin + 3px) 100%;
+    --screw2: #262626 0.75vmin, #fff0 calc(0.8vmin + 1px) 100%;
+    background: 
+		radial-gradient(circle at 82.5% 82%, var(--screw1)), 
+		radial-gradient(circle at 82.55% 82%, var(--screw2)), 
+		radial-gradient(circle at 18% 82%, var(--screw1)), 
+		radial-gradient(circle at 17.95% 82%, var(--screw2)), 
+		radial-gradient(circle at 17% 18%, var(--screw1)), 
+		radial-gradient(circle at 16.95% 18.05%, var(--screw2)), 
+		radial-gradient(circle at 83% 17.5%, var(--screw1)), 
+		radial-gradient(circle at 83% 17.55%, var(--screw2)), 
+		radial-gradient(#fff0 0 58%, #c3c3c3 calc(59% + 1px), #5e666a 68%, #cdcdcd 70% 100%), 
+		radial-gradient(circle at 50% 100%, #000, #333);
+    filter: drop-shadow(0px 0px 0.25vmin #000d);
+    box-shadow: 
+		1vmin 1vmin 3vmin 1vmin #fff8 inset, 
+		-1vmin -2vmin 2vmin 0vmin #090b0c inset, 
+		-1vmin -1vmin 1.5vmin 0vmin #0003, 
+		0.5vmin 0.5vmin 3vmin 0vmin #fff4;
+}
+
+body:after {	
+	content: "";
+    position: absolute;
+    width: 67vmin;
+    height: 67vmin;
+    border-radius: 100%;
+    background: repeating-linear-gradient(180deg, #fff0 1%, var(--g1) calc(1% + 1px), #fff0 calc(1% + 2px) 10.75%), repeating-linear-gradient(90deg, #fff0 1%, var(--g1) calc(1% + 1px), #fff0 calc(1% + 2px) 10.75%), radial-gradient(circle at 34vmin 78vmin, #fff0 0 47vmin, #83ff8020 calc(52vmin + 1px) 100%);
+    background-size: 2.75vmin 100%, 100% 2.75vmin , 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 0, 0% 50.1%, 0 0;
+    box-shadow: -1vmin -2vmin 3vmin 0vmin #2226 inset;
+    filter: blur(0.5px);
+}
+
+.radar {
+	width: 70vmin;
+    height: 70vmin;
+    background:
+		linear-gradient(0deg, #fff0 calc(50% - 0.11vmin), var(--g2)  0 calc(50% + 0.1vmin) ,#fff0 0 100% ), 
+		linear-gradient(90deg, #fff0 calc(50% - 0.11vmin), var(--g2)  0 calc(50% + 0.1vmin) ,#fff0 0 100% ), 
+		radial-gradient(#fff0 calc(40vmin - 0.5vmin), var(--g2) calc(calc(40vmin - 0.5vmin) + 1px)), 
+		repeating-radial-gradient(#fff0 4.25vmin, var(--g2) calc(4.25vmin + 1px) calc(4.4vmin + 1px), #fff0 calc(4.4vmin + 2px) calc(10.5vmin + 2px)),
+		radial-gradient(#fff0 4.5vmin, #3ac43610 calc(4.5vmin + 1px) 11vmin, #3ac43620 calc(11vmin + 1px) 17.5vmin, #3ac43630 calc(17.5vmin + 1px) 23.9vmin, #3ac43640 calc(23.9vmin + 1px) 30.25vmin, #3ac43650 calc(30.25vmin + 1px) 37vmin, #3ac43660 calc(37vmin + 1px));
+    border-radius: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+.radar:before {
+	content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: 
+		conic-gradient(from 0deg at 100% 100%, #fff0 0 90%, #3ac43620 100%), 
+		conic-gradient(from 0deg at 100% 100%, #fff0 0 78%, #3ac43680 100%);
+    border-radius: 100% 0 0 0;
+    animation: spin 3s linear 0s infinite;
+    transform-origin: 100% 100%;
+    border-right: 0.35vmin solid #70ff6c;
+    box-sizing: border-box;
+}
+	
+@keyframes spin {
+	100% { transform: rotate(360deg)}
+}
+	
+.radar:after {
+    content: "";
+	position: absolute;
+    width: 45%;
+    height: 35%;
+    left: 8vmin;
+    top: 0vmin;
+    background: radial-gradient(ellipse at 40% 40%, #fff 1%, #d2ff9d40, #fff0 60%);
+    border-radius: 50% 100%;
+    transform: rotate(-45deg);
+    filter: blur(15px);
+    opacity: 0.65;
+}
+
+/*** TARGETS ***/
+
+@keyframes detect {
+	  0% { opacity: 1; text-shadow: 0 0 1vmin var(--g1), 0 0 1vmin var(--g1), 0 0 1vmin var(--g1); }
+	100% { opacity: 0; text-shadow: none;}
+}	
+
+.radar > span {
+	position: absolute;
+	width: 2vmin;
+	height: 2vmin;
+	opacity: 0;
+}
+
+.radar > span:after {
+    font-family: Arial, Helvetica, serif;
+    text-transform: uppercase;
+    color: var(--g1);
+    text-shadow: none;
+    font-size: 1vmin;
+    height: 3vmin;
+    width: 5vmin;
+    position: absolute;
+    top: -2vmin;
+    left: -5.5vmin;
+    white-space: pre-wrap;
+    text-decoration: underline;
+}
+
+/*** PLANE ***/
+
+.plane {
+	animation: detect 3s ease 2.625s infinite, move-plane 65s linear 0s infinite;
+}
+
+.plane:before {
+    content: "\2708";
+    color: var(--g1);
+    position: absolute;
+    transform: rotate(45deg) ;
+    filter: drop-shadow(-1vmin -2vmin 0px var(--g1));
+}
+
+@keyframes move-plane {
+	  0% { transform: translate(12vmin, 12vmin); }
+	100% { transform: translate(32vmin, 32vmin); }
+}
+
+.plane:after {
+    content: "maverick  \a \a iceman   ";
+	animation: name-plane 65s linear 0s infinite;
+}
+
+@keyframes name-plane {
+	  0%, 8.6% { opacity: 0; }
+	8.7%, 100% { opacity: 1; }
+}
+
+/*** SUBMARINE ***/
+
+.submarine {
+	animation: detect 3s ease 6.25s infinite, move-sub 75s linear 6s infinite;
+}
+
+.submarine:before {
+	content: "\276A \276B";
+    color: var(--g1);
+    position: absolute;
+    transform: rotate(30deg);
+    letter-spacing: -0.35vmin;
+    animation: slow-sub 75s ease 6s infinite;
+    text-align: center;
+	filter: drop-shadow(0 0 0.25vmin var(--g1)) drop-shadow(0 0 0.5vmin var(--g1));
+}
+	
+@keyframes move-sub {
+	  0% { transform: translate(50vmin, 5vmin);}
+	100% { transform: translate(36vmin, 31.75vmin); }
+}
+@keyframes slow-sub {
+	  0% { text-shadow: 1vmin -2vmin 0 var(--g1), 2vmin -4vmin 0 var(--g1);}
+	100% { text-shadow: 1vmin -2vmin 0 var(--g1), 2vmin -4.5vmin 0 var(--g1); }
+}
+
+.submarine:after {
+    width: 10vmin !important;
+    line-height: 1.65vmin;
+    text-align: right;
+    left: -1.25vmin !important;
+    top: -2.5vmin !important;
+    content: "       k-19\A     nautilus\A    red october";
+	animation: name-sub 75s linear 6s infinite;
+}
+
+@keyframes name-sub {
+	0%, 7.99% { opacity: 0; }
+	8%,  100% { opacity: 1; }
+}
+
+/*** UFO ***/
+
+.ufo {
+	animation: detect 3s ease 13.1s infinite, move-ufo 30s linear 13.1s infinite;
+}
+
+.ufo:before {
+	content: "\25C9";
+    color: var(--g1);
+    width: 2vmin;
+    height: 2vmin;
+    position: absolute;
+    animation: spin 1s linear 13.1s infinite, clon-ufo 30s linear 13.1s infinite;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: 1vmin;
+	filter: drop-shadow(0 0 0.5vmin var(--g1)) drop-shadow(0 0 0.5vmin #83ff8080);
+}
+
+@keyframes clon-ufo {
+	0%, 64%, 100% { text-shadow: 0 0 0 var(--g1), 0 0 0 var(--g1); }
+	65%, 93% { text-shadow: 1vmin -1vmin 0 var(--g1), -1vmin 1vmin 0 var(--g1); }
+}
+
+@keyframes move-ufo {
+	 0% { transform: translate(63vmin, 50vmin);}
+	10% { transform: translate(47vmin, 43vmin); } 
+	20% { transform: translate(47vmin, 44vmin); }
+	21% { transform: translate(20vmin, 35vmin); }
+	24% { transform: translate(22vmin, 26vmin); }
+	27% { transform: translate(50vmin, 28vmin); }
+	30% { transform: translate(46vmin, 47vmin); }
+	32%, 36% { transform: translate(52vmin, 51vmin); }
+	37%, 59% { transform: translate(66vmin, 60vmin); }
+	60% { transform: translate(63vmin, 50vmin); }
+	88%, 91% { transform: translate(37vmin, 37vmin); }
+	92%, 100% { transform: translate(70vmin, 43vmin); }
+}
+
+.ufo:after {
+    content: " \00a0 \00a0 UFO";
+    top: -1vmin !important;
+	left: 0vmin !important;
+    text-align: right;
+	animation: name-ufo 30s linear 13.1s infinite;
+}
+
+@keyframes name-ufo {
+	  0%, 18% { opacity: 0; }
+	18.1%, 100% { opacity: 1; }
+}
+
+/*** GODZILLA ***/
+
+.godzilla {
+	animation: detect 3s ease 25.75s infinite, move-godzilla 72s linear 25.75s infinite;
+}
+
+.godzilla:before {
+    content: "";
+    position: absolute;
+    transform: rotate(-55deg);
+    letter-spacing: -0.45vmin;
+    width: 6vmin;
+    height: 3vmin;
+    background: 
+		radial-gradient(ellipse at 74% 50%, var(--g1) 1vmin, #fff0 calc(1vmin + 2px)), 
+		radial-gradient(ellipse at 50% 50%, var(--g1) 1.5vmin, #fff0 calc(1.5vmin + 2px)), 
+		radial-gradient(ellipse at 19% 48%, var(--g1) 0.65vmin, #fff0 calc(0.65vmin + 2px)), 
+		radial-gradient(ellipse at 9% 48%, var(--g1) 0.45vmin, #fff0 calc(0.45vmin + 2px)), 
+		radial-gradient(ellipse at 33% 26%, var(--g1) 0.25vmin, #fff0 calc(0.25vmin + 1px)), 
+		radial-gradient(ellipse at 33% 74%, var(--g1) 0.25vmin, #fff0 calc(0.25vmin + 1px)), 
+		radial-gradient(ellipse at 66% 26%, var(--g1) 0.125vmin, #fff0 calc(0.125vmin + 1px)), 
+		radial-gradient(ellipse at 66% 74%, var(--g1) 0.125vmin, #fff0 calc(0.125vmin + 1px));
+	filter: drop-shadow(0px 0px 2vmin var(--g1))drop-shadow(0px 0px 0.5vmin var(--g1));
+}
+
+@keyframes move-godzilla {
+	  0% { transform: translate(15vmin, 61vmin); }
+	100% { transform: translate(30vmin, 37vmin); }
+}
+
+.godzilla:after {
+    content: "godzilla   ";
+	animation: name-godzilla 72s linear 25.75s infinite;
+	left: -2vmin !important;
+}
+
+@keyframes name-godzilla {
+	   0%, 8.4% { opacity: 0; }
+	8.45%, 100% { opacity: 1; }
+}
