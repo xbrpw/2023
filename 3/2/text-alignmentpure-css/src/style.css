@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Annie Use Your Telescope', Arial, Helvetica, serif;
+	background-color: #4c4177;
+  background-image: radial-gradient(circle at 50% 100%, #2a5470 0%, #4c4177 74%);
+}
+
+.content {
+	width: 100%;
+	padding: 20px;
+	position: relative;
+	max-width: 600px;
+	margin-top: 30px;
+}
+
+.content:before, .content:after {
+	content: "";
+	width: 100%;
+	box-shadow: #0006 0px 2px 4px, #0004 0px 7px 13px -3px;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	border-radius: 20px;
+	z-index: -1;
+}
+
+.content:after {
+	height: calc(100% - 115px);
+	bottom: 25px;
+	top: inherit;
+}
+
+.menu {
+	position: relative;
+}
+
+p {
+	margin-top: 66px;
+	padding: 5px;
+	padding-top: 20px;
+	padding-bottom: 0;
+	color: #8194b3;
+	font-size: 22px;
+	line-height: 25px;
+}
+
+input {
+	display: none;
+}
+
+label {
+	background: #fff0;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: -70px;
+	cursor: pointer;
+}
+
+label[for=a-mid] {
+	left: 78px;
+}
+
+label[for=a-rig] {
+	left: 156px;
+}
+
+label[for=a-jus] {
+	left: 234px;
+}
+	
+
+label > span {
+	background: #dbe2ed;
+	width: 40px;
+	height: 5px;
+	position: absolute;
+	border-radius: 5px;
+	left: 5px;
+	top: 5px;
+	transition: all 0.5s ease 0s;
+}
+
+label > span:nth-child(2) {
+	top: 17px;
+	width: 30px;
+}
+
+label > span:nth-child(3) {
+	top: 28px;
+	width: 35px;
+}
+
+label > span:nth-child(4) {
+	top: 39px;
+	width: 20px;
+}
+
+label:hover > span {
+	background: #9a95b1;
+	transition: all 0.5s ease 0s;
+}
+
+
+
+label[for=a-mid] > span:nth-child(2) {
+	left: 20%;
+}
+label[for=a-mid] > span:nth-child(3) {
+	left: 15%;
+}
+label[for=a-mid] > span:nth-child(4) {
+	left: 30%;
+}
+
+
+label[for=a-rig] > span:nth-child(2) {
+	left: 30%;
+}
+label[for=a-rig] > span:nth-child(3) {
+	left: 20%;
+}
+label[for=a-rig] > span:nth-child(4) {
+	left: 50%;
+}
+
+label[for=a-jus] > span {
+	left: 10%;
+	width: 80%;
+}
+
+
+div[class^="line-"] {
+	position: absolute;
+	width: 40px;
+	height: 5px;
+	background: #4c4177;
+	left: 5px;
+	top: -65px;
+	border-radius: 5px;
+}
+
+div.line-sub {
+	top: -53px;
+	width: 30px;
+}
+
+div.line-mid {
+	top: -42px;
+	width: 35px;
+	transition-delay: 0.4s;
+}
+
+div.line-bot {
+	top: -31px;
+	width: 20px;
+	transition-delay: 0.6s;
+}
+
+
+input:checked + label {
+	cursor: default;
+}
+
+input:checked ~ div[class^="line-"] {
+	transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+
+/*** left ***/
+input#a-lef:checked ~ div.line-top {
+	transition-delay: 0s;
+}
+input#a-lef:checked ~ div.line-sub {
+	transition-delay: 0.15s;
+}
+input#a-lef:checked ~ div.line-mid {
+	transition-delay: 0.3s;
+}
+input#a-lef:checked ~ div.line-bot {
+	transition-delay: 0.45s;
+}
+
+/*** center ***/
+input#a-mid:checked ~ div.line-top {
+	left: 83px;
+}
+input#a-mid:checked ~ div.line-sub {
+	left: 88px;
+	transition-delay: 0.15s;
+}
+input#a-mid:checked ~ div.line-mid {
+	left: 85px;
+	transition-delay: 0.3s;
+}
+input#a-mid:checked ~ div.line-bot {
+	left: 93px;
+	transition-delay: 0.45s;
+}
+
+/*** right ***/
+input#a-rig:checked ~ div.line-top {
+	left: 161px;
+}
+input#a-rig:checked ~ div.line-sub {
+	left: 171px;
+	transition-delay: 0.15s;
+}
+input#a-rig:checked ~ div.line-mid {
+	left: 166px;
+	transition-delay: 0.3s;
+}
+input#a-rig:checked ~ div.line-bot {
+	left: 181px;
+	transition-delay: 0.45s;
+}
+
+
+/*** justify ***/
+input#a-jus:checked ~ div[class^="line-"] {
+	left: 239px;
+	width: 40px;
+}
+input#a-jus:checked ~ div.line-sub {
+	transition-delay: 0.15s;
+}
+input#a-jus:checked ~ div.line-mid {
+	transition-delay: 0.3s;
+}
+input#a-jus:checked ~ div.line-bot {
+	transition-delay: 0.45s;
+}
+
+
+
+
+/*** TEXT ***/
+input#a-lef:checked ~ p {
+	text-align: left;
+}
+input#a-mid:checked ~ p {
+	text-align: center;
+}
+input#a-rig:checked ~ p {
+	text-align: right;
+}
+input#a-jus:checked ~ p {
+	text-align: justify;
+}
+
+
+/*** Blink ***/
+input:active ~ p {
+	transform-origin: center top;
+	transform-style: preserve-3d;
+	animation: blink 0.5s ease 0s;
+}
+
+@keyframes blink {
+	30% { color: #fff; }
+}
+
+
+/*** PORTRAIT ***/
+@media only screen and (orientation: portrait) {
+	.content {
+		width: 80vmin;
+	}
+}
