@@ -1,0 +1,70 @@
+.translate-z-25 {
+  transform: translateZ(25px);
+}
+.translate-z-50 {
+  transform: translateZ(50px);
+}
+.translate-z-150 {
+  transform: translateZ(150px);
+}
+.translate-z-100 {
+  transform: translateZ(100px);
+}
+.translate-z-200 {
+  transform: translateZ(200px);
+}
+
+.-translate-z-100 {
+  transform: translateZ(-200px);
+}
+.-translate-z-200 {
+  transform: translateZ(-200px);
+}
+.-translate-z-400 {
+  transform: translateZ(-400px);
+}
+
+.backface-visible {
+  backface-visibility: visible;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-full {
+  transform: rotateY(180deg);
+}
+
+.bg-navy {
+  background: #003057;
+}
+
+.bg-bright-yellow {
+  background: #ffcb00;
+}
+
+.bg-teal {
+  background: #32ced7;
+}
+
+.text-teal {
+  color: #32ced7;
+}
+
+.hero {
+  width: 600px;
+  height: 600px;
+}
+
+.bg-dark-teal {
+  background: #1e96a5;
+}
+
+h1,
+button {
+  font-family: "Montserrat";
+}

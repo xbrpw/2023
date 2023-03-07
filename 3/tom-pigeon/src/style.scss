@@ -1,0 +1,148 @@
+$count: 25;
+
+$backgroundSizeW: (100/$count);
+$backgroundSizeH: ((5/3.5)*$backgroundSizeW);
+$colors: (#EEE9E6, #C7DDE0, #3A3E41, #FFC21B, #DAD4CB, #F6D0BD);
+
+@function remove($value) {
+  $result: ();
+  @for $i from 1 through length($colors) {
+    @if nth($colors, $i) != $value {
+      $result: append($result, nth($colors, $i));
+    }
+  }
+
+  @return $result;
+}
+
+$backgroundColor: nth($colors, random(length($colors)));
+$remainingColors: remove($backgroundColor);
+
+$color1: nth($remainingColors, 1);
+$color2: nth($remainingColors, 2);
+$color3: nth($remainingColors, 3);
+$color4: nth($remainingColors, 4);
+$color5: nth($remainingColors, 5);
+
+$pattern1: linear-gradient(to top, $color1 0, $color1 24%, transparent 24%, transparent 100%), radial-gradient(circle at ($backgroundSizeW/2.1)+vw ($backgroundSizeW/1.9)+vw, $color2 0, $color2 40%, transparent 40%);
+$pattern2: linear-gradient(to top, $color1 24%, transparent 24%, transparent 100%), linear-gradient(132deg, transparent, transparent 43%, $color3 43%);
+$pattern3:  linear-gradient(to right, transparent 68.5%, $backgroundColor 68.5%), linear-gradient(to top, $color1 0, $color1 24%, transparent 24%, transparent 100%), linear-gradient(to left, $backgroundColor 0, $backgroundColor 69.5%, transparent 69.5%), linear-gradient(to bottom, $color3 0, $color3 23%, transparent 23%, transparent 100%);
+$pattern4: linear-gradient(to right, transparent 0, transparent 65%, $color1 65%), linear-gradient(to bottom, $backgroundColor 87%, transparent 87%), linear-gradient(to right, $color4 0, $color4 32%, transparent 32%, transparent 100%);
+$pattern5: linear-gradient(to right, $color1 0, $color1 67%, transparent 67%), linear-gradient(to bottom, transparent 0, transparent 76%, $color5 76%);
+$pattern6: linear-gradient(to right, transparent 0, transparent 52%, $color2 52%), radial-gradient(circle at -0.1vw ($backgroundSizeW/2.8)+vw, $color1 24%, transparent 24%), radial-gradient(circle at -0.1vw ($backgroundSizeW*1.07)+vw, $color1 24%, transparent 24%);
+$pattern7: linear-gradient(to bottom, transparent 0, transparent 76%, $color1 76%), linear-gradient(to right, $color5 25%, transparent 25%), linear-gradient(to bottom, transparent 0, transparent 50%, $color4 50%);
+$pattern8: linear-gradient(to bottom, $backgroundColor 50%, transparent 50%), linear-gradient(to right, $backgroundColor 15%, $color5 15%, $color5 30%, $color4 30% );
+$pattern9: radial-gradient(circle at $backgroundSizeW+vw #{$backgroundSizeW/1.4+vw}, $color5 57%, transparent 57%);
+$pattern10: linear-gradient(to right, $color4 33%, transparent 33%), linear-gradient(47.5deg, $backgroundColor 43.5%, $color1 43.5%);
+$pattern11: linear-gradient(to bottom, $color4 25%, $backgroundColor 25%, $backgroundColor 50%, $color5 50%);
+$pattern12: linear-gradient(47deg, transparent 68%, $backgroundColor 68%), linear-gradient(135deg, $color1 67%, $color5 67%), linear-gradient(0deg, $color5 50%, $backgroundColor 50%);
+$pattern13: linear-gradient(to bottom, $color1 25%, transparent 25%), radial-gradient(circle at 50% 100%, $color3 33%, transparent 33%);
+$possiblePatterns: (
+  "pattern1": (
+    pattern: $pattern1,
+    count: 2,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern2": (
+    pattern: $pattern2,
+    count: 2,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern3": (
+    pattern: $pattern3,
+    count: 4,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern4": (
+    pattern: $pattern4,
+    count: 3,
+    sizes: ($backgroundSizeW+vw $backgroundSizeW+vw, $backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern5": (
+    pattern: $pattern5,
+    count: 2,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern6": (
+    pattern: $pattern6,
+    count: 3,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern7": (
+    pattern: $pattern7,
+    count: 3,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern8": (
+    pattern: $pattern8,
+    count: 2,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern9": (
+    pattern: $pattern9,
+    count: 1,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern10": (
+    pattern: $pattern10,
+    count: 2,
+    sizes: ($backgroundSizeW+vw calc((5/7)*#{$backgroundSizeW+vw}), $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern11": (
+    pattern: $pattern11,
+    count: 1,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern12": (
+    pattern: $pattern12,
+    count: 3,
+    sizes: (((5/7) * $backgroundSizeW)+vw $backgroundSizeH+vw, ((5/7) * $backgroundSizeW)+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  ),
+  "pattern13": (
+    pattern: $pattern13,
+    count: 2,
+    sizes: ($backgroundSizeW+vw $backgroundSizeH+vw, $backgroundSizeW+vw $backgroundSizeH+vw)
+  )
+);
+
+
+@function backgroundPosition($bgPartCount, $pos){
+  $bgPos: #{map-get($pos, "x")*$backgroundSizeW}vw #{map-get($pos, "y")*$backgroundSizeW}vw;
+  @for $i from 2 through $bgPartCount {
+    $bgPos: #{map-get($pos, "x")*$backgroundSizeW}vw #{map-get($pos, "y")*$backgroundSizeW}vw;
+  }
+  @return $bgPos;
+}
+
+@function backgroundImage($int){
+  @return map-get($possiblePatterns, #{"pattern"+$int});
+}
+
+@function background(){
+  $backgroundImg: null;
+  $backgroundPosition: null;
+  $backgroundSizes: null;
+  @for $row from 0 through 30 {
+    @for $col from 0 through $count {
+      $randomInt: random(length($possiblePatterns));
+      $backgroundPattern: backgroundImage($randomInt);
+      $backgroundImg: $backgroundImg, map-get($backgroundPattern, "pattern");
+      $backgroundSizes: $backgroundSizes, map-get($backgroundPattern, "sizes");
+      @for $k from 1 through map-get($backgroundPattern, "count") {
+        $backgroundPosition: $backgroundPosition, $col*$backgroundSizeW+vw $row*$backgroundSizeH+vw;
+      }
+    }
+  }
+  @return ("img": $backgroundImg, "position": $backgroundPosition,  "sizes": $backgroundSizes );
+}
+
+body {
+  background-color: $backgroundColor;
+  $background: background();
+  background-size: map-get($background, "sizes");
+  background-repeat: no-repeat;
+  background-image: map-get($background, "img");
+  background-position: map-get($background, "position");
+  height: 100%;
+  width: 100%;
+}

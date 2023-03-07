@@ -1,0 +1,72 @@
+$duration: 2.5s
+$size: 64px
+$border-size: 1px
+  
+body
+  background: #3498db
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  
+.icon
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 48px
+  height: auto
+  margin: -24px
+  
+.icon-preloader
+  position: relative
+  transform: rotate(-180deg)
+  width: $border-size*2
+  height: 2px
+  overflow: hidden
+  animation: preloader $duration ease infinite
+  
+  &:before, &:after
+    // codepen sass highlight hack
+    content: " "
+    color: transparent
+    // codepen sass highlight hack
+  
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 0
+    border: $border-size solid white
+    
+  &:after
+    left: auto
+    right: 0
+  
+
+@keyframes preloader 
+  0%
+    opacity: 0
+  10%
+    opacity: 1
+    height: 2px
+  25%
+    height: $size
+    transform: rotate(-180deg)
+  40%
+    transform: rotate(0deg)
+    width: $border-size*2
+  60%
+    width: $size
+  80%
+    opacity: 1
+  100%
+    opacity: 0
+    height: $size
+    width: $size
+    transform: rotate(0deg)
+
+  

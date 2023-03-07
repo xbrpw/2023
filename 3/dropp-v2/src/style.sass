@@ -1,0 +1,139 @@
+@import bourbon
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round)
+html 
+	box-sizing: border-box
+
+*, *:before, *:after 
+	box-sizing: inherit
+
+html
+	background: #181818
+	overflow-y: scroll
+body
+	font: 1em/1.6 "Varela Round", Arial, sans-serif
+	color: #999
+	font-weight: 400
+	max-width: 25em 
+	padding: 1em
+	margin: 10% auto
+
+
+.icon
+	display: block
+	position: relative
+	width: 1.5em 
+	height: 1.5em
+	margin: 0 auto
+
+	&:before,&:after 
+		content: ""
+		position: absolute
+
+// Dropp styles
+
+$bgColor: #242424
+$trimColor: #dd4040
+$textColor: #fff 
+
+
+.dropp 
+	position: relative
+	width: 100%
+
+.dropp-header
+	background: $bgColor
+	color: $textColor
+	border: none
+	width: 100%
+	text-align: left
+	vertical-align: baseline
+	line-height: normal
+	cursor: pointer
+	padding: 0
+	margin: 0
+	-webkit-appearance: button
+	box-shadow: 0 1px 3px darken($bgColor,10)
+
+	&:focus,&.focused
+		box-shadow: inset 1px 1px $trimColor,inset -1px -1px $trimColor
+		outline: none		
+
+.dropp-header__title
+	display: block
+	float: left
+	width: 80%
+	padding: .8em .5em
+	
+	+ellipsis(100%)
+
+.dropp-header__icon
+	display: block
+	float: right
+	color: $textColor
+	padding: .8em .5em
+	width: 20%
+	+transition(all .3s ease-in-out)
+
+	.icon
+		+transform(rotate(-90deg))
+		&:before,&:after
+			top: 30%
+			left: 25%
+			width: 50%
+			height: 15% 
+			background: $trimColor
+			+transform(rotate(-45deg))
+		&:after
+			top: 55% 
+			+transform(rotate(45deg))
+
+
+
+.dropp-body
+	+position(absolute,3.2em null null 0)
+	overflow: hidden
+	width: 100%
+	max-height: 0
+	visibility: hidden
+	background: lighten($bgColor,2)
+	color: $textColor
+	box-shadow: 0 1px 3px darken($bgColor,10)
+	+transition(all .3s ease-in-out)
+		
+
+	label
+		display: block 
+		font-size: .875em
+		color: $textColor 
+		text-decoration: none
+		padding: 1em .5em
+		font-weight: 400
+		box-shadow: 0 -1px 0 darken($bgColor,5),inset 0 1px 0 lighten($bgColor,5)
+		cursor: pointer
+
+		&:first-child 
+			box-shadow: none
+
+		&:hover
+			background: darken($bgColor,3)
+
+
+	input[name="dropp"] 
+		position: absolute 
+		top: -1em
+		left: -1em
+
+		&:focus + label
+			background: darken($bgColor,3)
+			outline: none
+
+		&:checked + label
+			background: $trimColor
+
+
+// Open dropp-body
+
+.dropp-header:focus ~ .dropp-body,.open
+	max-height: 20em
+	visibility: visible
