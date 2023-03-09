@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="La opción de imput type con Checkbox von Value remember-me en un form funciona para lograr que cada vez que termine sesión y vuelvas abrir, este precargado los datos solo para dar click sin volver a llenar los campos de password y user." />
-    <meta name="robots" content="max-image-preview:large" />
-    <link rel="stylesheet" href="./style.css">
+    <meta name="robots" content="max-image-preview:large" />    
     <meta name="keywords" content="" />
     <link rel="canonical" href="https://xbrpw.github.io/2023/yes/checkbox-remember-me/index.html" />
     <meta name="generator" content="All in One SEO (AIOSEO) 4.2.8 " />
@@ -31,8 +30,13 @@
     <meta name="twitter:description" content="La opción de imput type con Checkbox von Value remember-me en un form funciona para lograr que cada vez que termine sesión y vuelvas abrir, este precargado los datos solo para dar click sin volver a llenar los campos de password y user." />
     <meta name="twitter:image" content="https://xbrpw.github.io/2023/og-image.webp" />
     <meta name="google" content="nositelinkssearchbox" />
-    <link rel="icon" href="https://xbrpw.github.io/2023/ico.svg" sizes="32x32" />
+    <link rel="icon" href="https://xbrpw.github.io/2023/favicon.svg" sizes="32x32" />
     <meta name="google-site-verification" content="">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .alert {display: none;}
+        .login_phase_two {display: none;}
+    </style>
 </head>
 
 <body>
@@ -60,17 +64,17 @@
             <div id="accountLogin" class="login_phase_one"  itemscope itemtype="https://schema.org/BlogPosting">
                 <form id="loginForm" novalidate>            
                         <div class="field">
-                            <input id="loginEmail" class="form-control" type="email" name="email" placeholder="Email" spellcheck="false" tabindex="1" autofocus />
+                            <input id="loginEmail" class="form-control" type="email" name="email" placeholder="Email" spellcheck="false" tabindex="0" autofocus />
                         </div>
                         <div class="field">
-                            <input id="loginPW" class="form-control" type="password" name="password" placeholder="Password" tabindex="2" />
+                            <input id="loginPW" class="form-control" type="password" name="password" placeholder="Password" tabindex="1" />
                         </div>
                         <p class="form_error loginError"></p>
                         <div class="login_submit">
                             <div class="remember_me">
-                                <input type="checkbox" tabindex="3" value="remember-me" id="remember_me">Remember Me
+                                <input type="checkbox" tabindex="2" value="remember-me" id="remember_me" aria-label="Remember Me">Remember Me
                             </div>
-                            <button id="loginButton"  type="submit" tabindex="4">Log In</button>
+                            <button id="loginButton"  type="submit" tabindex="3">Log In</button>
                             <br />
                             <div role="alert">
                                 <p id="passwordError" class="form_error"></p>
@@ -87,7 +91,7 @@
     </article>	
 </main>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
 <script  src="./script.js"></script>
 
 </body>
