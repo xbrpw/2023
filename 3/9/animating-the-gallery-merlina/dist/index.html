@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Animating the Gallery: Merlina (4)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      img, ul {
+        -webkit-animation: 10s scale-up both ease-in-out infinite alternate;
+                animation: 10s scale-up both ease-in-out infinite alternate;
+      }
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      font-family:  'Google Sans', sans-serif, system-ui;
+      width: 100vw;
+      overflow-x: hidden;
+      overflow: hidden;
+      background: var(--surface-2);
+    }
+
+    ul {
+      --big-tile-size: 50vmin;
+      --scale: 0.4;
+      --rotation: 270deg;
+      --tile-size: calc(var(--big-tile-size) / 3);
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 1vmin;
+      grid-template: repeat(9, var(--tile-size)) / repeat(9, var(--tile-size));
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(var(--scale));
+    }
+
+    @-webkit-keyframes scale-up {
+      0% {
+        transform: translate(-50%, -50%) scale(var(--scale)) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1) rotate(var(--rotation));	
+      }
+    }
+
+    @keyframes scale-up {
+      0% {
+        transform: translate(-50%, -50%) scale(var(--scale)) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1) rotate(var(--rotation));	
+      }
+    }
+
+
+    img {
+      --rotation: -270deg;
+      --scale: 1;
+      height: 200%;
+      min-width: 200%;
+      aspect-ratio: 1;
+      -o-object-fit: cover;
+        object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    li {
+      padding: 0;
+      position: relative;
+      background: hsl(0 0% 75% / 0.2);
+      max-inline-size: 100%;
+    }
+
+    li {
+      grid-column: var(--x1, auto) / var(--x2, auto);
+      grid-row: var(--y1, auto) / var(--y2, auto);
+    }
+
+    li {
+      border-radius: var(--radius-3);
+      overflow: hidden;
+    }    
+  </style>
+</head>
+
+<body>
+
+<main>
+      <ul>
+        <li style="--x1: 2; --x2: 6; --y1: 1; --y2: 4;">
+          <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005743_com.google.android.apps.photos~2.webp" alt="Merlina baile">
+        </li>
+        <li style="--x1: 6; --x2: 8; --y1: 2; --y2: 4;">          
+          <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005732_com.google.android.apps.photos~2.webp" alt="Merlina en el baile">
+        </li>
+        <li style="--x1: 1; --x2: 4; --y1: 4; --y2: 7;">
+          <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005712_com.google.android.apps.photos~2.webp" alt="Merlina para correr">
+        </li>
+        <li style="--x1: 4; --x2: 7; --y1: 4; --y2: 7;">
+          <img src="" alt="" class="imgrandom">
+        </li>
+        <li style="--x1: 7; --x2: 9; --y1: 4; --y2: 6;">
+          <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005743_com.google.android.apps.photos~2.webp" alt="Merlina Menonita">
+        </li>
+        <li style="--x1: 2; --x2: 4; --y1: 7; --y2: 9;">
+          <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005608_com.google.android.apps.photos~2.webp" alt="Merlina">
+        </li>
+        <li style="--x1: 4; --x2: 7; --y1: 7; --y2: 10;">
+          <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005523_com.google.android.apps.photos~2.webp" alt="Omar Chaparro">
+        </li>
+        <li style="--x1: 7; --x2: 10; --y1: 6; --y2: 9;">
+         <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005659_com.google.android.apps.photos~2.webp" alt="Merlina cortada">
+        </li>
+      </ul>
+</main>
+
+<script src='./scroll-timeline.js'></script>
+<script>
+  const imageArray1 = [
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005407_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005423_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005430_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005438_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005507_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005511_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005523_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005530_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005537_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005554_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005601_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005608_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005617_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005630_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005638_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005648_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005659_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005712_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005723_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005732_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005743_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005809_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230308_223903_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230308_223907_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230308_223908_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230308_223910_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230308_223912_com.google.android.apps.photos~2.webp",
+  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230308_223917_com.google.android.apps.photos~2.webp"
+  ];
+
+
+  const image = document.querySelector(".imgrandom");
+  const button = document.querySelector("button");
+
+  window.onload = () => generateRandomPicture(imageArray1);
+
+  button.addEventListener("click", () => generateRandomPicture(imageArray1));
+
+  function generateRandomPicture(array){
+    let randomNum = Math.floor(Math.random() * array.length); 
+    image.setAttribute("src", array[randomNum]);
+  }  
+</script>
+<!--        <img src="https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005438_com.google.android.apps.photos~2.webp" alt="Merlina baile"> -->
+</body>
+</html>

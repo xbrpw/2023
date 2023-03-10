@@ -1,12 +1,5 @@
 const imageArray1 = [
-	"https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon-negra.svg",
-	"https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon.svg",
-	"https://www.xbr.pw/go/icon-xbrpw/usuario-verificado.svg",
-  "https://www.xbr.pw/go/icon-xbrpw/xbr-coins.svg",
-  "https://www.xbr.pw/go/icon-xbrpw/who-homero-escondiendose-en-una-bolsa.svg",
-  "https://assets.codepen.io/191814/1920-1080.jpg",
-  "https://www.xbr.pw/go/icon-xbrpw/pokebolas.svg",
-  "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005407_com.google.android.apps.photos~2.webp",
+"https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005407_com.google.android.apps.photos~2.webp",
 "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005423_com.google.android.apps.photos~2.webp",
 "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005430_com.google.android.apps.photos~2.webp",
 "https://xbrpw.github.io/2023/img/reface/Screenshot_20230307_005438_com.google.android.apps.photos~2.webp",
