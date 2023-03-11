@@ -1,7 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 Luis Angel Maciel (https://codepen.io/luisangelmaciel/pen/zYLzmaq)
-Fork of an original work Functioning Calculator (HTML & CSS) (https://codepen.io/luisangelmaciel/pen/zYLzmaq)
+Copyright (c) 2023 Luis Angel Maciel (https://codepen.io/luisangelmaciel/pen/yLqavjK)
+Fork of an original work imput searchable content Javascript Js (https://codepen.io/luisangelmaciel/pen/yLqavjK)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
