@@ -1,0 +1,46 @@
+
+<input class="file">
+<label class="field" >
+  <span class="message">Drag files here or <span class="underline" style="   font-weight: normal;    text-decoration: underline;    color: #777777;
+  border-bottom: 2px dashed #BFBFBF;  cursor: pointer;">click to upload</span></span>
+</label>
+<style>
+  
+.label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 19px;
+}
+
+.file {
+  display: none;
+}
+
+.field {
+  display: block;
+  padding: 22px;
+  color: #777777;
+  border: 2px dashed #BFBFBF;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  .underline {
+    font-weight: normal;
+    text-decoration: underline;
+    
+    &:hover,
+    &:focus {
+      color: #EB5757;
+    }
+  }
+  
+  &.highlight {
+    border-color: #777777;
+  }
+  
+  .error {
+    color: #eb5757;
+  }
+}
+</style>

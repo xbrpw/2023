@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<script>
+var myObject= {"galleryBig":[
+{"img" : "AlfredsFutterkiste","onclick" : "1","alt" : "Gallery img"},
+{"img" : "WolskiZajazd","onclick" : "2","alt" : "Gallery img"}
+]};
+</script>
+<body>
+
+
+<div>
+ 
+  <div style="position: fixed;right: 2px;opacity: 0.8;" >
+    <button id="reload" style="">Reload</button>
+  </div>
+
+  <script>
+    console.clear();
+    const storage =
+      typeof sessionStorage !== "undefined" ? sessionStorage : localStorage;
+    // load scroll position after page fully loaded
+    (function() {
+      document.scrollingElement.scrollLeft = sessionStorage.getItem("scroll-x");
+      document.scrollingElement.scrollTop = sessionStorage.getItem("scroll-y");
+    })();
+    // save while scrolling page
+    window.addEventListener("scroll", function() {
+      storage.setItem("scroll-x", document.scrollingElement.scrollLeft);
+      storage.setItem("scroll-y", document.scrollingElement.scrollTop);
+    });
+    // log
+    console.log(sessionStorage);
+    // refresh button
+    const refbtn = document.getElementById("reload");
+    refbtn.addEventListener("click", function() {
+      window.location.reload(1);
+    });
+  </script>
+</div>
+
+
+<header>
+<table  class="container" id="myGallery01">
+  <tr w3-repeat="galleryBig">
+    <td>	<div class="container">
+
+		<div class="profile">
+
+			<div class="profile-image">
+
+				<img src="{{URL-Avatar}}" alt="{{User}}">
+
+			</div>
+
+			<div class="profile-user-settings">
+
+				<h1 class="profile-user-name">{{User}}</h1>
+
+				<div class="profile-edit-btn">Edit Profile</div>
+
+				<div class="profile-settings-btn"><i class="fas fa-cog"></i></div>
+
+			</div>
+
+			<div class="profile-stats">
+
+				<ul>
+					<li><span class="profile-stat-count">{{Post}}</span> posts</li>
+					<li><span class="profile-stat-count">{{Followers}}</span> followers</li>
+					<li><span class="profile-stat-count">{{Following}}</span> following</li>
+				</ul>
+
+			</div>
+
+			<div class="profile-bio">
+
+				<p><span class="profile-real-name">{{Nombre}}</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
+
+			</div>
+
+		</div>
+		<!-- End of profile section -->
+	</div>
+       
+       <main>
+	<div class="container">
+
+		<div class="gallery">
+
+			<div class="gallery-item">
+
+				<img src="{{URL}}" class="gallery-image">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><i class="fas fa-heart"></i> {{Love}}</li>
+						<li class="gallery-item-comments"><i class="fas fa-comment"></i> {{Comentarios}}</li>
+					</ul>
+
+				</div>
+
+			</div>	
+
+		</div>
+		<!-- End of gallery -->
+
+		<div class="spinner"></div>
+
+	</div>
+</main>	   
+	</td>
+  </tr>
+</table>  
+</header>
+
+
+
+
+<script>
+w3.displayObject("myGallery01", myObject);
+</script>
+
+
+<script>
+var myObject= {"codepen2023":[
+{"Pen":"Circle tenks","URL":"","Creado":"January 2, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"ZEjORyj","URL":"","Creado":"January 2, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Nav","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Body Invisible scrollbar","URL":"","Creado":"January 3, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Multiple galeria","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"email validations","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Flexbox Dynamic Line Separator - CQ","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Birthday input with zodiac","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Expanding card","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Light Shaft","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"xxJErQE","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"vuejsStorage Example","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"text-rainbow & throwConfetti","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"CSS email validation","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Phone number input field","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"CSS Slider Puzzle Game","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Range Slider Scaling","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Daily UI #016 - Pop Up / Overlay","URL":"","Creado":"January 9, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Simulated button push on hover","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Electronic Store App","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"responsive-webpage","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Usabilty is just a button click away","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"yLqavjK","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"XWBjZZP","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"load iframe button","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Dashboard UI","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Responsive Dark Dashboard","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Responsive Grid Timeline | Dribble shot","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"screenshot taker","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"mimic.css","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"speechSynthesis","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"old lat long","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"eYjdEKW","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"To-do with localStorage JSON","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Type and save localStorage","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"WebGL Wormhole Effect","URL":"","Creado":"January 4, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"CSS Grid Gallery Auto-fit","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Menu concept","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"wvxovvq","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"xxJRKNN","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Iframe inlining trick as a Web Component","URL":"","Creado":"January 11, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"BaPQBpj","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Hx Branding Color Picker","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Neumorphic UI 2","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"BrainF**k to JavaScript","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Drag and Drop - specific purpose(Vue)","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"btn-upload","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Validation Form Input CSS","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"HTML5 FileReader API Demo: Text","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"How to Build a Meme Generator with JavaScript (No Frameworks)","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Pokemon Mew (touch it)","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Fixed Navbar on Scroll","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"okayNav Demo","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Map","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Native autocomplete","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Native video/photo capture","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Bootstrap 3 Step Wizard","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Simple HTML calculation form","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"count-clicks button with audio","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Extract text of HTML page using JavaScript","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"window frame","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"FCC - Build a Mark Down Viewer","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Expand More Detail like CardView","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"blue metric buttons","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"✅ Emojibox - Checkbox with emojis","URL":"","Creado":"January 12, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Dribble Button CSS Rebound","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"iFrame Lazy Load","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Html Icons","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Contact Form","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"jq bs4 megamenu and sidemenu mobile","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"navbar & sidebar","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Handbook CSS3","URL":"","Creado":"January 5, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"dyjOVOw","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Pookie the Pug","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Buttons multicolor","URL":"","Creado":"January 9, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Simulated Website Screenshots using Iframes","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"CodePenSimple","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"scheduled-content.js demo","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Spaces UI Demo","URL":"","Creado":"January 11, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Emoji picker native","URL":"","Creado":"January 12, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Jurassic Ipsum Generator in JS","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Image Picker","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Showcase animated","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"LOREM FRI.TUM GENERATUM","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Scrollable Browser Website Mockup (CSS Only)","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Full Page Nav","URL":"","Creado":"January 6, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"ZEjLMLg","URL":"","Creado":"January 8, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Javascript Emoji Select","URL":"","Creado":"January 9, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Upload File Button style, Preview image, Delete button","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Placeholdem // Placeholder Caret Animation","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"CSS Concert ticket purchase","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Interactive Form","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Random Picture Generator","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Responsive Movie Card - Dark Version","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Materialize + Angular Search and Filter Responsive Table with pagination","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Daily UI Movie Card","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"CSS Responsive animated Accordion","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"User Listing","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Memory Game","URL":"","Creado":"January 11, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Canvas Starfield","URL":"","Creado":"January 11, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Responsive Multiple Full-Page DIV with pure CSS.","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"A Book Generator Apart","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Fullscreen slides with TweenLite, CSSPlugin and ScrollToPlugin","URL":"","Creado":"January 11, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Success Message","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"How to Build a News Website Layout with Flexbox","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"QWBpqxj","URL":"","Creado":"January 10, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"SVG Inset Shadow Example","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Canvas -> Background","URL":"","Creado":"January 12, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"content locker, html/css counter","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"OJwgXjJ","URL":"","Creado":"January 12, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"scheduled-content.js demo","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"vuejsStorage Example","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Firma typeWriter","URL":"","Creado":"January 13, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Reaction Social Media Card with ReactJS","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Payment App (Neumorphism)","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Responsive Plants Shopping UIX (using CSS Grid & GreenSock's FLIP)","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Grid / List toggle","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Event Calendar Widget","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Centered w3 meta","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Upload File Button style, Preview image, Delete button","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"random-blob-generator + Random Picture Generator","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Satisfying Button (Neumorphism)","URL":"","Creado":"January 15, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"qByXdxq","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"MWBvWxo","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"emoji list","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Blog Post Featured Image Generator","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"tabs with mouse move - mobile bank","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Satisfying Button (Neumorphism)","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Garcello - Arrow keys control - SVG","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"bGjRzyJ","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Note App","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"Log In | Sign up Forms, Fingerprint","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"},{"Pen":"year365","URL":"","Creado":"January 14, 2023","Comentarios":"96","Performance":"97","Accessibility":"98","BestPractices":"99","SEO":"100"}
+]};
+</script>
+
+<table id="myPens2023">
+  <thead>
+    <tr>
+      <th>Pen</th>
+      <th>Creado</th>
+      <th w3-hide">Comentarios</th>
+      <th class="w3-hide">Performance</th>
+      <th class="w3-hide">Accessibility</th>
+      <th class="w3-hide">BestPractices</th>
+      <th class="w3-hide">SEO </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr w3-repeat="codepen2023">     
+      <td><a href="{{URL}}">{{Pen}}	</td>
+      <td>{{Creado}}</td>
+      <td w3-hide">{{Comentarios}}</td>
+      <td class="w3-hide">{{Performance}}</td>
+      <td class="w3-hide">{{Accessibility}}</td>
+      <td class="w3-hide">{{BestPractices}}</td>
+      <td class="w3-hide">{{SEO}} </td>
+    </tr>   		
+  </tbody>
+</table>
+
+<script>w3.displayObject("myPens2023", myObject);</script>

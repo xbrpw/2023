@@ -1,0 +1,367 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700);
+
+$body: #38405e;
+$bg: #f9fcfe;
+$gray: #5d7592;
+$shadow: #dde8f0;
+$gray2: #476283;
+$primary: #1bbbef;
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; 
+}
+::-webkit-input-placeholder { color: $gray; }
+:-moz-placeholder {  color: $gray; }
+::-moz-placeholder { color: $gray; }
+:-ms-input-placeholder { color: $gray; }
+
+.m {
+  font-size: 28px;
+}
+
+body {
+  text-align: center;
+  background: $bg;
+  color: $body;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+header {
+  width: 100%;
+  background: $body;
+  padding: 3em 0;
+  color: white;
+  h1 {
+    font-weight: 300;
+    font-size: 36px;
+    margin: 0.75em 0;
+    span {
+      font-size: 90%;
+      color: $primary;
+    }
+  }
+}
+
+main {
+  padding: 1.5em 0 0;
+}
+
+footer, main {
+  max-width: 960px;
+  margin: 0 auto;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+footer {
+  padding: 2em 0;
+  p {
+    color: $gray;
+    font-size: 14px;
+  }
+}
+
+.ctrls {
+  margin-bottom: 1em;
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+.filter {
+  float: left;
+  width: 75%;
+  padding-left: 2.5em;
+  .m {
+    color: $gray;
+    position: absolute;
+    margin-left: -1.25em;
+  }
+  input {
+    width: 100%;
+    vertical-align: top;
+    height: 2em;
+    border: none;
+    background: $bg;
+    font-size: 16px;
+    font-weight: 300;
+    color: $gray;
+    outline: none;
+    padding: 0 0.5em;
+  } 
+}
+.grid-toggle {
+  cursor: pointer;
+  @extend .no-select;
+  float: right;
+  a {
+    span { color: $gray; }
+    span:first-child { color: $body; margin-right: 12px; }
+    &.active {
+      span:first-child { color: $gray; }
+      span:last-child { color: $body; }
+    }
+  }
+}
+
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $gray;
+}
+
+.container {
+  
+}
+
+ul.grid {
+  .grid-body ul {
+    li {
+      span {
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+        &.grid-icon {
+          color: $gray2;
+        }
+        &.grid-title a {
+          font-size: 16px;
+          font-weight: 500;
+          color: $body;
+          text-decoration: none;
+          &:hover { text-decoration: underline; }
+        }
+        &.grid-usericon {
+          &:first-letter {
+            color: white;
+            font-size: 16px;
+          }
+          margin-right: 12px;
+          font-size: 0;
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+          text-align: center;
+          background: $primary;
+          @include border-radius(100px);
+        }
+        &.grid-date, &.grid-user {
+          color: $gray;
+          font-size: 14px;
+        }
+        a .m {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+
+ul.grid.grid-thumb {
+  &:after {
+    content:'';
+    display: block;
+    clear: both;
+  }
+  .grid-head { display: none; }
+  .grid-body {
+    width: 50%;
+    float: left;
+    @include box-sizing(border-box);
+    margin-bottom: 2em;
+    &:nth-child(even) { padding-right: 1em; }
+    &:nth-child(odd) { padding-left: 1em; }
+    ul {
+      @include box-sizing(border-box);
+      background: white;
+      border: 1px solid $shadow;
+      padding: 1em 1.5em .75em;
+      @include border-radius(5px);
+      float: left;
+      width: 100%;
+      &:after {
+        content:'';
+        display: block;
+        clear: both;
+      }
+      li {
+        position: relative;
+        span {
+          &.grid-icon {
+            display: block;
+            font-size: 56px;
+            margin: 0 0 12px;
+          }
+          &.grid-title {
+            display: block;
+            margin-bottom: 1em;
+          }
+          &.grid-user {
+            .grid-usericon {
+              position: absolute;
+              left: 0;
+              bottom: -37px;
+            }
+            margin-bottom: 2px;
+          }
+          &.grid-date {
+            display: block;
+          }
+          &.grid-options {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.grid.grid-list {
+  background: white;
+  border: 1px solid $shadow;
+  padding: 0 2em;
+  @include border-radius(5px);
+  li.grid-body {
+    border-bottom: 1px solid $shadow;
+    &:last-child, &.last { border-bottom: none; }
+  }
+  .grid-head ul {
+    &:after {
+      content:'';
+      display: block;
+      clear: both;
+    }
+    li {
+      @extend .no-select;
+      font-size: 16px;
+      border: none;
+      text-align: left;
+      padding: 2em 0 1em;
+      float: left;
+      a {
+        cursor: pointer;
+        color: $primary;
+        font-weight: 600;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .grid-body ul {
+    &:after {
+      content:'';
+      display: block;
+      clear: both;
+    }
+    li {
+      border: none;
+      text-align: left;
+      height: 5em;
+      line-height: 5em;
+      padding: 0;
+      float: left;
+      &:first-child { text-align: left; width: 40%; }
+      &:nth-child(2) { width: 30%; }
+      &:nth-child(3) { width: 15%; }
+      &:last-child { text-align: right; width: 15%; }
+      span {
+        &.grid-icon {
+          margin-right: 0.5em;
+        }
+        &.grid-username {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+li.clear-fix {
+  display: block;
+  clear: both;
+}
+li.pagination {
+  padding: 1em 0 2em;
+  p {
+    font-size: 14px;
+  }
+  ul.pager {
+    margin: 2em 0;
+    li {
+      display: inline;
+      &:first-child { margin-right: 1em; }
+      a {
+        color: $primary;
+        text-decoration: none;
+        padding: 0.5em 1.5em;
+        border: 1px solid $primary;
+        @include border-radius(100px);
+      }
+    }
+  } 
+}
+// Animations
+.animate-repeat {
+  list-style:none;
+  box-sizing:border-box;
+  overflow: hidden;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all ease-in-out 0.4s;
+  transition:all ease-in-out 0.4s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+}
+.grid-thumb {
+  .animate-repeat.ng-move,
+  .animate-repeat.ng-enter,
+  .animate-repeat.ng-leave {
+    -webkit-transition:none;
+    transition:none;
+  }
+}
+.grid-list {
+  .animate-repeat {
+    line-height:5em;
+  }
+  .animate-repeat.ng-leave.ng-leave-active,
+  .animate-repeat.ng-move,
+  .animate-repeat.ng-enter {
+    height:0;
+  }
+  .animate-repeat.ng-leave,
+  .animate-repeat.ng-move.ng-move-active,
+  .animate-repeat.ng-enter.ng-enter-active {
+    height:5em;
+  }
+}
