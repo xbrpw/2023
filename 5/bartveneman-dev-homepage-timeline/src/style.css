@@ -1,0 +1,12 @@
+body {
+	background-color: hsl(203, 90%, 8%);
+  min-height: 1000px;
+}
+
+/*Save User Scroll Position And Scroll Back After Reload*/ 
+.long,
+#long,
+[id*="long"],
+[class*="long"] {
+  min-height: 500px;
+}

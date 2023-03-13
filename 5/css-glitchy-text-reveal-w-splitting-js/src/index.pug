@@ -1,0 +1,10 @@
+- const glitches = ['En esta escuela reforzamos', 'Puntualidad', 'Trabajo diario','Trabajo en equipo','Respeto','Responsabilidad','La presentación']
+
+.container
+  - const glitchCount = glitches.length
+  - let g = 0
+  while g < glitchCount
+    .page
+      p= glitches[g]
+      p(aria-hidden='true' data-scroll='out', data-splitting='', class=`reveal--${g}`)= glitches[g]
+      - g++

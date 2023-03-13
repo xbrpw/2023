@@ -1,0 +1,1 @@
+// Pokemon animation was inspire by Mary Lou`s post on cordop: https://tympanus.net/codrops/2015/05/13/inspiration-for-text-styles-and-hover-effects/
