@@ -1,0 +1,232 @@
+$mxw: 450px
+@import url('https://fonts.googleapis.com/css?family=Poppins')
+$font: 'Poppins', sans-serif
+$green: #1B998B
+
+html,
+body
+	width: 100%
+	height: 100%
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	font-family: $font
+*,
+*::before,
+*::after
+	box-sizing: inherit
+.preview-block
+	position: absolute
+	left: 50%
+	top: 10%
+	transform: translate(-50%)
+	max-width: $mxw
+	width: 100%
+	&__content
+		position: relative
+		z-index: 100
+		top: -40px
+.image-block
+	height: $mxw / 1.5
+	width: 100%
+	position: relative
+	z-index: -1
+	box-shadow: 1px 3px 20px #aaa
+	&__wrapper
+		height: 100%
+		width: 100%
+		position: relative
+		overflow: hidden
+		border-radius: 5px
+	&__image
+		position: absolute
+		width: 100%
+		height: auto
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: 0.3s ease
+.btn
+	position: absolute
+	display: flex
+	align-items: center
+	z-index: 1000
+	bottom: 5px
+	left: 10px
+	background-color: transparent
+	border: none
+	color: #1B998B
+	cursor: pointer
+	transition: 0.3s ease
+	outline: none
+	span
+		height: 15px
+	svg
+		width: 15px
+		height: 15px
+		fill: #1B998B
+	&:hover
+		color: #1B998B
+		letter-spacing: 1.3px
+.block
+	max-width: $mxw
+	width: 100%
+	max-height: 200px
+	box-shadow: 1px 3px 20px #aaa
+	border-radius: 5px
+	overflow: hidden
+	background-color: #fff
+	padding: 15px
+	transition: 0.6s ease
+	position: relative
+	font-size: 0.9em
+	&__content
+		display: inline-block
+		transition: 0.3s ease
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 50%
+		bottom: 0
+		left: 0
+		transition: 0.3s ease
+		background-image: linear-gradient(0deg, #fff 30%, transparent)
+	&__title
+		margin-bottom: 0
+		color: #aaa
+	&__name
+		margin: 0 0 1em
+		font-size: 0.8em
+		color: $green
+	&--open
+		transition: 0.6s ease
+		max-height: 1000px
+		padding: 15px
+		&:before
+			opacity: 0
+			z-index: -200
+		.btn
+			bottom: 10px
+			span
+				display: inline
+			svg
+				transform: rotate(180deg)
+		.block__content
+			display: block
+			padding-bottom: 20px
+	&__tags
+		max-width: $mxw
+		width: 100%
+		box-shadow: 1px 3px 20px #aaa
+		border-radius: 5px
+		padding: 15px 15px 0.5em
+		margin: 15px 0
+		font-size: 0.9em
+	&__tags-item
+		padding: 0.2em 0.8em
+		font-size: 0.8em
+		margin-bottom: 0.5em
+		margin-right: 0.5em
+		color: #fff
+		border-radius: 2em
+		display: inline-block
+		line-height: 1.6em
+		background-color: $green
+.page-actions
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	max-width: $mxw
+	width: 100%
+	padding: 1em
+	box-shadow: 1px 3px 20px #aaa
+	border-radius: 5px
+	overflow: hidden
+	&__button
+		border-radius: 50%
+		border: none
+		width: 60px
+		height: 60px
+		background-color: #fff
+		box-shadow: 1px 5px 20px #aaa
+		position: relative
+		top: 130px
+		cursor: pointer
+		animation: jump_go 0.5s ease forwards
+		transition: 0.3s ease
+		svg
+			fill: #fff
+			width: 30px
+			height: 30px
+			position: relative
+			top: 2px
+	&__button--prev
+		width: 52px
+		height: 52px
+		animation-delay: 0s
+		&:hover
+			box-shadow: 1px 5px 30px #aaa
+		&:active
+			box-shadow: 1px 5px 10px #aaa
+		svg
+			fill: #888
+	&__button--chat
+		background-color: #1B998B
+		box-shadow: 1px 5px 20px rgba(#1B998B, 0.6)
+		animation-delay: 0.1s
+		transition: 0.3s ease
+		&:hover
+			box-shadow: 1px 5px 30px rgba(#1B998B, 0.6)
+		&:active
+			box-shadow: 1px 5px 10px rgba(#1B998B, 0.6)
+	&__button--like
+		background-color: #E71D36
+		box-shadow: 1px 5px 20px rgba(#E71D36, 0.6)
+		animation-delay: 0.2s
+		transition: 0.3s ease
+		&:hover
+			box-shadow: 1px 5px 30px rgba(#E71D36, 0.6)
+		&:active
+			box-shadow: 1px 5px 10px rgba(#E71D36, 0.6)		
+	&__button--like-remove
+		animation: remove_animation_go 0.3s ease forwards
+	&__button--next
+		width: 52px
+		height: 52px
+		animation-delay: 0.3s
+		&:hover
+			box-shadow: 1px 5px 30px #aaa
+		&:active
+			box-shadow: 1px 5px 10px #aaa
+		svg
+			fill: #888
+@keyframes jump_go
+	0%
+		transform: translateY(0) scale(0.3)
+	30%
+		transform: translateY(-140px) scale(0.7)
+	40%
+		transform: translateY(-120px) scale(0.95)
+	50%
+		transform: translateY(-135px) scale(1)
+	60%
+		transform: translateY(-125px) scale(0.95)
+	100%
+		transform: translateY(-130px) scale(1)
+@keyframes remove_animation_go
+	0%
+		transform: translateY(-130px) scale(1)
+	90%
+		transform: translateY(-130px) scale(1.1)
+	100%
+		transform: translateY(-130px) scale(0)
+@media screen and (max-width: #{$mxw})
+	.preview-block
+		top: 0
+	.image-block__wrapper
+		border-radius: 0
+
+
+	
