@@ -1,11 +1,10 @@
-@import 'https://fonts.googleapis.com/css?family=Teko:500';
+
 * {
   box-sizing: border-box;
 }
 html {
   background-color: #1b1a1e;
-  color: #efeef1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #efeef1;  
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
