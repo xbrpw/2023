@@ -114,7 +114,8 @@ svg {
   opacity: 0.5;
   pointer-events: none;
   background-color: rgba(255, 0, 0, 0.65);
-  background-image: url(https://source.unsplash.com/Pzv28NRtgko/400x450/);
+  /*background-image: url(https://source.unsplash.com/Pzv28NRtgko/400x450/);*/
+  background-image: url(https://luisangelmaciel.github.io/img/luisangelmaciel_400x400.webp/);
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
