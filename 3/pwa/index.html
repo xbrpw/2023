@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/index.cssx">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <script src="/index.jsx"></script>
+  <script>
+    // This is just to force HTTPS (can't do it statically on glitch)
+    if(location.protocol == 'http:') location.protocol = 'https:';
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('Service Worker registered', reg))
+        .catch(err => console.error('Service Worker **not** registered', err));
+    }
+    else {
+      console.warn('Service Worker not supported in this browser');
+    }    
+  </script>
+  <title>Simplest PWA</title>
+  <meta name="theme-color" content="lightblue">
+</head>
+<body>
+  <h1>
+    Welcome to possibly the simplest progressive web app
+  </h1>
+  <p>
+    It
+  </p>
+  <ol>
+    <li>Works offline; the assets are installed when the service worker is registered; and fetched from cache or network</li>
+    <li>Is installable; the manifest defines what to launch and how it should appear on the users system</li>
+    <li>Is just this.</li>
+  </ol>
+  <p>
+    Check out the code <a href="http://glitch.com/edit/#!/pwa">on glitch</a>.
+  </p>
+</body>
+</html>
