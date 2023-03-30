@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.movie-container{
+  background-color:#fff;
+  display:inline-block;
+  padding:20px;
+  border-radius:30px;
+  z-index:10;
+  position:relative;
+  margin: 0 0px;
+  width:220px!important;
+}
+
+.movies{
+  text-align:center;
+}
+
+
+.movie-title{
+  text-align:center;
+}
+
+.movie-poster{
+  width:220px;
+  height:280px;
+  border-radius:20px;
+}
+
+.joker{
+  background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/poster-joker-2-1567010576.jpg');
+  background-size: cover;
+}
+
+.good{
+  background-image:url('https://m.media-amazon.com/images/M/MV5BMTc1NjIzODAxMF5BMl5BanBnXkFtZTgwMTgzNzk1NzM@._V1_SY1000_CR0,0,631,1000_AL_.jpg');
+  background-size: cover;
+  background-position:bottom center;
+}
+
+.hustle{
+  background-image:url('https://m.media-amazon.com/images/M/MV5BMTc3MDcyNzE5N15BMl5BanBnXkFtZTgwNzE2MDE0NzM@._V1_SY1000_CR0,0,682,1000_AL_.jpg');
+  background-size: cover;
+  background-position:bottom center;
+}
+
+.tags{
+  text-align:center;
+  max-width:240px;
+}
+
+.tags > p{
+  display:inline-block;
+  color:#95a5a6;
+  border:1px solid #95a5a6;
+  padding:5px 9px;
+  border-radius:20px;
+  margin:0;
+  font-weight:300;
+  font-size:14px;
+  font-weight:400;
+}
+
+.movie-title{
+  margin:20px 0px;
+  font-size:30px;
+}
+
+#buy-tickets{
+  background-color:#1d1d1d;
+  color:#fff;
+  border-radius:3px;
+  width:200px;
+  font-size:15px;
+  padding:13px 0px;
+  position:fixed;
+  bottom:10px;
+  left:0;
+  right:0;
+  margin: auto;
+  z-index:99;
+  border:none;
+}
+
+.movie-rate{
+  text-align:center;
+  margin:20px 0 0 0;
+}
+
+.fa-star{
+  color:#f1c40f;
+}
+
+.movie-wallpaper{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.joker-wallpaper{
+  background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/poster-joker-2-1567010576.jpg');
+  background-size:cover;
+  background-position:center;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  transition:all .2s ease;
+}
+
+@keyframes replace{
+  0%{
+    width:0%;
+  }
+  100%{
+    width:100%;
+  }
+}
+
+.effect{
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 33%, rgba(255,255,255,0) 100%);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.hide{
+  opacity:0 !important;
+}
+
+.movie-container{
+  opacity:.7;
+  margin-top:20px;
+  transition:all .3s ease;
+  filter: grayscale(50%);
+}
+
+.slick-center{
+  z-index:999;
+}
+
+
+.slick-center .movie-container{
+  opacity:1;
+  margin-top:0 !important;
+  filter: grayscale(0%);
+  transition:all .3s ease;
+  z-index:999;
+}
