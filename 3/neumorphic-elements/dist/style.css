@@ -20,6 +20,7 @@ html {
   font-size: 62.5%;
   overflow-y: scroll;
   background: var(--greyLight-1);
+  font-family: "Poppins", sans-serif;
 }
 @media screen and (min-width: 900px) {
   html {
@@ -28,7 +29,7 @@ html {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,8 +38,8 @@ html {
 }
 
 .components {
-  width: 75rem;
-  height: 40rem;
+  width: 35rem;
+  height: 20rem;
   border-radius: 3rem;
   box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
   padding: 4rem;

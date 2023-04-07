@@ -5,25 +5,51 @@
   <title>Neumorphic Elements</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="./f0601b0fb2.js" crossorigin="anonymous"></script>
-  <script type='module' src=./ionicons.esm.js'></script>
-  <script nomodule='' src='./ionicons.js'></script>
+  <script src="https://xbrpw.github.io/2023/3/neumorphic-elements/dist/f0601b0fb2.js" crossorigin="anonymous"></script>
+  <script type='module' src='https://xbrpw.github.io/2023/3/neumorphic-elements/dist/ionicons.esm.js'></script>
+  <script nomodule='' src='https://xbrpw.github.io/2023/3/neumorphic-elements/dist/ionicons.js'></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://xbrpw.github.io/2023/3/neumorphic-elements/dist/style.css">
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="./w3.css">
   <meta name="description" content="Neumorphic Elements">
   <meta property="og:title" content="Neumorphic Elements">
   <meta property="og:description" content="Neumorphic Elements">
   <meta property="og:url" content="">
   <meta property="og:image" content="https://xbrpw.github.io/og-image.webp"> 
   <link rel="icon" href="https://xbrpw.github.io/favicon.svg" type="image/x-icon">
-
+  <style>.greyE4EBF5 {background-color:#E4EBF5}</style>
 </head>
 <body>
-<!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators_animate  -->
-<div class="container">
+<!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators_animate  -->                                                                           
+<div class="w3-sidebar w3-bar-block  w3-card" style="  font-size: 1.4rem; color: #9baacf; background: var(--greyLight-1); width:230px;   box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);">
+  <h5 class="w3-bar-item " style=""><b>Menu</b></h5>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Switch')">Switch</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Checkbox')">Checkbox</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Button')">Button</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Radio')">Radio</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Slider')">Slider</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Tab')">Tab</button>
+   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Clock')">Clock</button>
+   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Chip')">Chip</button>
+   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Circle')">Circle</button>
+   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Form')">Form</button>
+   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Search')">Search</button>
+   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Icon')">Icon</button>
+     <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Container')">Container</button>
+</div>
+
+<div style="margin-left:250px">
+  <div class="w3-padding"><h1 style="color: #5b0eeb;">
+  <b>Neumorphic Elements</b>
+  </h1></div>
+
+  <div id="Switch" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Switch</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p><br>
+    <div class="containerxx">
   <div class="switch">
     <div class="switch__1">
       <input id="switch-1" type="checkbox">
@@ -36,22 +62,14 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="components">
-    
-    <div class="switch">
-      <div class="switch__1">
-        <input id="switch-1" type="checkbox">
-        <label for="switch-1"></label>
-      </div>
-      
-      <div class="switch__2">
-        <input id="switch-2" type="checkbox" checked>
-        <label for="switch-2"></label>
-      </div>
-    </div>
-    
-    <div class="checkbox">
+  </div>
+
+  <div id="Checkbox" class="w3-container city w3-animate-opacity" style="display:none">
+       <h2>Checkbox</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p><br>
+    <div class="containerxx"> 
+      <div class="checkbox">
       <div class="checkbox__1">
         <input id="checkbox-1" type="checkbox">
         <label for="checkbox-1">
@@ -63,8 +81,24 @@
           <i class="material-icons">done</i></label>
       </div>
     </div>
+</div>    
     
-    <div class="radio">
+  </div>
+
+  <div id="Button" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Bottom</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p><br>
+       <div class="btn btn__primary"><p>Button</p></div><br>
+    <div class="btn btn__secondary"><p>Button</p></div>
+  </div>
+
+  <div id="Radio" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Radio</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+      <div class="radio">
       <div class="radio__1">
         <input id="radio-1" type="radio"  name="radio" value="1">
         <label for="radio-1"></label>
@@ -75,53 +109,29 @@
         <label for="radio-2"></label>
       </div>
     </div>
-    
-    <div class="btn btn__primary"><p>Button</p></div>
-    <div class="btn btn__secondary"><p>Button</p></div>
-    
-    <div class="clock">
-      <div class="hand hours"></div>
-      <div class="hand minutes"></div>
-      <div class="hand seconds"></div>
-      <div class="point"></div>
-      <div class="marker">
-        <span class="marker__1"></span>
-        <span class="marker__2"></span>
-        <span class="marker__3"></span>
-        <span class="marker__4"></span>
+  </div>
+
+
+
+  <div id="Slider" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Slider</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p><br>
+     <div class="slider">
+      <div class="slider__box">
+        <span class="slider__btn" id="find"></span>
+        <span class="slider__color"></span>
+        <span class="slider__tooltip">50%</span>
       </div>
     </div>
-    
-    <div class="chip">
-      <div class="chip__icon">
-        <ion-icon name="color-palette"></ion-icon></div>
-      <p>Neumorphic Design</p>
-      <div class="chip__close">
-        <ion-icon name="close"></ion-icon>
-      </div>
-    </div>
-    
-    <div class="circle">
-      <span class="circle__btn">
-        <ion-icon class="pause" name="pause"></ion-icon>
-        <ion-icon class="play" name="play"></ion-icon>
-      </span>
-      <span class="circle__back-1"></span>
-      <span class="circle__back-2"></span>
-    </div>
-    
-    <div class="form">
-      <input type="text" class="form__input" placeholder="Type anything...">
-    </div>
-    
-    <div class="search">
-      <input type="text" class="search__input" placeholder="Search...">
-      <div class="search__icon">
-        <ion-icon name="search"></ion-icon>
-      </div>
-    </div>
-    
-    <div class="segmented-control">
+  </div>
+
+  <div id="Tab" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Tab</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+     <div class="segmented-control">
       
       <input type="radio" name="radio2" value="3" id="tab-1" checked/>
       <label for="tab-1" class= "segmented-control__1">
@@ -137,27 +147,137 @@
       
       <div class="segmented-control__color"></div>
     </div>
-    
-    <div class="icon">
-      <div class="icon__home">
-        <ion-icon name="home"></ion-icon></div>
-      <div class="icon__account">
-        <ion-icon name="person"></ion-icon></div>
-      <div class="icon__settings">
-        <ion-icon name="settings"></ion-icon></div>
-    </div>
-    
-    <div class="slider">
-      <div class="slider__box">
-        <span class="slider__btn" id="find"></span>
-        <span class="slider__color"></span>
-        <span class="slider__tooltip">50%</span>
+  </div>
+  
+  <div id="Clock" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Clock</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+         <div class="clock">
+      <div class="hand hours"></div>
+      <div class="hand minutes"></div>
+      <div class="hand seconds"></div>
+      <div class="point"></div>
+      <div class="marker">
+        <span class="marker__1"></span>
+        <span class="marker__2"></span>
+        <span class="marker__3"></span>
+        <span class="marker__4"></span>
       </div>
     </div>
+  </div>  
+  
+  <div id="Chip" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Chip</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+     <div class="chip">
+      <div class="chip__icon">
+        <ion-icon name="color-palette"></ion-icon></div>
+      <p>Neumorphic Design</p>
+      <div class="chip__close">
+        <ion-icon name="close"></ion-icon>
+      </div>
+    </div>
+  </div>  
+  
+  <div id="Circle" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Circle</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+     <div class="circle">
+      <span class="circle__btn">
+        <ion-icon class="pause" name="pause"></ion-icon>
+        <ion-icon class="play" name="play"></ion-icon>
+      </span>
+      <span class="circle__back-1"></span>
+      <span class="circle__back-2"></span>
+    </div>
+  </div>    
+  
+  <div id="Form" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Form</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+     <div class="form">
+      <input type="text" class="form__input" placeholder="Type anything...">
+    </div>
+  </div>  
+  
+    <div id="Search" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Search</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+         <div class="search">
+      <input type="text" class="search__input" placeholder="Search...">
+      <div class="search__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+           <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" fill="currentColor">
+          </path>
+         </svg>
+      </div>
+    </div>  
+  </div>  
+  
+        <div id="Icon" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Icon</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+     <div class="icon">
+      <div class="icon__home">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.838 8.445c0-.001-.001-.001 0 0l-.003-.004-.001-.001v-.001a.809.809 0 0 0-.235-.228l-9.164-6.08a.834.834 0 0 0-.898 0L2.371 8.214A.786.786 0 0 0 2 8.897v6.16a.789.789 0 0 0 .131.448v.001l.002.002.01.015v.002h.001l.001.001.001.001c.063.088.14.16.226.215l9.165 6.082a.787.787 0 0 0 .448.139.784.784 0 0 0 .45-.139l9.165-6.082a.794.794 0 0 0 .371-.685v-6.16a.793.793 0 0 0-.133-.452zm-9.057-4.172 6.953 4.613-3.183 2.112-3.771-2.536V4.273zm-1.592 0v4.189l-3.771 2.536-3.181-2.111 6.952-4.614zm-7.595 6.098 2.395 1.59-2.395 1.611v-3.201zm7.595 9.311-6.96-4.617 3.195-2.15 3.765 2.498v4.269zm.795-5.653-3.128-2.078 3.128-2.105 3.131 2.105-3.131 2.078zm.797 5.653v-4.27l3.766-2.498 3.193 2.15-6.959 4.618zm7.597-6.11-2.396-1.611 2.396-1.59v3.201z" fill="currentColor">
+            </path>
+          </svg></div>
+      <div class="icon__account">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" fill="currentColor">
+         </path>
+       </svg></div>
+      <div class="icon__settings">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+           <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" fill="currentColor">
+           </path>
+         </svg></div>
+    </div>
+  </div> 
+  
+  
+  <div id="Container" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>Container</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    <br>
+<div class="container">
+  <div class="components">                                                            
   </div>
 </div>
-<!-- partial -->
-  <script  src="./script.js"></script>
+  </div>  
 
+</div>
+<style>.w3-morado {background-color: #E4EBF5; color: #6d5dfc}</style>
+<script>
+function openLink(evt, animName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(animName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+<script  src="https://xbrpw.github.io/2023/3/neumorphic-elements/dist/script.js"></script>  
+  
 </body>
 </html>
