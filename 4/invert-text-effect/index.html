@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Invert Text Effect</title>
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+      /* 
+      -wekit-backdrop-filter is needed for Safari.
+      both Safari and Firefox 
+      */
+      :root {
+        font-family: "Montserrat", sans-serif;
+      }
+      h2 {
+        opacity: 0.999999; /* this is key but only works in chrome*/
+        font-size: clamp(1.5rem, 6vw, 10rem);
+        color: #fff;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+      }
+      h2:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        left: 3rem;
+        width: 6rem;
+        
+        -webkit-backdrop-filter: 
+          invert(1);
+        backdrop-filter: 
+          invert(1);
+      }
+      .txt {
+        position: relative;
+        color: #efeffe;
+        background-color: #080505;
+      }
+
+      .txt:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        height: 100%;
+        left: 3rem;
+        width: 10rem;
+        -webkit-backdrop-filter: 
+          brightness(300%) 
+          contrast(300%) 
+          invert(1);
+        backdrop-filter: 
+          brightness(300%) 
+          contrast(300%) 
+          invert(1);
+      }
+
+      /* fluff */
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        grid-auto-rows: 1fr auto;
+        place-items: center;
+        background: 
+          linear-gradient(red, transparent),
+          linear-gradient(to top left, lime, transparent),
+          linear-gradient(to top right, blue, transparent);
+        background-blend-mode: screen;
+      }
+      h2:before {
+        /* not sure why skew is working here in firefox and not in the h1 */
+        transform: skewX(15deg);
+        animation: 4s linear 0.5s infinite alternate move;
+      }
+      .txt {
+        padding: 10vmin;
+        border-radius: 0.25em;
+        overflow: hidden;
+      }
+      h1 {
+        font-size: clamp(2rem, 8vw, 8rem);
+      }
+      .txt:before {
+        
+        animation: 5s linear infinite alternate move;  
+      }
+      @keyframes move {
+        from {
+          left: -5rem;
+        }
+        to {
+          left: calc(100% - 5rem);
+        }
+      }
+      /* chrome only */
+      @supports not (mask-image: linear-gradient(red, blue)) {
+          .txt:before{
+            /*background-color: #b8c6db;*/
+        background-image: 
+          linear-gradient(
+            315deg, #b8c6db 0%, #f5f7fa 74%);
+        -webkit-mask-image: 
+          linear-gradient(
+            #000,
+            transparent 50%
+          ),
+          repeating-linear-gradient(
+            90deg, 
+            #000, #000 1%, 
+            transparent 0%, transparent 10%);
+        /* dont know why skew seems to make firefox cringe here but not in the h2*/
+            transform: skew(15deg);
+          } 
+      }
+      /* safari */
+      @supports (-webkit-backdrop-filter: invert(1)) {
+        .txt:before {
+          transform: skewX(15deg);
+        }
+      }    
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="txt"> 
+  <h1>This is CodePen</h1>
+</div>
+<div class="simp">
+  <h2>No Background</h2>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
