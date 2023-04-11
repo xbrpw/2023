@@ -5,6 +5,7 @@ new Vue ({
       editTitle: '',
       editContent: '',
       title: '',
+      mes: '',
       content: ''  
     }
   },
@@ -15,6 +16,7 @@ new Vue ({
     previewPost: function() {
       this.title = this.editTitle;
       this.content = this.editContent;
+      this.mes = this.editMes;
     }
   }
 });

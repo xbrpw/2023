@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Vue Blog Input &amp; Preview</title>
+  <title>Vue Blog Input &amp; Preview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
 
-<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -22,23 +23,35 @@
     <input type="text" placeholder="Name Your Post" v-model="editTitle">
     <label>Content:</label>
     <textarea placeholder="Write Your Post" v-model="editContent"></textarea>
-    <button class="preview" v-on:click.prevent="previewPost">Preview</button>
+
+
+      <h2>Mes de nacimiento</h2>
+      <p>
+      <input class="mes preview-data" type="radio" name="mes" value="Enero" v-model="editTitle">
+      <label>Enero</label></p>
+      <p>
+      <input class="mes preview-data" type="radio" name="mes" value="Febrero" v-model="editTitle">
+      <label>Febrero</label></p>
+      <p>
+      <input class="mes preview-data" type="radio" name="mes" value="Marzo" v-model="editTitle">
+      <label>Marzo</label></p>
+      <button class="preview" v-on:click.prevent="previewPost">Preview</button>
   </form>
   
   <h1 class="preview-header"></h1>
   <div class="preview-section">
     <h3 class="title preview-data">{{title}}</h3>
     <div class="date"></div>
-    <p class="paragraph preview-data" style="white-space: pre-line;">{{content}}</p>
-    
-    <!--<button class="preview" v-if="">Delete</button>-->
+    <p class="paragraph preview-data" style="white-space: pre-line;">{{content}}</p>  
+    <p class="mes preview-data" style="white-space: pre-line;">{{mes}}</p>  
+    <button class="preview" v-if="">Compartir</button>
   </div>
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/velocity.ui.min.js'></script><script  src="./script.js"></script>
+  <script src='./vue.min.js'></script>
+<script src='./jquery.min.js'></script>
+<script src='./velocity.js'></script>
+<script src='./velocity.ui.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>

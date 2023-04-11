@@ -1,5 +1,5 @@
 // Fetch some CSS boilerplate
-fetch('https://gist.githubusercontent.com/shotrifork/662614c8b53c4c4f3612b980ef2024c9/raw/71de5a081d867acad610114450c88259ec498a14/codepen.css').
+fetch('./style.css').
 then(r => r.text()).
 then(css => {
 	const style = document.body.appendChild(document.createElement('style'));
@@ -9,7 +9,7 @@ then(css => {
 const shareData = {
 	title: "Web Share API example",
 	text: "A simple pen, found on MDN for showing Web Share API",
-	url: "https://codepen.io/netsi1964/pen/KKeMOGL"
+	url: "https://xbrpw.github.io"
 };
 
 const btn = document.querySelector("button");
