@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Brands: Goku, Pizza Planet and more</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+/* Marquee styles */
+.marquee {
+  --gap: 0.01rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+@-webkit-keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    -webkit-animation-play-state: paused !important;
+            animation-play-state: paused !important;
+  }
+}
+
+/* Enable animation */
+.enable-animation .marquee__content {
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+}
+
+/* Reverse animation */
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Enable position absolute animation on the duplicate content (last-child) */
+.enable-animation .marquee--pos-absolute .marquee__content:last-child {
+  -webkit-animation-name: scroll-abs;
+          animation-name: scroll-abs;
+}
+
+@-webkit-keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Other page demo styles */
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: transparent;
+  /*background: dodgerblue;*/
+  margin: 1px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.marquee {
+  border: none;
+}
+ img {  object-fit: cover;}
+  </style>
+</head>
+<body>
+
+<section class="enable-animation">
+
+  <div class="marquee">
+    <ul class="marquee__content">
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673408596079.webp" alt="Ferrari" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673719377486.webp" alt="Dragon Ball" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673408885956.webp" alt="Pirate King" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673409802142.webp" alt="Lord of the Drinks" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673720649579.webp" alt="Sayayin Fusion" class="w3-image" width="100px" height="auto" ></li>      
+    </ul>
+
+    <ul aria-hidden="true" class="marquee__content">      
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673681496915.webp" alt="Ardidas" class="w3-image" width="100px" height="auto""></li>      
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673408820928.webp" alt="Pizza Planet" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673748082362.webp" alt="Gym Saya Express" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673729542533.webp" alt="Pizza Planet 2" class="w3-image" width="80px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673729604905.webp" alt="Sexy" class="w3-image" width="100px" height="auto"></li>
+    </ul>
+  </div>
+
+  <div class="marquee marquee--reverse">
+    <ul class="marquee__content">
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673749890328.webp" alt="Butman" class="w3-image" width="100px" height="auto"></li>      
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673748221951.webp" alt="Goky Gym" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673748299013.webp" alt="Goku NFL" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673749825583.webp" alt="Tanga" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673749927287.webp" alt="Kuley" class="w3-image" width="100px" height="auto"></li>
+    </ul>
+
+    <ul aria-hidden="true" class="marquee__content">      
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673749980151.webp" alt="Gatumadre" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673750177279.webp" alt="Bitch McDonalds" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673750278902.webp" alt="Pandas WTF" class="w3-image" width="50px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673750433907.webp" alt="Umbrella" class="w3-image" width="100px" height="auto"></li>
+      <li><img src="https://xbrpw.github.io/2023/img/marcas/Webp/1673748438686.webp" alt="Goku NFL" class="w3-image" width="80px" height="auto"></li>
+    </ul>
+  </div>
+</section>
+
+  
+</body>
+</html>
