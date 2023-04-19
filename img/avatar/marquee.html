@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Marquee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <style>
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}    
+    @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    body {
+      --space: 2rem;
+
+      display: grid;
+      align-content: center;
+      overflow: hidden;
+      gap: var(--space);
+      width: 100%;
+      font-family: "Corben", system-ui, sans-serif;
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .marquee {
+      --duration: 60s;
+      --gap: var(--space);
+
+      display: flex;
+      overflow: hidden;
+      -webkit-user-select: none;
+        -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      gap: var(--gap);
+      transform: skewY(-3deg);
+    }
+
+    .marquee__group {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: var(--gap);
+      min-width: 100%;
+      -webkit-animation: scroll var(--duration) linear infinite;
+              animation: scroll var(--duration) linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee__group {
+        -webkit-animation-play-state: paused;
+                animation-play-state: paused;
+      }
+    }
+
+    .marquee__group img {
+      max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+      aspect-ratio: 1;
+      -o-object-fit: cover;
+        object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .marquee__group p {
+      background-image: linear-gradient(
+        75deg,
+        hsl(240deg 70% 49%) 0%,
+        hsl(253deg 70% 49%) 11%,
+        hsl(267deg 70% 49%) 22%,
+        hsl(280deg 71% 48%) 33%,
+        hsl(293deg 71% 48%) 44%,
+        hsl(307deg 71% 48%) 56%,
+        hsl(320deg 71% 48%) 67%,
+        hsl(333deg 72% 48%) 78%,
+        hsl(347deg 72% 48%) 89%,
+        hsl(0deg 73% 47%) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .marquee--borders {
+      border-block: 3px solid dodgerblue;
+      padding-block: 0.75rem;
+    }
+
+    .marquee--reverse .marquee__group {
+      animation-direction: reverse;
+      -webkit-animation-delay: calc(var(--duration) / -2);
+              animation-delay: calc(var(--duration) / -2);
+    }
+
+    @-webkit-keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="marquee">
+  <div class="marquee__group">
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0141.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/image%20(1).jpeg' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0134.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/danna-paola-.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0133.webp' alt=''>
+  </div>
+
+  <div aria-hidden="true" class="marquee__group">
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0124.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/image%20(2).jpeg' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0127.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0133.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/paquita-la-del-barrio/IMG_20230403_104935296~2.webp' alt=''>
+  </div>
+</div>
+
+<div class="marquee marquee--borders" style="--duration: 100s">
+  <div class="marquee__group">
+    <p>Fotos para tu Avatar de perfil</p>
+    <p aria-hidden="true">Fotos para tu Avatar de perfil</p>
+    <p aria-hidden="true">Fotos para tu Avatar de perfil</p>
+  </div>
+
+  <div aria-hidden="true" class="marquee__group">
+    <p>Fotos para tu Avatar de perfil</p>
+    <p>Fotos para tu Avatar de perfil</p>
+    <p>Fotos para tu Avatar de perfil</p>
+  </div>
+</div>
+
+<div class="marquee marquee--reverse">
+  <div class="marquee__group">
+    <img src='https://xbrpw.github.io/2023/img/avatar/mishell/IMG_20230406_125124715~2.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/luisangelmaciel.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0138.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0130.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/IMG-20230410-WA0131.webp' alt=''>
+  </div>
+
+  <div aria-hidden="true" class="marquee__group">
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/image%20(5).jpeg' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/image%20(4).jpeg' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/image%20(3).jpeg' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/ai/danna-paola-.webp' alt=''>
+    <img src='https://xbrpw.github.io/2023/img/avatar/mishell/IMG_20230406_125124715~2.webp' alt=''>
+  </div>
+</div>
+  
+</body>
+</html>
