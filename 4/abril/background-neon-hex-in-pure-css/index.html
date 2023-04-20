@@ -4,12 +4,138 @@
 <meta charset="UTF-8">
 <title>Neon Hex in pure CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
+<style>
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
+  *, *:after, *:before {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background: #000;
+  }
+  body:not(:hover) .spacer:nth-child(135):before {
+    -webkit-animation: wave 0.5s infinite, flash 1s infinite;
+            animation: wave 0.5s infinite, flash 1s infinite;
+    opacity: 1;
+  }
+
+  .spacer {
+    position: relative;
+    width: 3vw;
+    margin: 0.17vw 0.77vw;
+  }
+  .spacer:nth-child(even) {
+    transform: translateY(-2vw);
+  }
+  .spacer:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #0f0;
+    width: 6vw;
+    height: 6vw;
+    z-index: -10;
+    border-radius: 50%;
+    filter: blur(4px);
+    opacity: 0;
+  }
+  .spacer:hover {
+    z-index: -10;
+  }
+  .spacer:hover:before {
+    -webkit-animation: wave 0.5s infinite, flash 1s infinite;
+            animation: wave 0.5s infinite, flash 1s infinite;
+    opacity: 1;
+  }
+
+  .hex {
+    width: 3vw;
+    height: 4vw;
+    background: #111;
+    position: relative;
+  }
+  .hex:before, .hex:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-style: solid;
+    border-width: 2vw 1.25vw 2vw 1.25vw;
+    border-color: transparent #111 transparent transparent;
+  }
+  .hex:after {
+    left: 100%;
+    border-color: transparent transparent transparent #111;
+  }
+
+  @-webkit-keyframes wave {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: blur(6px);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(6);
+      filter: blur(20px);
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: blur(6px);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(6);
+      filter: blur(20px);
+    }
+  }
+  @-webkit-keyframes flash {
+    0% {
+      background: red;
+    }
+    25% {
+      background: orange;
+    }
+    50% {
+      background: yellow;
+    }
+    75% {
+      background: green;
+    }
+    100% {
+      background: blue;
+    }
+  }
+  @keyframes flash {
+    0% {
+      background: red;
+    }
+    25% {
+      background: orange;
+    }
+    50% {
+      background: yellow;
+    }
+    75% {
+      background: green;
+    }
+    100% {
+      background: blue;
+    }
+  }  
+</style>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
+
 <div class="spacer">
   <div class="hex"></div>
 </div>
@@ -1510,7 +1636,6 @@
 <div class="spacer">
   <div class="hex"></div>
 </div>
-<!-- partial -->
   
 </body>
 </html>
