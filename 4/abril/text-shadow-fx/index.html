@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+   <meta charset="UTF-8">
+   <title>Text Shadow Generator</title>
+   <style>  
+      html {
+         height: 100%;
+         overflow:hidden;
+      }
+
+      body {
+         background: linear-gradient(#00ffff 0%, #ff00ff 100%);
+         height: 100%;
+         margin: 0;
+      }
+
+
+      #header {
+         background: #000;
+         color: white;
+         padding: 10px;
+         font-family: monospace;
+         text-transform: uppercase;
+      }
+
+      #header span {
+         margin: 5px 20px;
+         display: inline-block;
+      }
+
+      #header label, #header input {
+         vertical-align: middle;
+      }
+
+      #headline {
+         font-family: sans-serif;
+         color: #fff;
+         font-size: 150px;
+         text-align: center;
+         outline: none;
+      }  
+   </style>
+</head>
+
+<body>
+
+<div id="header" style="display:none">
+
+   <span>
+      <label for="color1">Start Color</label>
+      <input type="color" id="color1" name="color1" value="#003638" onchange="update()" />
+   </span>
+
+   <span>
+      <label for="color2">End Color</label>
+      <input type="color" id="color2" name="color2" value="#00fbb5" onchange="update()" />
+   </span>
+
+   <span>
+      <label for="textColor">Text Color</label>
+      <input type="color" id="textColor" name="textColor" value="#ffffff" onchange="update()" />
+   </span>
+
+   <span>
+      <label for="steps">Shadow Length</label>
+      <input type="range" id="steps" name="steps" value="500" min="0" max="1000" onchange="update()" oninput="update()" />
+   </span>
+</div>
+
+<h1 id="headline" contenteditable="true">eevee<small>.css</small></h1>
+
+<script>
+   var textColor = document.getElementById('textColor');
+   var headline = document.getElementById('headline');
+   var color1 = document.getElementById('color1');
+   var color2 = document.getElementById('color2');
+   var steps = document.getElementById('steps');
+   var grad = document.getElementById('gradient');
+
+   headline.focus();
+   update();
+
+   function cutHex(h) {
+      return (h.charAt(0) == "#") ? h.substring(1, 7) : h;
+   }
+
+   function hexToR(h) {
+      return parseInt((cutHex(h)).substring(0, 2), 16);
+   }
+
+   function hexToG(h) {
+      return parseInt((cutHex(h)).substring(2, 4), 16);
+   }
+
+   function hexToB(h) {
+      return parseInt((cutHex(h)).substring(4, 6), 16);
+   }
+
+   function calcColorStep(v1, v2, percent) {
+      return v1 + percent * (v2 - v1);
+   }
+
+   function generateGradient() {
+      document.body.style.background = 'linear-gradient(' + color1.value + ' 0%, ' + color2.value + ' 100%)';
+
+      var hex1 = cutHex(color1.value);
+      var hex2 = cutHex(color2.value);
+
+      var textShadowStyleStr = '';
+
+      for (var i = 0; i <= steps.value; i++) {
+         var percent = (1 / steps.value) * i;
+
+         var r = Math.round(calcColorStep(hexToR(hex1), hexToR(hex2), percent));
+         var g = Math.round(calcColorStep(hexToG(hex1), hexToG(hex2), percent));
+         var b = Math.round(calcColorStep(hexToB(hex1), hexToB(hex2), percent));
+
+         var offset = i + 1;
+         textShadowStyleStr = textShadowStyleStr + ' ' + offset + 'px ' + offset + 'px rgb(' + r + ',' + g + ',' + b + ')';
+         if (i < steps.value) {
+            textShadowStyleStr = textShadowStyleStr + ',';
+         }
+      }
+
+      headline.style.textShadow = textShadowStyleStr;
+   }
+
+   function update() {
+      headline.style.color = textColor.value;
+      generateGradient();
+   }   
+</script>
+
+</body>
+</html>
