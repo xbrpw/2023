@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Reptilian Eye - CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <style>
+      :root {
+        --c0: #000000;
+        --c1: #8bc34a;
+      }
+
+      body {
+        background: 
+          radial-gradient(circle at 50% 50%, #fff0 35vmin, #140000cc 50vmin 100%), 
+          radial-gradient(circle at calc(50% + 2.5vmin) calc(50% - 2.5vmin), var(--c1) 0.75vmin, #fff0 calc(0.75vmin + 1px)),
+          radial-gradient(circle at 50% 50%, var(--c0) 0 5vmin, var(--c1) calc(5vmin + 1px) 6.25vmin, var(--c0) calc(6.25vmin + 1px) 7vmin, var(--c1) calc(7vmin + 1px) 7.75vmin, var(--c0) calc(7.75vmin + 1px) 8.5vmin, var(--c1) calc(8.5vmin + 1px) 9.25vmin, var(--c0) calc(9.25vmin + 1px) 10vmin, var(--c1) calc(10vmin + 1px) 10.75vmin, var(--c0) calc(10.75vmin + 1px) 11.5vmin, var(--c1) calc(11.5vmin + 1px) 12.25vmin, var(--c0) calc(12.25vmin + 1px) 13vmin, var(--c1) calc(13vmin + 1px) 13.75vmin, var(--c0) calc(13.75vmin + 1px) 14.5vmin, var(--c1) calc(14.5vmin + 1px) 15.25vmin, var(--c0) calc(15.25vmin + 1px) 16vmin, var(--c1) calc(16vmin + 1px) 16.75vmin, var(--c0) calc(16.75vmin + 1px) 17.5vmin, var(--c1) calc(17.5vmin + 1px) 18vmin, #fff0 calc(18vmin + 1px)),
+          repeating-radial-gradient(circle at 50% 50%, var(--c0) 0 0.75vmin, var(--c1) calc(0.75vmin + 1px) 1.5vmin, var(--c0) calc(1.5vmin + 1px));
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 0 50vmin 15vmin #160101 inset;
+      }
+
+      body:before {
+        content: "";
+        background: var(--c0);
+        width: 2.2vmin;
+        height: 10vmin;
+        position: absolute;
+        left: calc(50% - 1.1vmin);
+        top: calc(50% - 5vmin);
+        border-radius: 100%;
+        border: 0.5vmin solid var(--c0);
+        box-sizing: border-box;
+        border-left-color: var(--c1);
+        border-right-color: var(--c1);
+        box-shadow: 0 0 0.5vmin 0 var(--c1) inset;
+      }
+
+      div {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: absolute;
+        width: 100vw;
+      }
+
+      .bot {
+        top: 50vh;
+      }
+
+      @property --pos{
+        syntax: '<percentage>';
+        inherits: false;
+        initial-value: -70%;
+      }
+
+      .bot:before, .top:before {
+        --c1: #835241;
+        --c0: #140000;
+        content: "";
+        background: 
+          radial-gradient( circle at var(--pos) var(--pos), #0008 34vmin, #fff0 36vmin),
+          radial-gradient( circle at var(--pos) var(--pos), var(--c0) 5vmin, var(--c1) 35vmin, var(--c0) calc(35vmin + 1px) calc(35vmin + 4px), #fff0 calc(35vmin + 5px));
+        width: 25vmin;
+        height: 25vmin;
+        position: absolute;
+        border-radius: 50vmin 0;
+        transform: rotate(45deg) skew(0deg, 0deg);
+        top: -12.5vmin;
+        box-shadow: 
+          0 0 2vmin 1vmin var(--c0) inset, 
+          0 0 20vmin 10vmin var(--c0), 
+          0 0 0 1vmin var(--c1), 0 0 0 2vmin var(--c0), 
+          0 0 0 3vmin var(--c1), 0 0 0 4vmin var(--c0), 
+          0 0 0 5vmin var(--c1), 0 0 0 6vmin var(--c0), 
+          0 0 0 7vmin var(--c1), 0 0 0 8vmin var(--c0), 
+          0 0 0 9vmin var(--c1), 0 0 0 10vmin var(--c0), 
+          0 0 0 11vmin var(--c1), 0 0 0 12vmin var(--c0), 
+          0 0 0 13vmin var(--c1), 0 0 0 14vmin var(--c0), 
+          0 0 0 15vmin var(--c1), 0 0 0 16vmin var(--c0), 
+          0 0 20vmin 20vmin var(--c0), 
+          0 0 20vmin 20vmin var(--c0);
+        animation: blinking 5.5s ease 1s infinite;
+      }	
+
+      @keyframes blinking {
+        10%, 40%, 50% { --pos: -25%; }
+        0%, 5%, 15%, 35%, 45%, 55%, 100% { --pos: -70%; }
+      }
+
+      .top:before {
+        bottom: -12.5vmin;
+        top: inherit;
+      }
+  </style>
+
+</head>
+<body>
+
+<div class="top"></div>
+<div class="bot"></div>
+
+  
+</body>
+</html>
