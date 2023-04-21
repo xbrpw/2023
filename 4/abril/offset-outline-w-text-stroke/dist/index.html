@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Offset outline w/text-stroke</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+    .stroke-uno {
+      position: relative;
+      margin-top: 5rem;
+      font-family: 'Roboto', sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      z-index: 100;
+      text-align: center;
+    }
+
+    .stroke-dos {
+      position: relative;
+      margin-top: 5rem;
+      font-family: 'Roboto', sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: #09e0f6;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #09e0f6;
+      margin-top: -9rem;
+      transform: translate(-5px, .5px);
+      z-index: 10;
+      text-align: center;
+    }    
+  </style>
+
+</head>
+<body><br><br><br><br><br><br><br><br>
+<center>
+  <h1 class="stroke-uno">Font family ROBOTO</h1>
+  <h1 class="stroke-dos">Font family ROBOTO</h1>
+</center>
+
+</body>
+</html>
