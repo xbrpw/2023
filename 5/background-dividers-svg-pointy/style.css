@@ -1,0 +1,49 @@
+:root {
+  --section-one-color: #015c8b;
+  --section-middle-color: #23739bd0;
+  --section-end-color: #14668f67;
+  --page-padding: 24px;
+}
+
+body {
+  background: var(--section-one-color);
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bitter", serif;
+}
+
+.content-top {
+  margin: 0;
+  padding: var(--page-padding);
+}
+
+.section-middle {
+  background: var(--section-middle-color);
+  padding: var(--page-padding);
+}
+
+.section-end {
+  padding: var(--page-padding);
+  background: var(--section-end-color);
+}
+
+svg {
+  margin-left: calc(-1 * var(--page-padding));
+  margin-right: calc(-1 * var(--page-padding));
+  margin-top: calc(-1 * var(--page-padding));
+}
+
+.section-middle svg {
+  color: var(--section-one-color);
+}
+
+.section-end svg {
+  color: var(--section-middle-color);
+}

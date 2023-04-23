@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>API de texto a voz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  
+<main style="text-align: center;">
+  <label for="voice"><!-- Voice --></label>
+  <select id="voice" style="display: none;"></select>
+  <label for="message"><!-- Message --></label>
+  <div>
+    <!-- Tambien se puede de esta forma <input id="message" type="text" placeholder="Your message" value="Esto es un mensaje de texto a voz. Que tengas buen día. El cielo resplandece a mi alrededor, chala jed cha la" style="border:none; background-color: transparent; width: 100%; height: auto;"/> -->
+    <textarea id="message" style="border:none; background-color: transparent; width: 100%; height: 40vh; font-family:Verdana, Geneva, Tahoma, sans-serif">
+No soy un buen cantante, pero hare lo posible. Esta bonita canción es del opening de Dragon Ball. Aquí vamos. 1, 2, 3. 
+El cielo resplandece a mi alrededor volar, destellos brillan en las nubes sin fin.
+Con libertad puedes volar en el cielo azul, detras huye a un golpe de pronto en ti.
+Como si un volcán hiciera una erupción, derrite un gran glaciar, podrás ver de cerca un gran dragón.
+Chala head chala no importa lo que suceda, siempre el ánimo mantendré. 
+Chala head chala vibrante mi corazón siente emoción, haré una genki dama.
+Chala head chala no pienses nada, sólo escucha sueños hay en tu corazón. 
+Chala head chala no importa lo que suceda, sonreire el día de hoy.
+Tan tan, fin. Espero te gustará. Aplausos por favor. 
+¡Gracias publico conocedor! Hasta la vista. Beibi 
+    </textarea>
+    <button onClick={speak}>Habla</button>
+  </div>
+</main>
+
+  <script>
+    const {
+      speechSynthesis: synth } =
+    window;
+
+    const SELECT = document.querySelector('#voice');
+    const MESSAGE = document.querySelector('#message');
+
+    const START = () => {
+      const VOICES = speechSynthesis.getVoices();
+      console.info(VOICES);
+      VOICES.forEach(voice => {
+        const OPTION = document.createElement('option');
+        OPTION.value = voice.voiceURI;
+        OPTION.innerText = voice.name;
+        SELECT.appendChild(OPTION);
+      });
+    };
+
+    const speak = text => {
+      if (synth.speaking) synth.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      console.info(SELECT.value);
+      utter.voice = synth.getVoices().filter(v => v.name === SELECT.value)[0];
+      synth.speak(utter);
+    };
+
+
+    const BUTTON = document.querySelector('button');
+
+    const SPEAK_UP = () => speak(MESSAGE.value || 'Hey!');
+    BUTTON.addEventListener('click', SPEAK_UP);
+
+    if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+      speechSynthesis.onvoiceschanged = START;
+    }    
+  </script>
+
+</body>
+</html>
