@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Inset Shadow division separador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="SVG Inset Shadow division separador">
+  <meta property="og:title" content="SVG Inset Shadow division separador">
+  <meta property="og:description" content="SVG Inset Shadow division separador">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <link rel=" shortcut icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}/*# sourceMappingURL=normalize.min.css.map */    
+    body {
+      background: #f27a23;
+      width: 100%;
+    }
+    svg {
+      /*display: block;*/
+    }
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 100;
+      src: url(https://fonts.gstatic.com/s/lato/v23/S6u8w4BMUTPHh30AXC-v.ttf) format('truetype');
+    }
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+    }
+    h1 {
+      margin-top: 5em;
+      font-family: 'Lato', Sans-serif;
+      font-weight: 900;
+      font-size: 5em;
+      text-transform: uppercase;      
+      display: inline-block;
+      transform: skewY(-10deg);
+      line-height: 0.9;
+      border-top: 0.02em solid white;
+      border-bottom: 0.02em solid white;
+      padding: 0.1em 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 1.87em;
+      width: 8em;
+      text-align: center;
+      color:white;
+    }
+    h1 span.adj {
+      font-size: 1.05em;
+      text-align: center;
+    }
+    h1 small {
+      font-size: 0.25em;
+      font-weight: 600;
+      text-transform: lowercase;
+      display: block;
+      text-align: center;
+      line-height: 1.9;
+
+    }
+    h1 small span.block {
+      background: #015c8b;
+      padding: 0 0.35em;
+    }
+  </style>
+</head>
+
+<body>
+<svg viewBox='0 0 1920 1080' xmlns='http://www.w3.org/2000/svg'>
+    <defs>
+        <filter id='inset-shadow-top-bottom'>
+            <feOffset dx='0' dy='30' result='offset-top' />
+            <feOffset dx='0' dy='-30' result='offset-bottom' />
+            <feGaussianBlur in='offset-top' stdDeviation='30' result='offset-top-blur' />
+            <feGaussianBlur in='offset-bottom' stdDeviation='30' result='offset-bottom-blur' />
+            <feComposite operator='out' in='SourceGraphic' in2='offset-top-blur' result='inverse-top' />
+            <feComposite operator='out' in='SourceGraphic' in2='offset-bottom-blur' result='inverse-bottom' />
+            <feFlood flood-color='black' flood-opacity='0.8' result='shadow-color' />
+            <feComposite operator='in' in='shadow-color' in2='inverse-top' result='shadow-top' />
+            <feComposite operator='in' in='shadow-color' in2='inverse-bottom' result='shadow-top' />
+            <feComposite operator='over' in='shadow-top' in2='SourceGraphic' result='step-1' />
+            <feComposite operator='over' in='shadow-bottom' in2='step-1' />
+        </filter>
+    </defs>
+
+    <path
+        d='M -56.568541,241.21004 C 14.123201,163.33378 110.4425,109.11526 213.69259,89.078963 316.94268,69.042668 426.55011,83.299881 521.23871,129.0831 c 56.12308,27.13627 106.50015,64.64142 160.19374,96.31438 53.69359,31.67295 112.84964,58.02864 175.17691,59.24912 58.32965,1.14219 114.59903,-19.71927 169.00004,-40.79494 54.401,-21.07567 110.0601,-42.97459 168.3909,-44.05788 58.7379,-1.09085 115.648,19.04464 170.15,40.97311 54.502,21.92847 109.0152,46.16556 167.241,53.98123 73.1933,9.82476 147.334,-6.99435 217.8201,-29.02825 70.4861,-22.0339 139.7026,-49.49097 212.5048,-61.88548 64.5984,-10.99783 131.7925,-9.73891 194.7412,8.46484 62.9486,18.20375 121.4598,53.87336 162.8528,104.67225 39.0374,47.90797 61.9558,108.34306 66.5928,169.96766 4.6369,61.62459 -8.7437,124.22433 -36.2882,179.54512 -40.4089,81.15771 -111.686,146.40469 -195.9696,179.80715 -86.2546,34.18356 -184.5389,34.84839 -272.7412,6.06092 -62.7927,-20.4943 -122.0295,-55.55314 -187.8883,-60.60916 -67.4648,-5.17931 -132.8819,21.85496 -194.2806,50.28949 -61.3987,28.43453 -124.0224,59.39802 -191.5977,62.8476 -41.9499,2.14146 -83.9202,-6.58443 -123.4448,-20.80366 -39.5246,-14.21923 -76.8606,-33.84901 -113.6252,-54.16518 -73.52913,-40.63233 -148.17038,-85.2389 -231.64079,-94.73679 -60.67415,-6.90396 -121.77293,5.36997 -181.24732,19.21966 -59.47439,13.84968 -119.32185,29.43843 -180.38729,29.26766 -62.48304,-0.17473 -123.56403,-16.83728 -184.32929,-31.38872 -60.76526,-14.55144 -123.42353,-27.16544 -185.38654,-19.1189 -71.118159,9.23543 -135.853123,44.91604 -204.987532,63.98222 -34.567208,9.53309 -70.787968,14.90229 -106.360658,10.39059 -35.57268,-4.51171 -70.57506,-19.59026 -94.73313,-46.08854 -23.85679,-26.16782 -35.63251,-61.67138 -38.3858,-96.97465 -5.20938,-66.79577 19.93269,-133.10972 57.24594,-188.75622 37.31325,-55.6465 86.3355,-102.25232 134.68304,-148.63473 29.7284,-28.52006 59.359776,-57.14127 88.893429,-85.86296 z'
+        fill='#015c8b'
+        filter='url(#inset-shadow-top-bottom)'
+    />
+</svg>
+<br><br><br><br><br><br>
+<h1 contenteditable="true">Luis Angel<br /><span class="adj" contenteditable="true"><b>Maciel</span>
+  <small><span class="block" contenteditable="true"><b>@luisangelmaciel<b></span></small></h1>
+<!-- partial -->
+  
+</body>
+</html>

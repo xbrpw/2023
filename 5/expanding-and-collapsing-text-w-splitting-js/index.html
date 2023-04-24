@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Expanding and Collapsing Text w/ Splitting.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="Expanding and Collapsing Text w/ Splitting.js">
+  <meta property="og:title" content="Expanding and Collapsing Text w/ Splitting.js">
+  <meta property="og:description" content="Expanding and Collapsing Text w/ Splitting.js">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <link rel=" shortcut icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700,800,900'>
+</head>
+
+<!-- Expanding and Collapsing Text w/ Splitting.js -->
+<style>
+    body {
+    background: #015c8b;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    transition: 2s;
+  }
+
+  div {
+    place-self: center;
+    font: normal 700 20vw/2 'Roboto', sans-serif;
+    text-shadow: 0.5vmin 0.5vmin 0 #000000;
+    color: white;
+  }
+
+  span.char {
+    animation: expand 2s infinite ease-in-out normal;
+    animation-delay: calc(var(--char-index) * .2s);
+    user-select: none;
+  } 
+
+  @keyframes expand {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 1vmin 1vmin 0 #000000;
+      transform: scale(1.05, 2.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+<div data-splitting>Hello</div>
+<link rel='stylesheet' href='./splitting.css'> 
+<script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+<script>Splitting();</script>
+<!-- /Expanding and Collapsing Text w/ Splitting.js -->
+
+</body>
+</html>

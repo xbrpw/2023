@@ -1,0 +1,29 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+div {
+	display: none;
+	background:white; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.hidden {
+	display: none;
+}
+.visible {
+	display: block !Important;
+}
+
+label {
+	padding: 10px;
+}
