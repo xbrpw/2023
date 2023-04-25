@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title> Descarga este contenido</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content=" Descarga este contenido">
+  <meta property="og:title" content=" Descarga este contenido">
+  <meta property="og:description" content=" Descarga este contenido">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <link rel="icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <style>
+body {background-color: #015c8b;}    
+a {text-decoration: none;}a{background-color:transparent}a:active,a:hover{outline-width:0; color:white; text-decoration: none;}a:link, a:visited {color: inherit;text-decoration: none;} a:hover, a:active {color: inherit; text-decoration: none;}a:hover {text-decoration: underline;}
+  </style>
+</head>
+
+<body>
+<!-- Descarga este contenido -->
+<br><br><br><br><br><br><center>
+<a href ="#download" id="donwload-link" onClick="myFunction()"><h1 style="font-size: 50px; color:#f27a23;text-align: center;">Esto será descargado <br>tal cual esta en el index.html<br></h1></a>
+<img src="https://xbrpw.github.io/2023/favicon.svg" alt="My logo" width="200px" height="auto" title="Hi, hello!">
+<h2 style="color:white">Gracias Js</h2>
+</center>
+<script>
+  function myFunction() {
+    var content = document.documentElement.innerHTML;
+    download(content, "index", "txt")
+
+  }
+  function download(content, fileName, fileType) {
+    var link = document.getElementById("donwload-link");
+    var file = new Blob([content], {type: fileType});
+    var donwloadFile = fileName + "." + fileType;
+    link.href = URL.createObjectURL(file);
+    link.download = donwloadFile
+  }
+</script>
+
+
+</body>
+</html>

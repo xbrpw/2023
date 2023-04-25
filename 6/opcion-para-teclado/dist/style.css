@@ -1,0 +1,10 @@
+body{background:#222;color:white;}
+#a_name{width:50%;height:5vh;position: absolute;left: 70%;top:90vh;transform: translate(-50%,-300%);fot-size:30px;}
+ #button{width:30%;height:5vh;position: absolute;left: 50%;top:90vh;transform: translate(-50%,-200%);}
+.styling{stroke-width:3;stroke:olive;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.styler{stroke-width:3;stroke:orange;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.styled{stroke-width:.1;stroke:#ccc;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+input[type=text]{font-size:20px;}
+@media only screen and (max-width: 600px){
+ input[type=text]{font-size:10px;}
+}

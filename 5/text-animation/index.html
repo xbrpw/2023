@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Text animated 2 words</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="Text animated 2 words">
+  <meta property="og:title" content="Text animated 2 words">
+  <meta property="og:description" content="Text animated 2 words">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <link rel=" shortcut icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <style>
+    @font-face {
+        font-family: 'Inconsolata';
+        src: url('https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf');
+        font-weight: 275 900;
+        font-stretch: 50% 200%;
+      }
+    
+      .variable {      
+        color: black; 
+        font-family: 'Inconsolata';
+        display: flex;
+        font-size: 80px;
+        font-variation-settings: "wght"275, "wdth"50;
+        text-align: center;
+        animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+      }
+    
+      .swap-things {
+        animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+      }
+    
+    
+      @keyframes swapthings {
+        0% {
+          font-variation-settings: "wght"275, "wdth"50;
+        }
+    
+        50% {
+          font-variation-settings: "wght"900, "wdth"200;
+        }
+    
+        100% {
+          font-variation-settings: "wght"275, "wdth"50;
+        }
+      }
+    
+      @keyframes swapthings2 {
+        0% {
+          font-variation-settings: "wght"900, "wdth"200;
+        }
+    
+        50% {
+          font-variation-settings: "wght"275, "wdth"50;
+        }
+    
+        100% {
+          font-variation-settings: "wght"900, "wdth"200;
+        }
+      }    
+      </style>
+</head>
+<body>
+
+  <br><br>
+<div class="variable" style="text-align: center;">
+    <span class="swap-things">SAYA</span><span style="font-weight: 600; color:#015c8b">REX</span>
+</div>
+
+  
+</body>
+</html>
