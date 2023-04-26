@@ -1,0 +1,32 @@
+
+<!-- AJAX Bitcoin  -->
+<h5 id="name" class="flex-hcenter svelte-16k6c5o" style="box-sizing: inherit; line-height: 1.2; margin-bottom: 0.5em; margin-top: 0px; font-size: 0.8rem; font-family: Manrope, Helvetica, sans-serif; display: flex; align-items: center; letter-spacing: 0.1px;"><img id="coin-logo" src="https://imgs.search.brave.com/Y2iBzwUesV3qagEaU7E6bMXFTp5-KrPkWzkaKWBIUGE/rs:fit:40:40:1/g:ce/aHR0cHM6Ly9hc3Nl/dHMuY29pbmdlY2tv/LmNvbS9jb2lucy9p/bWFnZXMvMS9sYXJn/ZS9iaXRjb2luLnBu/Zz8xNTQ3MDMzNTc5" alt="btc-logo" class="svelte-16k6c5o" style="box-sizing: inherit; border-style: none; position: relative; overflow: hidden; width: 24px; margin-right: 10px;">Bitcoin<span id="symbol" class="svelte-16k6c5o" style="box-sizing: inherit; background: var(--bg-1); height: 1.2rem; padding: 0.2rem 0.4rem; border-radius: 30px; color: var(--color-primary); font-size: 0.7rem; margin-left: 15px;">BTC</span></h5>
+
+<h1>Bitcoin Current Price is: <span id="price" style="  color: green;"></span></h1>
+<p>by <a href="https://www.coindesk.com/" aria-label="Coin desk API">  api.coindesk.com</a></p>
+<button>Refresh Data</button>
+
+<script>
+  var btn = document.querySelector("button");
+  var priceDisp = document.querySelector("#price");
+
+  var currency = "USD";
+
+  btn.addEventListener("click", function(){
+    var XHR = new XMLHttpRequest();
+    
+    XHR.onreadystatechange = function() {
+      if(XHR.readyState == 4 && XHR.status == 200) {
+        var data = JSON.parse(XHR.responseText);
+        var price = data.bpi.USD.rate;
+        priceDisp.innerText = price + " " + currency;
+      }
+    }
+    
+    var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+    XHR.open("GET", url);
+    XHR.send();
+  })    
+</script>
+</body>
+</html>

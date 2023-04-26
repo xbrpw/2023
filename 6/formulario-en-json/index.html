@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript: serialize a form as JSON </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="JavaScript: serialize a form as JSON ">
+  <meta property="og:title" content="JavaScript: serialize a form as JSON ">
+  <meta property="og:description" content="JavaScript: serialize a form as JSON ">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <link rel=" shortcut icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <style>
+    body {
+    margin: 2em 2em 2em 2em;    
+    padding: 2em 2em 2em 2em;    
+    }
+
+    form div {
+        margin-bottom: 0.5em;
+    }
+    form div label, form div input {
+        display: block;
+        margin-bottom: 0.3em;
+    }
+  </style>
+</head>
+
+<body>
+<!-- JavaScript: serialize a form as JSON -->
+
+<form id="test" action="#" method="post">
+    
+    <div class="form-group">
+        <label for="srcimg"><!-- Name -->img</label>
+        <input class="form-control" type="text" name="srcimg" id="srcimg" />
+    </div>
+    <div class="form-group">
+        <label for="altimage">alt</label>
+        <input class="form-control" type="text" name="altimage" id="altimage" />
+    </div>
+    <div class="form-group">
+        <label for="tag">tag</label>
+        <input class="form-control" type="text" name="tag" id="tag" />
+    </div>
+    <div class="form-group">
+        <label for="ahref">ahref</label>
+        <input class="form-control" type="text" name="ahref" id="ahref" />
+    </div>
+    <div class="form-group">
+        <label for="titleimg">title-img</label>
+        <input class="form-control" type="text" name="titleimg" id="titleimg" />
+    </div>
+    <!-- check -->
+    <!-- div class="form-group" style="display: none;">
+    	<label for="check">webp</label>
+    	<input type="checkbox" name="check" value="webp" />
+    </div -->
+    <div class="form-group">
+        <label for="title">title</label>
+        <input class="form-control" type="text" name="title" id="title" />
+    </div>
+    <div class="form-group" >
+    	<label for="description">description</label>
+    	<textarea class="form-control" name="description" rows="10" cols="60"></textarea>
+    </div>
+    <div class="form-group">
+    	<label for="select">description hide/show</label>
+    	<select name="select" class="form-control">
+    		<option value="hide">hide</option>
+    		<option value="show" selected="selected">show</option>    		
+    	</select>
+    </div>
+    <div class="form-group">
+        <label for="title">Lighthouse</label>
+        <input class="form-control" type="text" name="Lighthouse" id="title" />
+    </div>
+    <div class="form-group">
+    	<label for="LighthouseHideShow">Lighthouse hide/show</label>
+    	<select name="LighthouseHideShow" class="form-control">
+    		<option value="hide" selected="selected">hide</option>
+    		<option value="show">show</option>    		
+    	</select>
+    </div>
+    <!-- email -->
+    <!-- div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" id="email" />
+    </div -->
+    <!-- password -->
+    <!-- div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" id="password" />
+    </div -->
+    <p>
+        <input type="submit" value="Send">
+    </p>
+</form>	
+<pre id="output"></pre>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

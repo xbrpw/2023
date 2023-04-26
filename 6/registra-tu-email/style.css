@@ -1,0 +1,326 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	margin: 0;
+	text-align: center;
+	font-family: 'Google Sans', sans-serif;
+	background: hsl(210 80% 99%);
+}
+:root {
+	--size: 50vmin;
+}
+
+.form {
+	position: relative;
+}
+
+.word {
+  white-space: nowrap;
+}
+
+button {
+	padding: 8px 16px;
+	border-radius: 4px;
+	background: hsl(130 60% var(--lightness, 50%));
+	color: hsl(0 0% 98%);
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	border: 0;
+	font-family: 'Google Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.25rem;
+	transform: scale(var(--s, 1));
+	transition: transform 0.1s, background 0.1s;
+}
+
+button:hover {
+	--lightness: 65%;
+	--s: 1.1;
+}
+
+button:active {
+	--lightness: 35%;
+	--s: 0.9;
+}
+
+[type="email"] {
+	padding: 8px 16px;
+}
+
+.form__controls {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: grid;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+}
+
+.form--submitted .form__controls {
+	animation: scale-out 0.25s both reverse ease-in;
+}
+
+.form-group {
+	display: grid;
+	max-width: 300px;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	justify-content: center;
+	grid-gap: 0.5rem 1rem;
+}
+
+.form-group button {
+	grid-column: span 2;
+}
+
+main {
+	width: 100%;
+}
+
+.captcha {
+	/* "4" is "2*" the gutter which is "2" */
+	--grid-size: calc(var(--captcha-grid-size) + 4);
+	--cell-size: calc(var(--size) / var(--grid-size));
+	--image-size: calc(var(--cell-size) * var(--captcha-grid-size));
+	height: var(--size);
+	aspect-ratio: 1 / 1;
+	position: relative;
+	-webkit-animation: scale-out 1s 0.35s both steps(5, end);
+	        animation: scale-out 1s 0.35s both steps(5, end);
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.captcha--finished {
+	-webkit-animation: scale-in 0.5s steps(5) both;
+	        animation: scale-in 0.5s steps(5) both;
+}
+
+@-webkit-keyframes scale-in {
+	to {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@keyframes scale-in {
+	to {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@-webkit-keyframes scale-out {
+	from {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@keyframes scale-out {
+	from {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+}
+
+label {
+  justify-self: start;
+}
+
+.captcha__header {
+	font-size: 2rem;
+	color: hsl(0 0% 10%);
+	font-weight: bold;
+	position: absolute;
+	bottom: 100%;
+	text-align: center;
+	left: 0;
+	right: 0;
+	font-family: 'JetBrains Mono', monospace;
+}
+
+@property --progress {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}	
+
+.captcha__img:before {
+	content: "";
+	position: absolute;
+	inset: -1vmin;
+	background: conic-gradient(from 315deg, #015c8b calc(var(--progress) * 1%), transparent calc(var(--progress) * 1%));
+	z-index: -1;
+	transition: --progress 0.5s;
+}
+.captcha__grid {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(var(--grid-size), 1fr);
+	grid-template-rows: repeat(var(--grid-size), 1fr);
+}
+
+.captcha__img {
+	position: relative;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	background-image: var(--captcha-image);
+	grid-row:  3 / -3;
+	grid-column: 3 / -3;
+	background-size: var(--image-size);
+}
+
+.captcha__piece {
+	grid-column: var(--captcha-x);
+	grid-row: var(--captcha-y);
+	z-index:  2;
+	height: var(--cell-size);
+	aspect-ratio:  1 / 1;
+	background-image: var(--captcha-image);
+	background-size: var(--image-size);
+	background-position: calc(var(--segment-x) * var(--cell-size)) calc(var(--segment-y) * var(--cell-size));
+}
+.captcha__slot {
+	background: hsl(0 0% 15%);
+  box-shadow: 0 0 16px 4px hsl(0 0% 45% / 0.5) inset;
+	grid-column: var(--segment-x);
+	grid-row: var(--segment-y);
+	z-index:  2;
+}
+
+.captcha__piece[draggable] {
+	cursor: -webkit-grab;
+}
+	
+.captcha__piece--clone {
+	background: red;
+	transform: scale(1.1);
+	z-index: -1;
+}
+
+button .glitchy:after {
+	color: hsl(0 0% 98%);
+}
+
+.glitchy {
+	color: transparent;
+	position: relative;
+	display: inline-block;
+}
+.glitchy:after {
+	content: attr(data-char);	
+	position: absolute;
+	color: hsl(0 0% 10%);
+	left: 0;
+	top: 0;
+	-webkit-animation: glitch calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite steps(1);
+	        animation: glitch calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite steps(1);
+}
+
+@-webkit-keyframes glitch {
+	0% {
+		content: var(--char-0);
+	}
+	10% {
+		content: var(--char-1);
+	}
+	20% {
+		content: var(--char-2);
+	}
+	30% {
+		content: var(--char-3);
+	}
+	40% {
+		content: var(--char-4);
+	}
+	50%, 100% {
+		content: attr(data-char);
+	}
+}
+
+@keyframes glitch {
+	0% {
+		content: var(--char-0);
+	}
+	10% {
+		content: var(--char-1);
+	}
+	20% {
+		content: var(--char-2);
+	}
+	30% {
+		content: var(--char-3);
+	}
+	40% {
+		content: var(--char-4);
+	}
+	50%, 100% {
+		content: attr(data-char);
+	}
+}
+
+.confirm {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	display: none;
+	-webkit-animation: scale-out 0.25s both steps(10);
+	        animation: scale-out 0.25s both steps(10);
+}
+
+.robot {
+	display: none;
+	position: fixed;
+	height: 40vmin;
+	width: 20vmin;
+	bottom: 0;
+	right: 15%;
+	transform: rotate(-10deg) translate(0, 50%) translateY(calc(((var(--progress, 0) / 100) * 30) * 1%));
+	transition: transform 0.25s;
+	-webkit-animation: entrance 0.25s 1.35s backwards;
+	        animation: entrance 0.25s 1.35s backwards;
+}
+
+.robot__mouth--sad,
+.robot__eyes--sad {
+	display: none;
+}
+
+.robot--disappointed {
+	transition: transform 0.25s 1s;
+}
+
+@-webkit-keyframes entrance {
+	0% {
+		transform: rotate(-10deg) translate(0, 120%) translateY(calc(var(--progress, 0) * 1%));
+	}
+	90% {
+		transform: rotate(-10deg) translate(0, 45%) translateY(calc(var(--progress, 0) * 1%));
+	}
+}
+
+@keyframes entrance {
+	0% {
+		transform: rotate(-10deg) translate(0, 120%) translateY(calc(var(--progress, 0) * 1%));
+	}
+	90% {
+		transform: rotate(-10deg) translate(0, 45%) translateY(calc(var(--progress, 0) * 1%));
+	}
+}
