@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile friendly form elements login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h1> Mobile friendly form elements</h1>
+
+<form action="">
+  <p class="quantity">
+    <label for="qt"> Quantity <span class="rm">(required)</span> </label>
+    <input id="qt" name="qt" type="number" inputmode="numeric" pattern="[0-9]*" autofocus required />
+  </p>
+
+  <p class="date">
+    <label for="date"> Date field <span class="rm">(required)</span></label>
+    <input id="date" name="date" type="date" required />
+  </p>
+
+  <p class="url">
+    <label for="url"> Site URL <span class="rm">(required)</span></label>
+    <input id="url" name="url" type="url" required />
+  </p>
+
+  <p>
+    <label for="email"> Email <span class="rm">(optionnal)</span></label>
+    <input id="email" name="email" type="email" autocapitalize="off" autocorrect="off" autocomplete="email" />
+  </p>
+  
+   <p>
+    <label for="phone"> Phone Number <span class="rm">(optionnal)</span></label>
+    <input id="phone" name="phone" type="tel" autocapitalize="off" autocorrect="off" />
+  </p>
+
+  <p class="input-group">
+    <label for="txtPassword">Password <span class="rm">(required)</span></label>
+    <input type="password" id="txtPassword" name="txtPassword" autocapitalize="off" autocorrect="off" autocomplete="off" required />
+    <button id="btnToggle" class="toggle" type="button">show</button>
+  </p>
+
+  <p>
+    <input type="submit" value="Send" />
+  </p>
+
+</form>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

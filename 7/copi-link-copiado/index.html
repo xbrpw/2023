@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Button Pal — some basic button styles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<article>
+    <h1>Button Pal</h1>
+    <p>You get so much <i>for free</i> when you use a real button, so here's a block of CSS to remove the headache of styling them for you. Read more about why you should use a button <a href="https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/#article-header-id-2" target="_blank" rel="noopener">here</a>.</p>
+    <h2>The button</h2>
+    <p>Check out this totally workable button. It's pretty much as easy to work with as a <code>&lt;div&gt;</code>. You can share these styles with an <code>&lt;a&gt;</code> too 🚀</p>
+    <button>Click to copy code to your clipboard</button>
+    <div role="status"></div>
+    <h2>The code</h2>
+    <pre><code>button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}</code></pre>
+    <footer>
+        <p>If you find this useful, you should probably check out <a href="https://boilerform.design" target="_blank" rel="noopener">Boilerform</a> to make your forms easier too.</p>
+    </footer>
+</article>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
