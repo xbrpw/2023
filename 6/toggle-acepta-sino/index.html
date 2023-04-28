@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>React Toggle & Js & Js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="React Toggle & Js & Js">
+  <meta property="og:title" content="React Toggle & Js & Js">
+  <meta property="og:description" content="React Toggle & Js & Js">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <meta name="keywords" content="React Toggle & Js & Js">
+  <meta name="author" content="@luisangelmaciel lamacpad@gmail.com">
+  <link rel=" shortcut icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+  <style>
+    body {
+      padding-top: 5rem;
+    }    
+  </style>
+
+</head>
+
+<body>
+<!-- React Toggle & Js & Js -->
+<div class="container">
+  <h1>Toggle V1</h1>
+  <div class="card">
+    <div class="card-block">
+      <div id="app"></div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js'></script><script  src="./script.js"></script>
+
+
+<h1>Toggle V2</h1>
+<div class="card">
+  <div class="card-block">
+    <p>Acepta ser un sayayin</p>
+    <input class="w3-check" type="checkbox" checked="checked" onclick="myFunctionsiNo()">
+    <label id="myDIVsiNo">Si, acepto</label>
+  </div>
+</div>
+<script>
+function myFunctionsiNo() {
+  var x = document.getElementById("myDIVsiNo");
+  if (x.innerHTML === "Si, acepto") {
+    x.innerHTML = "No acepto";
+  } else {
+    x.innerHTML = "Si, acepto";
+  }
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

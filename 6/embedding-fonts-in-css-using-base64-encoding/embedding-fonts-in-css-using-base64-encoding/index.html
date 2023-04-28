@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - </title>
+  <link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="content">
+<h1 class="rubik">Embedding fonts in CSS using base64 encoding</h1>
+<p>This is an example of using <code>base64</code> encoded fonts. You can embed the font directly in your <code>css</code> code. </p>
+
+	<div class="left">
+<code>@font-face {
+font-family: 'rubik'; <br>
+&#160;&#160;src: url(data:application/x-font-woff;<br>
+&#160;&#160;charset=utf-8;base64,d09GRgABAAAAAHF8ABIAAAAA...)<br>
+&#160;&#160;format('woff');<br>
+&#160;&#160;font-weight: normal;<br>
+&#160;&#160;font-style: normal;<br>
+}</code>
+		</div>
+	
+<p>Here I have embedded <a href="https://fonts.google.com/specimen/Rubik">Rubik</a> font using the tool at: <a href="https://font-converter.net/en/css-embedded-font-base64">font-converter.net</a></p>
+<p class="rubik">This paragraph uses Rubik. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus voluptate veniam fugiat repellendus temporibus, rerum nesciunt cum. Quas ea animi magni minus, perspiciatis amet quo atque itaque unde cumque.</p>
+</div>
+<!-- /Embedding fonts in CSS using base64 encoding  -->
+  
+</body>
+</html>
