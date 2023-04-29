@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Blog Input &amp; Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="Vue Blog Input &amp; Preview<">
+  <meta property="og:title" content="Vue Blog Input &amp; Preview<">
+  <meta property="og:description" content="Vue Blog Input &amp; Preview<">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="./image.webp"> 
+  <meta name="keywords" content="Vue Blog Input &amp; Preview, autocomplete">
+  <meta name="author" content="@luisangelmaciel lamacpad@gmail.com">
+  <link rel=" shortcut icon" href="https://xbrpw.github.io/2023/favicon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.cssx">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .dot {
+      height: 25px;
+      width: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    </style>
+</head>
+
+
+<body>
+<div id="theTab">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button" onclick="openTab('Uno')" style="display: none;">1</button>
+      <button class="w3-bar-item w3-button" onclick="openTab('Dos')" style="display: none;">2</button>
+      <button class="w3-bar-item w3-button" onclick="openTab('Tres')" style="display: none;">3</button>
+      <button class="w3-bar-item w3-button" onclick="openTab('Resultado')" style="display: none;">Resultado</button>
+    </div>
+    
+    
+    <div id="blog">
+      <div id="Uno" class="w3-container Tab">
+        <h1 v-bind:class="{red: true}">Título del vídeo porno gay que te lanzará a la fama</h1>
+        <form>    
+        <label>Tu nombre</label>
+        <input type="text"  placeholder="Tu nombre" v-model="editContent" autocomplete></input>
+        <label style="display: none;">Nombre</label>
+        <input type="text" placeholder="Te llamas" v-model="editTitle" style="display: none;" autocomplete>
+
+        <h2>Mes de nacimiento</h2>
+        <input class="mes preview-data" type="radio" name="mes" value="Vecino" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Enero</label>
+        <input class="mes preview-data" type="radio" name="mes" value="Hetero curioso" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Febrero</label>
+        <input class="mes preview-data" type="radio" name="mes" value="Bear" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Marzo</label>
+        <input class="mes preview-data" type="radio" name="mes" value="Daddy" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Abril</label>
+        <input class="mes preview-data" type="radio" name="mes" value="Musculoso" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Mayo</label>
+        <input class="mes preview-data" type="radio" name="mes" value="Espía secreto" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Junio</label>       
+        <input class="mes preview-data" type="radio" name="mes" value="Sextwittero" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Julio</label>  
+        <input class="mes preview-data" type="radio" name="mes" value="Actor porno profesional" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Agosto</label>  
+        <input class="mes preview-data" type="radio" name="mes" value="Twink" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Septiembre</label>  
+        <input class="mes preview-data" type="radio" name="mes" value="Octubre es" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Octubre</label>  
+        <input class="mes preview-data" type="radio" name="mes" value="Profesor" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Noviembre</label>  
+        <input class="mes preview-data" type="radio" name="mes" value="Futbolista" v-model="editTitle" onclick="openTab('Dos')">
+        <label>Diciembre</label>                   
+        <br>
+        <!--  <button class="preview"  onclick="openTab('Dos')">Siguiente</button>  -->
+        <br>
+        <div style="text-align:center">
+            <span class="dot" style=" background-color: black"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+      </div>
+      
+      <div id="Dos" class="w3-container Tab" style="display:none">    
+        <h2>Inicial de tu apellido</h2>
+        <input class="letra preview-data" type="radio" name="letra" value="	me da leche	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	A	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	Se lo traga todo	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	B	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	Me invita a orgía	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	C	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me la chupa	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	D	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me pajea	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	E	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me folla duro	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	F	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	es sodomizado	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	G	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	pollón me preña	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	H	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	pollón me folla	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	I	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me deslecha	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	J	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	follado a pelo	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	K	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	se pajea conmigo	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	L	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	quiere más y más	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	M	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me sodomiza	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	N	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	pide polla	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	Ñ	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	usa mi culo	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	O	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	recibe lefote	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	P	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me come el culo	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	Q	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me la mete	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	R	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	usa mi boca	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	S	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	gime muy fuerte	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	T	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me hace el amor	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	U	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	me da masaje erótico	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	V	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	enseña rabaco	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	X	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	y su amigo me follan	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	Y	</label>
+        <input class="letra preview-data" type="radio" name="letra" value="	y otros 5 tíos follamos	" v-model="editTitleletra" onclick="openTab('Tres')"> <label>	Z	</label>
+        <br>
+        <button class="preview"  onclick="openTab('Uno')">Regresar</button> 
+        <!-- <button class="preview"  onclick="openTab('Tres')">Siguiente</button>  -->
+        <br>
+        <div style="text-align:center">
+            <span class="dot" style=" background-color: black"></span>
+            <span class="dot" style=" background-color: black"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        </div>
+
+        <div id="Tres" class="w3-container Tab" style="display:none">    
+        <h2>Última cifra del año en el que naciste</h2>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="dos veces! " v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	1	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="en su avión privado." v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	2	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="tres veces seguidas." v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	3	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="y nos pillan! " v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	4	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="con mucho cariño." v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	5	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="en un baño público." v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	6	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="salvajemente. " v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	7	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="en las duchas del gym. " v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	8	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="en un descampado" v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	9	</label>
+        <input class="ultimonumero preview-data" type="radio" name="ultimonumero" value="pide caña. " v-model="editTitleultimonumero"  v-on:click.prevent="previewPost" onclick="openTab('resultado')" > <label> 	0	</label>
+        <br>
+        <button class="preview"  onclick="openTab('Dos')">Regresar</button> 
+        <!-- <button class="previewes content paragraph title ultimonumero mes dia letra signo preview-data" v-on:click.prevent="previewPost" onclick="openTab('resultado')"  >{{content}} conozcamos el nuevo titulo de tu peli xxx</button> -->
+        <br>
+        <div style="text-align:center">
+            <span class="dot" style=" background-color: black"></span>
+            <span class="dot" style=" background-color: black"></span>
+            <span class="dot" style=" background-color: black"></span>
+            <span class="dot"></span>
+        </div>
+        <!-- tras cena romántica. -->
+
+        
+        
+        <!-- <h2>Dia</h2>
+        <input class="dia preview-data" type="radio" name="dia" value="	1	" v-model="editTitleDia">	<label>	1	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	2	" v-model="editTitleDia">	<label>	2	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	3	" v-model="editTitleDia">	<label>	3	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	4	" v-model="editTitleDia">	<label>	4	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	5	" v-model="editTitleDia">	<label>	5	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	6	" v-model="editTitleDia">	<label>	6	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	7	" v-model="editTitleDia">	<label>	7	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	8	" v-model="editTitleDia">	<label>	8	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	9	" v-model="editTitleDia">	<label>	9	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	10	" v-model="editTitleDia">	<label>	10	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	11	" v-model="editTitleDia">	<label>	11	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	12	" v-model="editTitleDia">	<label>	12	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	13	" v-model="editTitleDia">	<label>	13	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	14	" v-model="editTitleDia">	<label>	14	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	15	" v-model="editTitleDia">	<label>	15	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	16	" v-model="editTitleDia">	<label>	16	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	17	" v-model="editTitleDia">	<label>	17	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	18	" v-model="editTitleDia">	<label>	18	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	19	" v-model="editTitleDia">	<label>	19	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	20	" v-model="editTitleDia">	<label>	20	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	21	" v-model="editTitleDia">	<label>	21	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	22	" v-model="editTitleDia">	<label>	22	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	23	" v-model="editTitleDia">	<label>	23	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	24	" v-model="editTitleDia">	<label>	24	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	25	" v-model="editTitleDia">	<label>	25	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	26	" v-model="editTitleDia">	<label>	26	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	27	" v-model="editTitleDia">	<label>	27	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	28	" v-model="editTitleDia">	<label>	28	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	29	" v-model="editTitleDia">	<label>	29	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	30	" v-model="editTitleDia">	<label>	30	</label>
+        <input class="dia preview-data" type="radio" name="dia" value="	31	" v-model="editTitleDia">	<label>	31	</label>
+        <br>
+          -->
+        
+        <!--         <h2>Inicial de tu nombre</h2>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	A	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	B	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	C	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	D	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	E	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	F	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	G	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	H	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	I	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	J	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	K	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	L	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	M	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	N	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	Ñ	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	O	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	P	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	Q	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	R	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	S	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	T	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	U	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	V	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	X	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	Y 	</label>
+        <input class="letra preview-data" type="radio" name="letra" value=" " v-model="editTitleletra"> <label>	Z	</label>  -->
+
+    
+      
+        <!-- <h2>Signo</h2>
+        <input class="signo preview-data" type="radio" name="Signo" value="Aries es" v-model="editTitlesigno" >        
+        <label>Aries</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Tauro es" v-model="editTitlesigno" >
+        <label>Tauro</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Géminis es" v-model="editTitlesigno" >
+        <label>Géminis</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Cáncer es" v-model="editTitlesigno" >
+        <label>Cáncer</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Leo es" v-model="editTitlesigno" >
+        <label>Leo</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Virgo es" v-model="editTitlesigno" >
+        <label>Virgo</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Libra es" v-model="editTitlesigno" >
+        <label>Libra</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Escorpio es" v-model="editTitlesigno" >
+        <label>Escorpio</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Sagitario es" v-model="editTitlesigno" >
+        <label>Sagitario</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Capricornio es" v-model="editTitlesigno" >
+        <label>Capricornio</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Acuario es" v-model="editTitlesigno" >
+        <label>Acuario</label>
+        <input class="signo preview-data" type="radio" name="Signo" value="Piscis es" v-model="editTitlesigno" >
+        <label>Piscis</label>  <br>   --> 
+        
+      </form> 
+      </div>
+      
+      <div id="resultado" class="w3-container Tab" style="display:none">
+        <h1 class="preview-header"></h1>
+        <div class="preview-section">
+        <!--   <h3 class="title preview-data" style="display: none;">{{title}}</h3>
+          <div class="date" style="display: none;"></div>
+        <p class="paragraph preview-data" style="white-space: pre-line; display: none;">{{content}}</p>   -->    
+        
+          <p class="paragraph title ultimonumero mes dia letra signo preview-data" style="white-space: pre-line;">{{content}} el título del vídeo porno gay que te lanzará a la fama es <b>{{title}} {{mes}} {{letra}} {{ultimonumero}} <!-- {{dia}} {{signo}}  --></b></p>  
+          <br>
+          <button class="preview" >Compartir</button> 
+          <button class="preview" onclick="openTab('Uno')">Hacer otro</button>
+          <button class="preview" onclick="openTab('Mas')">Terminar</button> 
+          <br>
+          <div style="text-align:center">
+              <span class="dot" style=" background-color: black"></span>
+              <span class="dot" style=" background-color: black"></span>
+              <span class="dot" style=" background-color: black"></span>
+              <span class="dot" style=" background-color: black"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="Mas" class="w3-container Tab" style="display:none">
+        <p onclick="openTab('Uno')">Jugar</p>
+        <p onclick="openTab('Uno')">Hacer</p>
+        <p onclick="openTab('Uno')"> Enviar</p>
+      </div>
+    </div>
+</div>    
+
+<script>
+function openTab(TabName) {
+  var i;
+  var x = document.getElementsByClassName("Tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(TabName).style.display = "block";  
+}
+</script>
+<script src='./vue.min.js'></script>
+<script src='./jquery.min.js'></script>
+<!-- <script src='./velocity.js'></script>
+<script src='./velocity.ui.min.js'></script> -->
+<script>
+  new Vue ({
+    el: '#blog',
+    data: function(){
+      return {
+        editTitle: '',
+        editTitlesigno: '',
+        editTitleDia: '',
+        editTitleletra: '',
+        editContent: '',
+        editTitleultimonumero: '',
+        ultimonumero: '',
+        title: '',
+        mes: '',      
+        letra: '',    
+        signo:  '',
+        dia: '',
+        content: ''  
+      }
+    },
+    delete: '',
+    
+    
+    methods: {
+      previewPost: function() {
+        this.title = this.editTitle;
+        this.signo = this.editTitlesigno;
+        this.dia = this.editTitleDia;
+        this.letra = this.editTitleletra;
+        this.content = this.editContent;
+        this.ultimonumero = this.editTitleultimonumero;
+        this.mes = this.editMes;
+      }
+    }
+  });
+
+
+
+  $('.preview').click(function(){
+    $('.preview-data').velocity("transition.slideUpIn", {
+      duration: 400, 
+      stagger: 100
+    });
+  });  
+</script>
+
+</body>
+</html>
