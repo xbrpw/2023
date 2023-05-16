@@ -1,0 +1,41 @@
+html { height: 100%; width: 100%; }
+body {
+  text-align:center;
+  position: relative;
+  height: 100%; width: 100%;
+}
+.bs-glyphicons-list {
+  list-style: none;
+  display: flex;
+  flex-flow: wrap row;
+  margin: 0 auto;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
+  li {
+    float: left;
+    width: 12.5%;
+    height: 115px;
+    padding: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #fff;
+  .glyphicon {
+    font-size: 5vw;
+  }
+  }
+  .glyphicon-class {
+    display: block;
+    font-size:1.5 em;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
+#Alert {
+  position: absolute;
+  width: 12.5%;
+  z-index: 1000;
+  display: none;
+}

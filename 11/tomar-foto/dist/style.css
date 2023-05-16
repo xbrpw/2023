@@ -1,0 +1,10 @@
+video { 
+  border: 2px solid #666; 
+  transform: rotateY(180deg);
+}
+canvas {
+  display: none;
+}
+code { 
+  font-weight: bold; 
+}

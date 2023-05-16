@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive iframe Generator</title>
+  <link rel='stylesheet' href='https://benmarshall.me/wp-content/themes/hello-elementor-child/assets/css/codepen.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="wrapper">
+  <label class="cell form">
+    iframe URL
+    <input type="url" placeholder="e.g. https://www.benmarshall.me" value="https://www.benmarshall.me" id="url" />
+  </label>
+  <div class="cell form">
+    <label>Aspect ratio</label>
+    <div class="options">
+      <div><input type="radio" checked="checked" name="aspect" value="16x9" id="a2" /> <label for="a2">16x9</label></div>
+      <div><input type="radio" name="aspect" value="8x5" id="a6" /> <label for="a6">8x5</label></div>
+      <div><input type="radio" name="aspect" value="5x4" id="a7" /> <label for="a7">5x4</label></div>
+      <div><input type="radio" name="aspect" value="5x4" id="a8" /> <label for="a8">5x3</label></div>
+      <div><input type="radio" name="aspect" value="4x3"  id="a3" /> <label for="a3">4x3</label></div>
+      <div><input type="radio" name="aspect" value="4x5"  id="a11" /> <label for="a11">4x5</label></div>
+      <div><input type="radio" name="aspect" value="3x2"  id="a5" /> <label for="a5">3x2</label></div>
+      <div><input type="radio" name="aspect" value="3x1"  id="a10" /> <label for="a10">3x1</label></div>
+      <div><input type="radio" name="aspect" value="2x1"  id="a9" /> <label for="a9">2x1</label></div>
+      <div><input type="radio" name="aspect" value="1x1"  id="a4" /> <label for="a4">1x1</label></div>
+    </div>
+  </div>
+  <div class="cell"><label>HTML</label></div>
+  <div class="cell"><label>CSS</label></div>
+  <div class="cell" id="html"></div>
+  <div class="cell" id="css"></div>
+  <div class="cell desc">Click to copy the code.</div>
+  <div class="cell"><label>Preview &mdash; <span id="size"></span></label></div>
+  <div class="cell" id="preview"></div>
+</section>
+<style id="style"></style>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

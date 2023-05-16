@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - download  HTML  content of a website</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<a href ="#" id="donwload-link" onClick="myFunction()">download html content</a>
+
+<script>
+function myFunction() {
+  var content = document.documentElement.innerHTML;
+  download(content, "index", "txt")
+
+}
+function download(content, fileName, fileType) {
+  var link = document.getElementById("donwload-link");
+  var file = new Blob([content], {type: fileType});
+  var donwloadFile = fileName + "." + fileType;
+  link.href = URL.createObjectURL(file);
+  link.download = donwloadFile
+}
+</script>
+<!-- partial -->
+  
+</body>
+</html>

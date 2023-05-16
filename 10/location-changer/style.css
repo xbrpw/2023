@@ -1,0 +1,38 @@
+body {
+  font: 14px sans-serif;
+  margin: 30px;
+}
+.location-picker {
+  position: relative;
+}
+.current-location {
+  border-bottom: 1px dotted #999;
+  color: #999;
+  cursor: pointer;
+}
+.current-location:hover {
+  border-bottom-color: #bbb;
+  color: #bbb;
+}
+.all-locations {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 200ms linear, visibility 0 linear 200ms;
+  visibility: hidden;
+  width: 280px;
+}
+.all-locations.visible {
+  opacity: 1;
+  transition: opacity 200ms linear;
+  visibility: visible;
+}
+.all-locations .input-group {
+  float: left;
+  width: 50%;
+}
+.fa {
+  color: #006477;
+  margin-right: 6px;
+}

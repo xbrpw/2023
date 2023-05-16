@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by bluecomm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button onclick="spinner.spin()">RND</button>
+<button onclick="spinner.spin(0)">0</button>
+<button onclick="spinner.spin(1)">1</button>
+<button onclick="spinner.spin(2)">2</button>
+<button onclick="spinner.spin(3)">3</button>
+<button onclick="spinner.spin(4)">4</button>
+
+<div class="roulette">
+  <div class="spinner"></div>
+  <div class="shadow"></div>
+  <div class="markers">
+    <div class="triangle">
+      
+    </div>
+  </div>
+  <div class="button">
+    <span>SPIN</span>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

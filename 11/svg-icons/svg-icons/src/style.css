@@ -1,0 +1,410 @@
+@desktop:    ~"only screen and (min-width: 959px)";
+
+body {
+  background-color: #111;
+  padding: 0;
+  margin: 0;
+  color: #F59E0B;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h3 {
+  display: flex;
+  font-size: 300%;
+  padding: 0;
+  margin: 1em 0 1em 0;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  width: 10rem;
+  height: 6rem;
+  border: 1px solid darkgoldenrod;
+  border-radius: 5px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 1em;
+  &:hover {
+    background-color: black;
+    border: 1px solid darkred;
+  }
+}
+.icon {
+  display: inline-flex;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  border: 0;
+  padding: 0 0.5em;
+  margin: 0;
+  justify-items: center;
+}
+
+.icon_desktop {
+  height: 2em;
+}
+.icon_mobile {
+  height: 6rem;
+  width: 6rem;
+}
+.icon_desktop {
+  background-position: 0 0;
+  &::before {
+    content: attr(title);
+    display: inline-flex;
+    align-self: center;
+    color: #F59E0B; /* tailwing yellow-500 */
+    clear: both;
+    margin-left: 1.2em;
+  }
+}
+
+.icon_placeholder {
+  background-image: url("https://svgshare.com/i/gyy.svg");
+}
+
+.icon_army {
+  background-image: url("https://svgshare.com/i/aaY.svg");
+}
+
+.icon_attack {
+  background-image: url("https://svgshare.com/i/Vmb.svg");
+}
+.icon_attack_1 {
+  background-image: url("https://svgshare.com/i/cMr.svg");
+}
+.icon_attack_1b {
+  background-image: url("https://svgshare.com/i/cNP.svg");
+}
+
+.icon_buildings {
+  background-image: url("https://svgshare.com/i/Vk5.svg");
+}
+.icon_buildings2 {
+  background-image: url("https://svgshare.com/i/aa5.svg");
+}
+
+.icon_castle {
+  background-image: url("https://svgshare.com/i/VkQ.svg");
+}
+
+.icon_defense {
+  background-image: url("https://svgshare.com/i/a_j.svg");
+}
+.icon_defense_1 {
+  background-image: url("https://svgshare.com/i/cLo.svg");
+}
+
+.icon_economy {
+  background-image: url("https://svgshare.com/i/VmT.svg");
+}
+.icon_economy2 {
+  background-image: url("https://svgshare.com/i/acC.svg");
+}
+.icon_economy3 {
+  background-image: url("https://svgshare.com/i/aad.svg");
+}
+
+.icon_post {
+  background-image: url("https://svgshare.com/i/Vk6.svg");
+}
+
+.icon_rankings {
+  background-image: url("https://svgshare.com/i/Vmr.svg");
+}
+.icon_rankings2 {
+  background-image: url("https://svgshare.com/i/aaa.svg");
+}
+
+.icon_spells {
+  background-image: url("https://svgshare.com/i/Vm8.svg");
+}
+.icon_timemachine {
+  background-image: url("https://svgshare.com/i/VmV.svg");
+}
+.icon_timemachine_1 {
+  background-image: url("https://svgshare.com/i/cMN.svg");
+}
+
+.icon_list_of_attacks {
+  background-image: url("https://svgshare.com/i/Vjt.svg");
+}
+
+.icon_my_alliance {
+  background-image: url("https://svgshare.com/i/af1.svg");
+}
+.icon_my_alliance2 {
+  background-image: url("https://svgshare.com/i/aaD.svg");
+}
+.icon_my_alliance3 {
+  background-image: url("https://svgshare.com/i/acA.svg");
+}
+.icon_my_alliance4 {
+  background-image: url("https://svgshare.com/i/acD.svg");
+}
+.icon_my_alliance5 {
+  background-image: url("https://svgshare.com/i/ae7.svg");
+}
+.icon_my_alliance6 {
+  background-image: url("https://svgshare.com/i/cM6.svg");
+}
+.icon_my_alliance7 {
+  background-image: url("https://svgshare.com/i/cLc.svg");
+}
+.icon_my_alliance8 {
+  background-image: url("https://svgshare.com/i/cMG.svg");
+}
+
+.icon_construction  {
+  background-image: url("https://svgshare.com/i/Vpb.svg");
+}
+
+.icon_bestiary  {
+  background-image: url("https://svgshare.com/i/VqG.svg");
+}
+.icon_bestiary_b  {
+  background-image: url("https://svgshare.com/i/Vr3.svg");
+}
+.icon_bestiary2  {
+  background-image: url("https://svgshare.com/i/abf.svg");
+}
+.icon_bestiary3  {
+  background-image: url("https://svgshare.com/i/acX.svg");
+}
+
+.icon_blacklist  {
+  background-image: url("https://svgshare.com/i/Vqj.svg");
+}
+
+.icon_badge_conqueror {
+  background-image: url("https://svgshare.com/i/a_q.svg");
+}
+.icon_badge_conqueror2 {
+  background-image: url("https://svgshare.com/i/a_U.svg");
+}
+.icon_badge_conqueror3 {
+  background-image: url("https://svgshare.com/i/aac.svg");
+}
+.icon_badge_conqueror4 {
+  background-image: url("https://svgshare.com/i/arM.svg");
+}
+
+.icon_badge_age_master {
+  background-image: url("https://svgshare.com/i/a_i.svg");
+}
+.icon_badge_age_master2 {
+  background-image: url("https://svgshare.com/i/abY.svg");
+}
+
+.icon_badge_famous {
+  background-image: url("https://svgshare.com/i/aZE.svg");
+}
+.icon_badge_famous2 {
+  background-image: url("https://svgshare.com/i/acP.svg");
+}
+
+.icon_badge_warrior {
+  background-image: url("https://svgshare.com/i/a_V.svg");
+}
+.icon_badge_warrior2 {
+  background-image: url("https://svgshare.com/i/acB.svg");
+}
+.icon_badge_warrior3{
+  background-image: url("https://svgshare.com/i/asC.svg");
+}
+
+.icon_glory {
+  background-image: url("https://svgshare.com/i/aa9.svg");
+}
+.icon_glory2 {
+  background-image: url("https://svgshare.com/i/acn.svg");
+}
+.icon_glory3{
+  background-image: url("https://svgshare.com/i/af9.svg");
+}
+.icon_glory5{
+  background-image: url("https://svgshare.com/i/cKk.svg");
+}
+
+.icon_male {
+  background-image: url("https://svgshare.com/i/acZ.svg");
+}
+.icon_female {
+  background-image: url("https://svgshare.com/i/ac_.svg");
+}
+.icon_btn_confirm {
+  background-image: url("https://svgshare.com/i/aaE.svg");
+}
+.icon_btn_cancel {
+  background-image: url("https://svgshare.com/i/acS.svg");
+}
+.icon_btn_explore {
+  background-image: url("https://svgshare.com/i/adY.svg");
+}
+.icon_btn_pause {
+  background-image: url("https://svgshare.com/i/ae8.svg");
+}
+.icon_btn_send {
+  background-image: url("https://svgshare.com/i/afc.svg");
+}
+.icon_btn_change {
+  background-image: url("https://svgshare.com/i/adj.svg");
+}
+.icon_btn_change2 {
+  background-image: url("https://svgshare.com/i/aeW.svg");
+}
+.icon_btn_send {
+  background-image: url("https://svgshare.com/i/af6.svg");
+}
+.icon_btn_send_all {
+  background-image: url("https://svgshare.com/i/adZ.svg");
+}
+.icon_btn_reply {
+  background-image: url("https://svgshare.com/i/afH.svg");
+}
+.icon_btn_forward {
+  background-image: url("https://svgshare.com/i/afo.svg");
+}
+
+.icon_settings {
+  background-image: url("https://svgshare.com/i/af7.svg");
+}
+.icon_log_out {
+  background-image: url("https://svgshare.com/i/adk.svg");
+}
+.icon_sign_in {
+  background-image: url("https://svgshare.com/i/aep.svg");
+}
+.icon_first_0 {
+  background-image: url("https://svgshare.com/i/cL9.svg");
+}
+.icon_first_3 {
+  background-image: url("https://svgshare.com/i/cro.svg");
+}
+.icon_second_0 {
+  background-image: url("https://svgshare.com/i/cKy.svg");
+}
+.icon_third_0 {
+  background-image: url("https://svgshare.com/i/cN1.svg");
+}
+.icon_first {
+  background-image: url("https://svgshare.com/i/c6J.svg");
+}
+.icon_second {
+  background-image: url("https://svgshare.com/i/c4w.svg");
+}
+.icon_third {
+  background-image: url("https://svgshare.com/i/c5G.svg");
+}
+.icon_heart {
+  background-image: url("https://svgshare.com/i/cKj.svg");
+}
+.icon_sun {
+  background-image: url("https://svgshare.com/i/c5n.svg");
+}
+
+.icon_rank_first {
+  background-image: url("https://svgshare.com/i/cL6.svg");
+}
+.icon_rank_second {
+  background-image: url("https://svgshare.com/i/cLb.svg");
+}
+.icon_rank_third {
+  background-image: url("https://svgshare.com/i/cLa.svg");
+}
+.icon_rank_cup_first {
+  background-image: url("https://svgshare.com/i/cqt.svg");
+}
+.icon_rank_cup_second {
+  background-image: url("https://svgshare.com/i/cr2.svg");
+}
+.icon_rank_cup_third {
+  background-image: url("https://svgshare.com/i/crp.svg");
+}
+
+
+
+/* SVG buttons */
+
+.button_back_frame {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.icon_back {
+  display: inline-flex;
+  cursor: pointer;
+  background-image: url("https://svgshare.com/i/dUT.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+}
+
+.frame_01 {
+}
+.frame_02 {
+  background-image: url("https://svgshare.com/i/dUU.svg");
+}
+.frame_03 {
+  background-image: url("https://svgshare.com/i/dWd.svg");
+}
+.frame_04 {
+  background-image: url("https://svgshare.com/i/ieg.svg");
+}
+.button_colour {
+  display: flex;
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid red;
+}
+._blue {
+  background-image: url("https://svgshare.com/i/dX_.svg");
+  background-size: contain;
+  height: 83%;
+}
+._red_radial {
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3CradialGradient id='0' gradientTransform='translate(0.1 0.1) scale(0.8, 0.8)'%3E%3Cstop offset='0%25' stop-color='%23ff0000'/%3E%3Cstop offset='8.33%25' stop-color='rgba(255, 0, 0, 0.92)'/%3E%3Cstop offset='16.67%25' stop-color='rgba(255, 0, 0, 0.83)'/%3E%3Cstop offset='25%25' stop-color='rgba(255, 0, 0, 0.75)'/%3E%3Cstop offset='33.33%25' stop-color='rgba(255, 0, 0, 0.67)'/%3E%3Cstop offset='41.67%25' stop-color='rgba(255, 0, 0, 0.58)'/%3E%3Cstop offset='50%25' stop-color='rgba(255, 0, 0, 0.5)'/%3E%3Cstop offset='58.33%25' stop-color='rgba(255, 0, 0, 0.42)'/%3E%3Cstop offset='66.67%25' stop-color='rgba(255, 0, 0, 0.33)'/%3E%3Cstop offset='75%25' stop-color='rgba(255, 0, 0, 0.25)'/%3E%3Cstop offset='83.33%25' stop-color='rgba(255, 0, 0, 0.17)'/%3E%3Cstop offset='100%25' stop-color='rgba(255, 0, 0, 0)'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%230)' height='100%25' width='100%25'/%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+._blue_radial {
+  background-image: url("https://svgshare.com/i/iej.svg");
+}

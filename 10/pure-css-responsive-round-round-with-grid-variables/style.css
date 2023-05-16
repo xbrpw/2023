@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  min-width: 160px;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(var(--nc), var(--d));
+  grid-gap: var(--g);
+  margin: 0;
+  padding: 1em 0;
+  min-height: 100vh;
+  background: #222;
+}
+
+.item {
+  display: grid;
+  place-content: center;
+  position: relative;
+  --b: calc(.5*var(--f)*var(--d));
+  border: solid var(--b) transparent;
+  --p: 3px;
+  padding: var(--p);
+  width: var(--d);
+  height: var(--d);
+  border-radius: 50%;
+  background: linear-gradient(#cecece, #fefefe) content-box, linear-gradient(-45deg, #fefefe, #ddd) padding-box;
+  font: 900 1.5em/1.275 charmonman, cursive;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff, 1px 1px 3px #000;
+  text-transform: capitalize;
+  word-spacing: 4em;
+}
+.item:before {
+  position: absolute;
+  z-index: -1;
+  margin: calc(-1*var(--b) - var(--p));
+  border: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform: rotate(-45deg);
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.69) 0, transparent) 50%/calc(100% - 2*var(--b) - var(--p)) 100% no-repeat border-box, linear-gradient(var(--sl)) border-box;
+  content: "";
+}

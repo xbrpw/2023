@@ -1,0 +1,100 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 870px;
+  padding-top: 2rem;
+}
+
+label {
+  color: #fff;
+  font-family: var(--header-font-family);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cell {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  width: calc(50% - 1rem);
+}
+.cell#preview {
+  width: calc(100% - 1rem);
+}
+
+.form {
+  margin-bottom: 1rem;
+}
+
+#html,
+#css {
+  background: #062132;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  max-height: 10rem;
+  overflow: auto;
+  padding: 1rem;
+}
+
+#preview {
+  border: 1px solid var(--primary-color);
+}
+
+#form {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+[type=radio] {
+  display: none;
+}
+
+[type=radio] + label {
+  background: #062132;
+  border-radius: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-family: var(--header-font-family);
+  font-weight: 500;
+  padding: 0.32rem 1.1rem;
+  text-align: center;
+  width: 100%;
+}
+
+[type=radio]:checked + label {
+  background: #006ea0;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.2rem;
+  margin-right: -0.2rem;
+}
+.options > div {
+  margin: 0 0.2rem 0.4rem;
+  width: calc(100% / 5 - 0.4rem);
+}
+
+.copied {
+  background: #006ea0;
+  border-radius: 1rem;
+  font-family: var(--header-font-family);
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.desc {
+  font-size: 0.8rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,220 @@
+:root{
+--bgcolor:#9ACD32;
+--brcolor:#008000;
+--tcolor:#008000;
+--tcolorh:#006400;
+--tcolora:#006400;
+}
+html, body{
+  margin:0px;
+  padding:0px;
+  height:100%;
+  width:100%;
+}
+*{
+  margin:0px;
+  padding:0px;	
+}
+.menu-left-top{
+  margin:0px 0px;
+  padding:10px 0px 0px 20px;
+  width:400px;
+  position:fixed;
+  top:20px;
+}
+.menu-left-vertical{
+  margin:100px 0px;
+  padding:10px 0px 0px 20px;
+  width:50px;
+  position:fixed;
+  top:20px;
+}
+.menu-center-top{
+  margin:0px 0px 0px -200px;
+   left:50%;
+  padding:10px 0px 0px 0px;
+  width:400px;
+  position:fixed;
+  top:20px;
+}
+.menu-right-top{
+  margin:0px 0px;
+  padding:10px 20px 0px 0px;
+  width:400px;
+  float:right;
+    position:fixed;
+   top:20px;
+   right:0px;
+}
+.menu-left-bottom{
+  margin:0px 0px;
+  padding:10px 0px 0px 20px;
+  width:400px;
+  position:fixed;
+  bottom:20px;
+}
+.menu-center-bottom{
+   margin:0px 0px 0px -200px;
+   left:50%;
+  padding:10px 0px 0px 0px;
+  width:400px;
+  position:fixed;
+  bottom:20px;
+}
+.menu-right-bottom{
+  margin:0px 0px;
+  padding:10px 20px 0px 0px;
+  width:400px;
+  float:right;
+  position:fixed;
+  bottom:20px;
+  right:0px;
+}
+ul{
+  margin:0px 0px 0px 50px;
+  padding:0px;
+  top:0px;
+  left:0px;
+   position:absolute;	
+}
+.menu-left-vertical details{
+width:50px;
+height:50px;
+}
+.menu-right-vertical details{
+width:50px;
+height:50px;
+float:right;
+  margin:0px 20px 0px 0px;
+}
+.menu-left-vertical details[open]{
+height:320px;
+width:50px;
+}
+.menu-right-vertical details[open]{
+height:320px;
+width:50px;
+}
+.menu-right-vertical details ul li{
+list-style:none;
+float:none;
+margin:0px;
+}
+.menu-left-vertical details ul li{
+list-style:none;
+float:none;
+margin:0px;
+}
+
+.menu-left-vertical details ul,.menu-right-vertical details ul{
+  margin:50px 0px 0px 0px;
+  padding:0px;
+}
+.menu-left-vertical details ul li a,.menu-right-vertical details ul li a{
+text-decoration:none;	
+color:var(--tcolor);
+display:block;
+padding:0em;
+width:50px;
+height:50px;
+text-align:center;
+box-sizing: border-box;	
+margin:-1px 0px 0px 0px;
+border-top:1px solid var(--brcolor);
+border-bottom:1px solid var(--brcolor);
+border-right:none;
+border-left:none;
+transition:all 0.5s ease-in-out;
+}
+.menu-right-top details, .menu-right-bottom details{
+transform: rotate(180deg);	
+float:right;
+}
+.menu-right-top ul li, .menu-right-bottom ul li{
+transform: rotate(180deg);	
+}
+details{
+width:50px;
+height:50px;
+background-color:var(--bgcolor);	
+position:relative;
+border-radius:50px;
+transition:all 0.5s ease-in-out;
+box-shadow:0px 0px 5px 0px var(--bgcolor);	
+overflow:hidden;
+}
+summary{
+width:50px;
+height:50px;
+background-color:var(--bgcolor);	
+font-size:1.5em;
+text-align:center;
+list-style-type: none;
+line-height:50px;
+cursor:pointer;
+padding:0px;
+margin:0px;
+border-radius:50px;
+color:var(--tcolor);	
+}
+
+
+details[open]{
+width:320px;
+height:50px;
+border-radius:50px;	
+}
+details[open] summary.fa-plus{
+transform: rotate(30deg);
+}
+
+ul li{
+list-style:none;
+float:left;
+margin:0px;
+}
+ul li a{
+text-decoration:none;	
+color:var(--tcolor);
+display:block;
+padding:0em;
+width:50px;
+height:50px;
+text-align:center;
+box-sizing: border-box;	
+margin:0px 0px 0px -1px;
+border-left:1px solid var(--brcolor);
+border-right:1px solid var(--brcolor);
+transition:all 0.5s ease-in-out;
+}
+.menu-left-top .fa, .menu-center-top .fa, .menu-right-top .fa, .menu-left-vertical .fa, .menu-right-vertical .fa, .menu-left-bottom .fa, .menu-center-bottom .fa, .menu-right-bottom .fa{
+font-size:1.5em;	
+line-height:50px;
+}
+.menu-left-vertical details ul li a:hover,.menu-right-vertical details ul li a:hover
+{
+color:var(--tcolorh);		
+}
+.menu-left-vertical details ul li a:active,.menu-right-vertical details ul li a:active{
+color:var(--tcolora);		
+}
+ul li a:hover{
+color:var(--tcolorh);	
+}
+ul li a.active{
+color:var(--tcolora);	
+}
+h1{
+font-size:1.2em;
+text-align:center;
+margin:0px 0px 0px 0px;
+font-family:sans-serif;
+color:var(--brcolor);
+}
+h2{
+font-size:1.1em;
+margin:100px 0px 0px 20px;
+font-family:sans-serif;
+text-align:center;
+color:var(--brcolor);
+}

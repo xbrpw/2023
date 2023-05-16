@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>How to Build a Meme Generator with JavaScript (No Frameworks)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <style>
+    .meme-generator {
+      margin: 20px auto;
+      width: 400px;
+      font-family: sans-serif;
+    }
+
+    .meme-generator label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meme-generator input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    #meme {
+      width: 100%;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="meme-generator">
+  <label>Select an Image</label>
+  <input type="file" id="imageFileInput">
+
+  <label>Top Text</label>
+  <input type="text" id="topTextInput">
+
+  <label>Bottom Text</label>
+  <input type="text" id="bottomTextInput">
+
+  <canvas id="meme"></canvas>
+</div>
+
+  <script  src="./script.js"></script>
+
+</body>
+</html>
