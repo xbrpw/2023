@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New logo Twitter</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<dic class="nuevologotwitter">
+  <style>
+* {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.nuevologotwitter {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.nuevologotwitter-container {
+  min-height: 100vh;
+  background: #ededed;
+  color: #333;
+  line-height: 1.5;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --color-twitter: rgb(29, 155, 240);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.demo {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.tutorial-link {
+  z-index: 100;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.icon-link {
+  z-index: 100;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 32px;
+}
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.twitter-x {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.twitter-x__center {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+@-webkit-keyframes shaking {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  2% {
+    transform: translate(8px, -4px);
+  }
+  4% {
+    transform: translate(7px, -1px);
+  }
+  6% {
+    transform: translate(-8px, -7px);
+  }
+  8% {
+    transform: translate(9px, -3px);
+  }
+  10% {
+    transform: translate(5px, -6px);
+  }
+  12% {
+    transform: translate(1px, 10px);
+  }
+  14% {
+    transform: translate(9px, -2px);
+  }
+  16% {
+    transform: translate(1px, -9px);
+  }
+  18% {
+    transform: translate(-6px, 3px);
+  }
+  20% {
+    transform: translate(-8px, -3px);
+  }
+  22% {
+    transform: translate(3px, -4px);
+  }
+  24% {
+    transform: translate(-5px, -6px);
+  }
+  26% {
+    transform: translate(2px, -3px);
+  }
+  28% {
+    transform: translate(0px, -7px);
+  }
+  30% {
+    transform: translate(-7px, 6px);
+  }
+  32% {
+    transform: translate(-4px, 0px);
+  }
+  34% {
+    transform: translate(-2px, 2px);
+  }
+  36% {
+    transform: translate(-7px, 1px);
+  }
+  38% {
+    transform: translate(3px, -3px);
+  }
+  40% {
+    transform: translate(5px, -3px);
+  }
+  42% {
+    transform: translate(8px, -7px);
+  }
+  44% {
+    transform: translate(9px, 2px);
+  }
+  46% {
+    transform: translate(4px, 8px);
+  }
+  48% {
+    transform: translate(-8px, 9px);
+  }
+  50% {
+    transform: translate(2px, -7px);
+  }
+  52% {
+    transform: translate(10px, -9px);
+  }
+  54% {
+    transform: translate(9px, -7px);
+  }
+  56% {
+    transform: translate(-8px, 1px);
+  }
+  58% {
+    transform: translate(9px, -9px);
+  }
+  60% {
+    transform: translate(-5px, 4px);
+  }
+  62% {
+    transform: translate(4px, -9px);
+  }
+  64% {
+    transform: translate(-6px, 7px);
+  }
+  66% {
+    transform: translate(-6px, -4px);
+  }
+  68% {
+    transform: translate(7px, 2px);
+  }
+  70% {
+    transform: translate(-9px, 6px);
+  }
+  72% {
+    transform: translate(0px, -9px);
+  }
+  74% {
+    transform: translate(0px, 8px);
+  }
+  76% {
+    transform: translate(-9px, 9px);
+  }
+  78% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(9px, 5px);
+  }
+  82% {
+    transform: translate(8px, 10px);
+  }
+  84% {
+    transform: translate(3px, -6px);
+  }
+  86% {
+    transform: translate(4px, -9px);
+  }
+  88% {
+    transform: translate(-1px, -5px);
+  }
+  90% {
+    transform: translate(-5px, 7px);
+  }
+  92% {
+    transform: translate(-6px, 0px);
+  }
+  94% {
+    transform: translate(-5px, 8px);
+  }
+  96% {
+    transform: translate(8px, -9px);
+  }
+  98% {
+    transform: translate(-9px, 5px);
+  }
+  100% {
+    transform: translate(4px, -5px);
+  }
+}
+@keyframes shaking {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  2% {
+    transform: translate(8px, -4px);
+  }
+  4% {
+    transform: translate(7px, -1px);
+  }
+  6% {
+    transform: translate(-8px, -7px);
+  }
+  8% {
+    transform: translate(9px, -3px);
+  }
+  10% {
+    transform: translate(5px, -6px);
+  }
+  12% {
+    transform: translate(1px, 10px);
+  }
+  14% {
+    transform: translate(9px, -2px);
+  }
+  16% {
+    transform: translate(1px, -9px);
+  }
+  18% {
+    transform: translate(-6px, 3px);
+  }
+  20% {
+    transform: translate(-8px, -3px);
+  }
+  22% {
+    transform: translate(3px, -4px);
+  }
+  24% {
+    transform: translate(-5px, -6px);
+  }
+  26% {
+    transform: translate(2px, -3px);
+  }
+  28% {
+    transform: translate(0px, -7px);
+  }
+  30% {
+    transform: translate(-7px, 6px);
+  }
+  32% {
+    transform: translate(-4px, 0px);
+  }
+  34% {
+    transform: translate(-2px, 2px);
+  }
+  36% {
+    transform: translate(-7px, 1px);
+  }
+  38% {
+    transform: translate(3px, -3px);
+  }
+  40% {
+    transform: translate(5px, -3px);
+  }
+  42% {
+    transform: translate(8px, -7px);
+  }
+  44% {
+    transform: translate(9px, 2px);
+  }
+  46% {
+    transform: translate(4px, 8px);
+  }
+  48% {
+    transform: translate(-8px, 9px);
+  }
+  50% {
+    transform: translate(2px, -7px);
+  }
+  52% {
+    transform: translate(10px, -9px);
+  }
+  54% {
+    transform: translate(9px, -7px);
+  }
+  56% {
+    transform: translate(-8px, 1px);
+  }
+  58% {
+    transform: translate(9px, -9px);
+  }
+  60% {
+    transform: translate(-5px, 4px);
+  }
+  62% {
+    transform: translate(4px, -9px);
+  }
+  64% {
+    transform: translate(-6px, 7px);
+  }
+  66% {
+    transform: translate(-6px, -4px);
+  }
+  68% {
+    transform: translate(7px, 2px);
+  }
+  70% {
+    transform: translate(-9px, 6px);
+  }
+  72% {
+    transform: translate(0px, -9px);
+  }
+  74% {
+    transform: translate(0px, 8px);
+  }
+  76% {
+    transform: translate(-9px, 9px);
+  }
+  78% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(9px, 5px);
+  }
+  82% {
+    transform: translate(8px, 10px);
+  }
+  84% {
+    transform: translate(3px, -6px);
+  }
+  86% {
+    transform: translate(4px, -9px);
+  }
+  88% {
+    transform: translate(-1px, -5px);
+  }
+  90% {
+    transform: translate(-5px, 7px);
+  }
+  92% {
+    transform: translate(-6px, 0px);
+  }
+  94% {
+    transform: translate(-5px, 8px);
+  }
+  96% {
+    transform: translate(8px, -9px);
+  }
+  98% {
+    transform: translate(-9px, 5px);
+  }
+  100% {
+    transform: translate(4px, -5px);
+  }
+}
+.twitter-x__logo {
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+}
+.twitter-x.s--morphing .twitter-x__logo {
+  -webkit-animation: shaking var(--twitter-shaking-at) var(--twitter-shaking-delay);
+          animation: shaking var(--twitter-shaking-at) var(--twitter-shaking-delay);
+}
+.twitter-x__logo-svg {
+  overflow: visible;
+  stroke: var(--color-twitter);
+  fill: var(--color-twitter);
+  will-change: stroke, fill;
+}
+.twitter-x.s--morphing .twitter-x__logo-svg {
+  transition: stroke var(--logo-morphing-at) var(--logo-morphing-delay), fill var(--logo-fill-at) var(--logo-fill-delay);
+  fill: transparent;
+  stroke: #fff;
+}
+.twitter-x__logo-svg2 {
+  overflow: visible;
+  position: absolute;
+  inset: 0;
+  fill: #fff;
+}
+.twitter-x__logo-svg2 path {
+  transform: scale(0);
+}
+.twitter-x__logo-svg2 path:first-child {
+  transform-origin: 100px 160px;
+}
+.twitter-x__logo-svg2 path:last-child {
+  transform-origin: 160px 100px;
+}
+.twitter-x.s--morphing .twitter-x__logo-svg2 path {
+  transition: transform var(--x-part-2-at) var(--x-part-2-delay) cubic-bezier(0.13, 0.9, 0.3, 1.3);
+  transform: scale(1);
+}
+.twitter-x__sweat {
+  --timing: var(--twitter-reaction-at) var(--twitter-reaction-delay);
+  position: absolute;
+  right: 60px;
+  top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60px;
+  gap: 4px;
+  color: white;
+  transform: translateY(-10px);
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.twitter-x.s--morphing .twitter-x__sweat {
+  transition: opacity var(--timing), transform var(--timing);
+  transform: translateY(0);
+  opacity: 1;
+}
+.twitter-x__sweat svg {
+  will-change: opacity;
+}
+.twitter-x.s--morphing .twitter-x__sweat svg {
+  transition: opacity var(--logo-fill-at) var(--logo-fill-delay);
+  opacity: 0;
+}
+.twitter-x__elon {
+  position: absolute;
+  left: calc(100% + 20px);
+  top: 50%;
+  width: 300px;
+  transform: translateY(-50%);
+  opacity: 0;
+  will-change: opacity;
+}
+@media (max-width: 1100px) {
+  .twitter-x__elon {
+    width: 240px;
+  }
+}
+@media (max-width: 800px) {
+  .twitter-x__elon {
+    left: 50%;
+    top: auto;
+    bottom: 100%;
+    width: 200px;
+    transform: translate(-100px, 0);
+  }
+}
+.twitter-x.s--morphing .twitter-x__elon {
+  transition: opacity var(--elon-appearence-at) var(--elon-appearence-delay);
+  opacity: 1;
+}
+.twitter-x__black-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150vmax;
+  height: 150vmax;
+  margin-left: -75vmax;
+  margin-top: -75vmax;
+  border-radius: 50%;
+  background: #000;
+  transform: scale(0);
+  will-change: transform;
+}
+.twitter-x.s--morphing .twitter-x__black-bg {
+  transition: transform var(--logo-morphing-at) var(--logo-morphing-delay);
+  transform: scale(1);
+}
+.twitter-x__doge {
+  position: absolute;
+  left: calc(100% + 5px);
+  bottom: calc(100% + 15px);
+  width: 40px;
+  transform: scale(0);
+}
+.twitter-x.s--morphing .twitter-x__doge {
+  transition: transform var(--doge-appearence-at) var(--doge-appearence-delay) cubic-bezier(0.13, 0.9, 0.4, 1.6);
+  transform: scale(1);
+}
+.twitter-x__reset {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 40px);
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  stroke: #fff;
+  transform: scale(0);
+  pointer-events: none;
+  cursor: pointer;
+}
+.twitter-x.s--morphing .twitter-x__reset {
+  transition: transform var(--reset-appearence-at) var(--reset-appearence-delay) cubic-bezier(0.13, 0.9, 0.4, 1.6);
+  transform: scale(1);
+  pointer-events: auto;
+}    
+  </style>
+  <div class="nuevologotwitter-container">
+  <div class="demo"></div>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js'></script>
+<script type="module">
+import React, { useState, useEffect } from 'https://esm.sh/react@18.2.0';
+import ReactDOM from 'https://esm.sh/react-dom@18.2.0';
+import { IconBrandTwitter, IconDropletFilled, IconRefresh } from "https://cdn.skypack.dev/@tabler/icons-react@2.11.0";
+import cn from "https://cdn.skypack.dev/classnames@2.3.2";
+const { interpolate } = flubber;
+// demo code
+const logoSize = 270;
+// original tabler twitter icon is contained in viewBox="0 0 24 24" so I'm using the same coordinates system to create that X rectangle shape as target for morphing
+const targetPath = 'M0,0 6,0 24,24 18,24Z';
+// this is our single source of truth for chain of animations timings, values are in seconds
+const animations = [
+    { name: 'elon-waiting', duration: 0.5 },
+    { name: 'elon-appearence', duration: 1 },
+    { name: 'twitter-reaction-waiting', duration: 0.3 },
+    { name: 'twitter-reaction', duration: 0.7 },
+    { name: 'twitter-shaking', duration: 1.4 },
+    { name: 'logo-fill-waiting', duration: 0 },
+    { name: 'logo-fill', duration: 0.1 },
+    { name: 'logo-morphing', duration: 0.2 },
+    { name: 'x-part-2', duration: 0.6 },
+    { name: 'doge-appearence', duration: 0.3 },
+    { name: 'reset-appearence', duration: 0.3 },
+];
+// this map also contains delays for each animation, which makes our css transitions code very trivial
+const { acc: animationsWithDelaysMap } = animations.reduce(({ acc, delay }, anim) => {
+    acc[anim.name] = anim.duration;
+    acc[`${anim.name}-delay`] = delay;
+    return {
+        acc,
+        delay: delay + anim.duration, // accumulates total delay
+    };
+}, { acc: {}, delay: 0 });
+function TwitterXLogoDemo({ onReset }) {
+    const [isMorphing, setIsMorphing] = useState(false);
+    // this useEffect runs once at the start of component's initialization (which is also being triggered by key prop change)
+    useEffect(() => {
+        setIsMorphing(true);
+        const colorChangeAnim = animationsWithDelaysMap['logo-morphing'] * 1000;
+        const colorChangeDelay = animationsWithDelaysMap['logo-morphing-delay'] * 1000;
+        // using good old dom selector, nothing fancy
+        // but in a more serious project I would use useRef hook to get a reference to this element to evade relying on global classes
+        const $path = document.querySelector('.twitter-x__logo-svg path');
+        const twitterPath = ($path === null || $path === void 0 ? void 0 : $path.getAttribute('d')) || '';
+        // I'm using flubber library (https://github.com/veltman/flubber) to morph twitter svg into X rectangle
+        // GSAP MorphSVGPlugin is most likely is a better choice, but it requires paid membership to use it
+        const interpolator = interpolate(twitterPath, targetPath);
+        // I'm creating startTime variable here and not in timeout because of annoying js closure behavior
+        const startTime = Date.now();
+        let linejoinChanged = false;
+        setTimeout(() => {
+            // check mdn https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame for api reference
+            // but overall tldr is that rAF runs callback function on next frame, which is usually 60 times per second
+            requestAnimationFrame(draw);
+            function draw() {
+                // since startTime is defined outside of this function, we need to subtract the delay also to get proper elapsed time
+                const elapsed = Date.now() - startTime - colorChangeDelay;
+                const p = elapsed / colorChangeAnim; // progress of animation, from 0 to 1
+                const d = interpolator(p);
+                $path === null || $path === void 0 ? void 0 : $path.setAttribute('d', d);
+                if (p < 1) {
+                    // run this function in rAF loop until animation is finished
+                    requestAnimationFrame(draw);
+                }
+                if (p >= 0.5 && !linejoinChanged) {
+                    // twitter icon got round linejoin by default to make it look smoother,
+                    // but X rectangle requires sharp corners, so this part changes it mid-animation
+                    linejoinChanged = true;
+                    $path === null || $path === void 0 ? void 0 : $path.setAttribute('stroke-linejoin', 'miter');
+                }
+            }
+        }, colorChangeDelay);
+    }, []); // empty array dependency means that this effect will run only once
+    const styleObj = Object.assign({ '--logo-size': `${logoSize}px` }, Object.entries(animationsWithDelaysMap).reduce((acc, [name, duration]) => {
+        // the final result is something like { '--doge-appearence-at': '0.3s', '--doge-appearence-delay': '1.5s' }
+        acc[`--${name}${name.endsWith('delay') ? '' : '-at'}`] = `${duration}s`;
+        return acc;
+    }, {}));
+    return (React.createElement("div", { className: cn('twitter-x', { 's--morphing': isMorphing }), style: styleObj },
+        React.createElement("div", { className: "twitter-x__center" },
+            React.createElement("div", { className: "twitter-x__logo" },
+                React.createElement(IconBrandTwitter, { size: logoSize, stroke: "1.5", className: "twitter-x__logo-svg" }),
+                React.createElement("svg", { viewBox: "0 0 270 270", className: "twitter-x__logo-svg2" },
+                    React.createElement("path", { d: "M-20,280 0,280 122,153 102,150z" }),
+                    React.createElement("path", { d: "M250,-10 270,-10 160,115 150,100z" })),
+                React.createElement("div", { className: "twitter-x__sweat" },
+                    React.createElement(IconDropletFilled, { size: 24 }))),
+            React.createElement("img", { src: "https://i.imgur.com/97TTsIS.png", alt: "Elon Smoking", className: "twitter-x__elon" }),
+            React.createElement("div", { className: "twitter-x__black-bg" }),
+            React.createElement("img", { src: "https://i.imgur.com/NP1T6VA.png", alt: "Doge", className: "twitter-x__doge" }),
+            React.createElement(IconRefresh, { className: "twitter-x__reset", onClick: onReset }))));
+}
+// we are using this wrapper to reset our component state and rerun useEffect by changing the key prop
+export default function ResetWrapper() {
+    const [refreshMs, setRefreshMs] = useState(0);
+    return (React.createElement(TwitterXLogoDemo, { key: refreshMs, onReset: () => setRefreshMs(Date.now()) }));
+}
+ReactDOM.render(React.createElement(ResetWrapper, null), document.querySelector('.demo'));
+</script>
+</div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
